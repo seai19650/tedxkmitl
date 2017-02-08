@@ -1,5 +1,6 @@
 .top-bar {
-    padding: 42px 0;
+    padding: 30px 0;
+    background: transparent;
 }
 .nav-logo-bg {
     background: #fff;
@@ -11,6 +12,36 @@
 .top-bar ul.menu li {
     font-weight: bold;
     font-size: 20px;
+}
+.top-bar ul.menu li a {
+    color: #fff;
+}
+.top-bar ul {
+    background: transparent;
+}
+section#main {
+    background: #e62b1a;
+    height: 1056px;
+    position: relative;
+}
+.hero-wrap {
+    margin-top: 50px;
+    position: relative;
+}
+img.x-hero {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: static;
+    z-index: 1;
+}
+img.living-out-loud {
+    display: block;
+    position: absolute;
+    margin-top: 81px;
+    width: 394px;
+    z-index: 2;
 }
 @media print, screen and (min-width: 40em) {
     .top-bar-right {
