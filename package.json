@@ -1,0 +1,19 @@
+{
+  "name": "tedxkmitl",
+  "version": "1.0.0",
+  "description": "TEDxKMITL official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seai19650/tedxkmitl.git"
+  },
+  "author": "TEDxKMITL Web Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seai19650/tedxkmitl/issues"
+  },
+  "homepage": "https://github.com/seai19650/tedxkmitl#readme"
+}
