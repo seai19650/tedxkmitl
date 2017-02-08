@@ -21,7 +21,7 @@
 }
 section#main {
     background: #e62b1a;
-    height: 1056px;
+    min-height: 1056px;
     position: relative;
 }
 .hero-wrap {
@@ -47,4 +47,21 @@ img.living-out-loud {
     .top-bar-right {
         margin-top: 1.5em;
     }
+}
+.tedxwhite {
+    margin-top: 96px;
+}
+.tedxwhite img{
+    min-height: 170px;
+    display: inline;
+    position: absolute;
+}
+.tedxwhite p{
+    margin-left: 30px;
+}
+img#bars {
+    max-width: 370px;
+    display: block;
+    position: absolute;
+    z-index: 2;
 }

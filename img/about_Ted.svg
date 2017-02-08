@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="530px" height="170px" viewBox="0 0 530 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>About TEDx</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="normal" font-family=".SFNSText, .SF NS Text" line-spacing="22" letter-spacing="0.200000003" font-size="16">
+        <g id="Desktop-HD" transform="translate(-781.000000, -771.000000)" fill="#FFFFFF">
+            <text id="About-TEDx">
+                <tspan x="781" y="781">In the spirit of ideas worth spreading, TED has created a program </tspan>
+                <tspan x="781" y="803">called TEDx. TEDx is a program of local, self-organized events that </tspan>
+                <tspan x="781" y="825">bring people together to share a TED-like experience. Our event is </tspan>
+                <tspan x="781" y="847">called TEDxKMITL, where x = independently organized TED event. At </tspan>
+                <tspan x="781" y="869">our TEDxKMITL event, TEDTalks video and live speakers will combine </tspan>
+                <tspan x="781" y="891">to spark deep discussion and connection in a small group. The TED </tspan>
+                <tspan x="781" y="913">Conference provides general guidance for the TEDx program, but </tspan>
+                <tspan x="781" y="935">individual TEDx events, including ours, are self-organized</tspan>
+                <tspan x="1206.54531" y="935">.</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
