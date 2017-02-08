@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <link rel="stylesheet" href="css/foundation.css">
+    <script>
+        document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 
@@ -15,12 +19,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequatur debitis deserunt
             dignissimos dolor, eum id ipsa rem sequi? Impedit incidunt optio vel. Eveniet nulla, repudiandae? Odio,
             temporibus, voluptatem!</p>
+        <picture>
+            <source media="(min-width:1000px)" srcset="img/x-hero-lg.webp 1x, img/2x/x-hero-lg.webp 2x">
+            <source media="(min-width:1000px)" srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
+            <img srcset="img/x-hero-lg.jpg" alt="X hero">
+        </picture>
     </div>
 </div>
 
-<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.js"></script>
+<script src="js/vendor/foundation.min.js"></script>
 <script type="text/javascript">
     $(document).foundation()
 </script>
