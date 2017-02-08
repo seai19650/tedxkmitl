@@ -1,0 +1,19 @@
+.top-bar {
+    padding: 42px 0;
+}
+.nav-logo-bg {
+    background: #fff;
+    padding: 17px 19px;
+}
+.nav-logo-bg img {
+    width: 202px;
+}
+.top-bar ul.menu li {
+    font-weight: bold;
+    font-size: 20px;
+}
+@media print, screen and (min-width: 40em) {
+    .top-bar-right {
+        margin-top: 1.5em;
+    }
+}
