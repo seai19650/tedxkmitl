@@ -132,4 +132,23 @@ img#bars {
         margin-top: -270px;
         width: 320px;
     }
+    .tedxwhite {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        width: 95%;
+    }
+    img.tedx-vertical {
+        display: none !important;
+    }
+    .tedxwhite p {
+        display: block;
+        position: relative;
+    }
+    img#bars {
+        right: 15px;
+        bottom: 6px;
+    }
+    section#main {
+        min-height: 800px;
+    }
 }
