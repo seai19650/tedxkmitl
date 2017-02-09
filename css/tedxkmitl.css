@@ -101,6 +101,7 @@ img#bars {
     }
     .top-bar-right ul.menu {
         text-align: center;
+        margin-bottom: 15px;
     }
     span.hamburger .menu-icon {
         margin: 30px auto 20px;
