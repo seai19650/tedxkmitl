@@ -2,7 +2,8 @@ p {
     line-height: 23px;
 }
 .top-bar {
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background: transparent;
 }
 .nav-logo-bg {
@@ -92,5 +93,42 @@ img#bars {
     }
     .tedx-vertical {
         margin-right: 20px;
+    }
+}
+@media screen and (max-width: 639px) {
+    .top-bar {
+        padding-top: 30px;
+    }
+    .top-bar-right ul.menu {
+        text-align: center;
+    }
+    span.hamburger .menu-icon {
+        margin: 30px auto 20px;
+        display: block;
+        width: 30px;
+    }
+    .top-bar-title {
+        width: 100%;
+        padding: 0;
+    }
+    .nav-logo-bg {
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-logo-bg img {
+        width: 100%;
+    }
+    .hero-wrap {
+        margin-top: 0;
+    }
+    img.living-out-loud {
+        width: 280px;
+        margin: 20px auto 0;
+        position: relative;
+    }
+    img.x-hero {
+        margin-top: -270px;
+        width: 320px;
     }
 }
