@@ -1,0 +1,9 @@
+section#teaser {
+    background: #000000;
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#teaser h1{
+    color: white;
+}
