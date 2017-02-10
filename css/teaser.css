@@ -7,3 +7,23 @@ section#teaser {
 section#teaser h1{
     color: white;
 }
+section#speaker {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#speaker h1{
+    color: #e62b1a;
+    font-size: 3rem;
+    display: inline;
+    position: absolute;
+    text-align: justify;
+    z-index: 1;
+}
+#speakers img{
+    width: 290px;
+    height: 290px;
+    margin-top: 151px;
+    border: 8px solid #e62b1a ;
+    border-bottom-style:hidden;
+}  

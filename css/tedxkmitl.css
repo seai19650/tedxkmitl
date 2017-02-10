@@ -83,6 +83,14 @@ img#bars {
     z-index: 1;
     opacity: 0.5;
 }
+img#bars2{
+    min-width: 208px;
+    display: block;
+    z-index: 2;
+    opacity: 0.5;
+    margin-left: 128px;
+    margin-top: 34px;
+}
 @media screen and (max-width: 500px) {
     .tedxwhite {
         width: 100%;
