@@ -20,10 +20,8 @@ section#speaker h1{
     text-align: justify;
     z-index: 1;
 }
-#speakers img{
-    width: 290px;
-    height: 290px;
-    margin-top: 151px;
-    border: 8px solid #e62b1a ;
-    border-bottom-style:hidden;
-}  
+.person img{
+    min-width: 290px;
+    margin-top: 71px;
+
+}
