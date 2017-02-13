@@ -91,6 +91,19 @@ img#bars2{
     margin-left: 128px;
     margin-top: 34px;
 }
+footer {
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0 35px;
+    border-bottom: 3px solid #e62b1a;
+}
+#footer-contact {
+    margin-top: 18px;
+}
+img.footer-icon {
+    margin-top: -3px;
+}
 @media screen and (max-width: 500px) {
     .tedxwhite {
         width: 100%;
@@ -158,5 +171,11 @@ img#bars2{
     }
     section#main {
         min-height: 800px;
+    }
+    footer {
+        padding: 40px 0;
+    }
+    #footer-contact {
+        margin-top: 0;
     }
 }
