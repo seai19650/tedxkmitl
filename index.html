@@ -39,8 +39,10 @@
         <div class="hero-wrap" id="home">
             <img src="img/Living_out_loud.svg" alt="" class="living-out-loud">
             <picture>
-                <source type="image/webp" srcset="img/x-hero-lg.webp 1x, img/2x/x-hero-lg.webp 2x">
-                <source type="image/png" srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
+                <source type="image/webp" media="(max-width:639px)" srcset="img/2x/x-hero-sm.webp 2x">
+                <source type="image/webp" media="(min-width:640px)" srcset="img/2x/x-hero-lg.webp 2x">
+                <source media="(max-width:639px)" type="image/png" srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
+                <source media="(min-width:640px)" type="image/png" srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
                 <img src="img/x-hero-lg.png" alt="" class="x-hero">
             </picture>
         </div>
