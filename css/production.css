@@ -225,7 +225,7 @@ section#partner h1 {
     .tedx-vertical {
         margin-right: 20px;
     }
-    section#speaker {
+    section#speaker, section#event {
         padding: 40px 0;
     }
     section h1 {
