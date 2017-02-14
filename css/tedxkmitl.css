@@ -110,6 +110,11 @@ footer {
 img.footer-icon {
     margin-top: -3px;
 }
+@media screen and (max-width: 1182px) {
+    .top-bar {
+        padding: 2rem;
+    }
+}
 @media screen and (max-width: 1023px) {
     .hero-wrap {
         max-width: 610px;
