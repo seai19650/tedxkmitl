@@ -1,0 +1,73 @@
+section#teaser {
+    background: #000000;
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#teaser h1{
+    color: white;
+}
+section#speaker {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#speaker h1{
+    color: #e62b1a;
+    font-size: 3rem;
+    display: inline;
+    position: absolute;
+    text-align: justify;
+    z-index: 1;
+}
+.person img{
+    min-width: 290px;
+    margin-top: 71px;
+
+}
+section#event {
+    background: #000000;
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#event h1{
+    color: white;
+    font-size: 3rem;
+    display: inline;
+    text-align: justify;
+    z-index: 1;
+}
+.event {
+    margin-top: 71px;
+}
+.person h3{
+    padding-left: 40px;
+    padding-right: auto;
+    text-align: justify;
+}
+.person p{
+    padding-left: 50px;
+    padding-right: auto;
+}
+#pic_vi {
+    margin-top: 20px;
+     }
+#pic_vi p{
+    padding: 20px;
+    color: white;
+}
+section#partner{
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+section#partner h1{
+    font-size: 3rem;
+    display: inline;
+    text-align: justify;
+    z-index: 1;
+}
+#spon {
+    margin-top: 71px;
+}
