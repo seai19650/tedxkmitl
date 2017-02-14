@@ -1,3 +1,6 @@
+.row {
+    max-width: 70rem;
+}
 p {
     line-height: 23px;
 }
@@ -25,11 +28,11 @@ p {
 }
 section#main {
     background: #e62b1a;
-    min-height: 1056px;
     position: relative;
 }
 .hero-wrap {
-    margin-top: 50px;
+    margin: 50px auto 0;
+    max-width: 900px;
     position: relative;
 }
 img.x-hero {
@@ -47,13 +50,13 @@ img.living-out-loud {
     width: 394px;
     z-index: 2;
 }
-@media print, screen and (min-width: 40em) {
+@media screen and (min-width: 40em) {
     .top-bar-right {
         margin-top: 1.5em;
     }
 }
 .tedxwhite {
-    margin: 96px auto 0;
+    margin: 96px auto 90px;
     color: #fff;
     width: 610px;
     position: relative;
@@ -103,6 +106,11 @@ footer {
 }
 img.footer-icon {
     margin-top: -3px;
+}
+@media screen and (max-width: 1023px) {
+    .hero-wrap {
+        max-width: 610px;
+    }
 }
 @media screen and (max-width: 500px) {
     .tedxwhite {
@@ -168,9 +176,6 @@ img.footer-icon {
     img#bars {
         right: 15px;
         bottom: 6px;
-    }
-    section#main {
-        min-height: 800px;
     }
     footer {
         padding: 40px 0;
