@@ -37,7 +37,12 @@
             </div>
         </div>
         <div class="hero-wrap" id="home">
-            <img src="img/Living_out_loud.svg" alt="" class="living-out-loud">
+            <picture>
+                <source type="image/svg+xml" srcset="img/livin-out-loud.svg">
+                <source media="(max-width:639px)" srcset="img/livin-out-loud-sm.png 1x, img/2x/livin-out-loud-sm.png 2x">
+                <source media="(min-width:640px)" srcset="img/livin-out-loud-lg.png 1x, img/2x/livin-out-loud-lg.png 2x">
+                <img src="img/livin-out-loud.svg" alt="LIVIN OUT LOUD" class="living-out-loud">
+            </picture>
             <picture>
                 <source media="(max-width:639px)" type="image/png" srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
                 <source media="(min-width:640px)" type="image/png" srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
@@ -47,7 +52,11 @@
     </div>
     <div class="row" id="about">
         <div class="tedxwhite">
-            <img src="img/TEDx_Logo.svg" class="tedx-vertical">
+            <picture>
+                <source type="image/svg+xml" srcset="img/tedx-vertical.svg">
+                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
+                <img src="img/tedx-vertical.png" class="tedx-vertical">
+            </picture>
             <p> In the spirit of ideas worth spreading, TED has created a
                 program called TEDx. TEDx is a program of local, self-organized
                 events that bring people together to share a TED-like experience.
