@@ -6,7 +6,7 @@ section#teaser h1{
     color: white;
 }
 section#speaker {
-    padding: 80px 0 75px;
+    padding: 67px 0 58px;
 }
 section#speaker h1 {
     color: #e62b1a;
@@ -28,11 +28,15 @@ section#speaker h1 {
     margin-top: 35px;
     margin-bottom: 0;
     line-height: 0;
+    position: relative;
+    z-index: 2;
 }
 .person .speaker-last {
     margin-top: 0;
     margin-bottom: 0;
     color: #a9a9a9;
+    position: relative;
+    z-index: 1;
 }
 .person .speaker-position {
     font-weight: normal;
@@ -43,7 +47,7 @@ section#speaker h1 {
 section#event {
     background: #000000;
     min-height: auto;
-    padding: 90px 0;
+    padding: 67px 0;
 }
 section#event h1 {
     color: white;
