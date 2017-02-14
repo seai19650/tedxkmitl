@@ -20,7 +20,11 @@
         <div class="top-bar">
             <div class="top-bar-title">
                 <div class="nav-logo-bg">
-                    <img src="img/nav-on-w.svg" alt="TEDxKMITL">
+                    <picture>
+                        <source type="image/svg+xml" srcset="img/nav-on-w.svg">
+                        <source srcset="img/nav-on-w.png 1x, img/2x/nav-on-w.png 2x">
+                        <img src="img/nav-on-w.png" alt="TEDxKMITL">
+                    </picture>
                 </div>
                 <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger">
                     <button class="menu-icon" type="button" data-toggle></button>
@@ -50,7 +54,7 @@
             <picture>
                 <source media="(max-width:639px)" type="image/png" srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
                 <source media="(min-width:640px)" type="image/png" srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
-                <img src="img/x-hero-lg.png" alt="" class="x-hero">
+                <img src="img/x-hero-lg.png" class="x-hero">
             </picture>
         </div>
     </div>
