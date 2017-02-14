@@ -53,6 +53,18 @@ img.living-out-loud {
     width: 394px;
     z-index: 2;
 }
+img.hero-date-lg {
+    display: block;
+    position: absolute;
+    width: 290px;
+    z-index: 2;
+    right: 0;
+    bottom: 61px;
+}
+img.hero-date-md {
+    width: 290px;
+    margin-top: 86px;
+}
 @media screen and (min-width: 40em) {
     .top-bar-right {
         margin-top: 1.5em;
@@ -179,6 +191,10 @@ img.footer-icon {
     img.x-hero {
         margin-top: -270px;
         width: 320px;
+    }
+    img.hero-date-md {
+        width: 280px;
+        margin-top: 35px;
     }
     .tedxwhite {
         margin-top: 40px;
