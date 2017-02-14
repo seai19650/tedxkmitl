@@ -1,6 +1,5 @@
 section#teaser {
     background: #000000;
-    min-height: auto;
     padding-top: 90px;
     padding-bottom: 90px;
 }
@@ -8,30 +7,46 @@ section#teaser h1{
     color: white;
 }
 section#speaker {
-    min-height: auto;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 80px 0 75px;
 }
-section#speaker h1{
+section#speaker h1 {
     color: #e62b1a;
     font-size: 3rem;
-    display: inline;
     position: absolute;
     text-align: justify;
     z-index: 1;
 }
-.person img{
-    min-width: 290px;
-    margin-top: 71px;
-
+#speakers {
+    margin-top: 45px;
+}
+.person img {
+    width: 100%;
+}
+.person h2 {
+    font-size: 1.8rem;
+}
+.person .speaker-first {
+    margin-top: 35px;
+    margin-bottom: 0;
+    line-height: 0;
+}
+.person .speaker-last {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #a9a9a9;
+}
+.person .speaker-position {
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 1.3rem;
 }
 section#event {
     background: #000000;
     min-height: auto;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 90px 0;
 }
-section#event h1{
+section#event h1 {
     color: white;
     font-size: 3rem;
     display: inline;
@@ -41,28 +56,19 @@ section#event h1{
 .event {
     margin-top: 71px;
 }
-.person h3{
-    padding-left: 40px;
-    padding-right: auto;
-    text-align: justify;
-}
-.person p{
-    padding-left: 50px;
-    padding-right: auto;
-}
 #pic_vi {
     margin-top: 20px;
      }
-#pic_vi p{
+#pic_vi p {
     padding: 20px;
     color: white;
 }
-section#partner{
+section#partner {
     min-height: auto;
     padding-top: 90px;
     padding-bottom: 90px;
 }
-section#partner h1{
+section#partner h1 {
     font-size: 3rem;
     display: inline;
     text-align: justify;
@@ -70,4 +76,17 @@ section#partner h1{
 }
 #spon {
     margin-top: 71px;
+}
+@media screen and (max-width: 500px) {
+    section#speaker {
+        padding: 40px 0;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 900px) {
+    .person .speaker-first, .person .speaker-last {
+        font-size: 1.5rem;
+    }
+    .person .speaker-position {
+        font-size: 1rem;
+    }
 }
