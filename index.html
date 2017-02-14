@@ -29,12 +29,7 @@
             <div id="responsive-menu">
                 <div class="top-bar-right">
                     <ul class="menu vertical medium-horizontal">
-<<<<<<< HEAD
                         <li><a href="#">ABOUT</a></li>
-=======
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
->>>>>>> workspace_Foo
                         <li><a href="#speaker">SPEAKERS</a></li>
                         <li><a href="#event">EVENT</a></li>
                     </ul>
@@ -154,10 +149,11 @@
                 <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
             <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
                 <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div> --->
-            <div class="small-12 columns "><h2 style="color: white;" class="text-center">COMING SOON</h2></div>
+            <div class="small-12 columns ">
+                <h2 style="color: white;" class="text-center">COMING SOON</h2>
+            </div>
         </div>
     </div>
-
 </section>
 <!---
 <section id="partner">
@@ -175,7 +171,6 @@
 </section> ---->
 <footer>
     <div class="row text-center">
-        <a href="#home"><p class="text-center">HOME</p></a>
         <div class="small-12 medium-4 columns medium-text-left">
             <p>© TEDxKMITL</p>
             <p>This independent TEDx event is operated under license from TED.</p>
@@ -201,17 +196,15 @@
     $(document).foundation()
 </script>
 <script>
-    $(document).ready(function(){
-        $("a").on('click', function(event) {
+    $(document).ready(function () {
+        $("a").on('click', function (event) {
             if (this.hash !== "") {
                 event.preventDefault();
                 var hash = this.hash;
                 var go = $(hash).offset().top;
                 $('html, body').animate({
                     scrollTop: go
-                }, 800, function(){
-//        window.location.hash = hash;
-                })
+                }, 800)
             }
         });
     });
