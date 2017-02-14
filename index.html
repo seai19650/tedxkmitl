@@ -29,15 +29,15 @@
             <div id="responsive-menu">
                 <div class="top-bar-right">
                     <ul class="menu vertical medium-horizontal">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
                         <li><a href="#speaker">SPEAKERS</a></li>
                         <li><a href="#event">EVENT</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="hero-wrap">
+        <div class="hero-wrap" id="home">
             <img src="img/Living_out_loud.svg" alt="" class="living-out-loud">
             <picture>
                 <source srcset="img/x-hero-lg.webp 1x, img/2x/x-hero-lg.webp 2x">
@@ -46,7 +46,7 @@
             </picture>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="about">
         <div class="tedxwhite">
             <img src="img/TEDx_Logo.svg" class="tedx-vertical">
             <p> In the spirit of ideas worth spreading, TED has created a
@@ -171,6 +171,7 @@
 </section> ---->
 <footer>
     <div class="row text-center">
+        <a href="#home"><p class="text-center">HOME</p></a>
         <div class="small-12 medium-4 columns medium-text-left">
             <p>© TEDxKMITL</p>
             <p>This independent TEDx event is operated under license from TED.</p>
@@ -194,6 +195,22 @@
 <script src="js/vendor/foundation.min.js"></script>
 <script type="text/javascript">
     $(document).foundation()
+</script>
+<script>
+    $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                var go = $(hash).offset().top;
+                $('html, body').animate({
+                    scrollTop: go
+                }, 800, function(){
+//        window.location.hash = hash;
+                })
+            }
+        });
+    });
 </script>
 </body>
 </html>
