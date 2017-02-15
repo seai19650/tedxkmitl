@@ -26,6 +26,9 @@ p {
 .top-bar ul.menu li a {
     color: #fff;
 }
+.top-bar ul.menu li a:hover {
+    color: #000;
+}
 .top-bar ul {
     background: transparent;
 }
@@ -64,11 +67,6 @@ img.hero-date-lg {
 img.hero-date-md {
     width: 290px;
     margin-top: 86px;
-}
-@media screen and (min-width: 40em) {
-    .top-bar-right {
-        margin-top: 1.5em;
-    }
 }
 .tedxwhite {
     margin: 86px auto 90px;
@@ -118,6 +116,12 @@ footer {
 }
 #footer-contact {
     margin-top: 18px;
+}
+#footer-contact a {
+    color: #fff;
+}
+#footer-contact a:hover, #footer-contact a:focus {
+    color: #a3a3a3;
 }
 img.footer-icon {
     margin-top: -3px;
@@ -204,6 +208,18 @@ section#partner h1 {
 #spon {
     margin-top: 71px;
 }
+@media screen and (min-width: 40em) {
+    .top-bar-right {
+        margin-top: 1.5em;
+    }
+    .no-js .top-bar {
+        display: block;
+    }
+
+    .no-js .title-bar {
+        display: none;
+    }
+}
 @media screen and (max-width: 1182px) {
     .top-bar {
         padding: 2rem;
@@ -246,6 +262,7 @@ section#partner h1 {
 @media screen and (max-width: 639px) {
     .top-bar {
         padding-top: 30px;
+        padding-bottom: 12px;
     }
     .top-bar-right ul.menu {
         text-align: center;
