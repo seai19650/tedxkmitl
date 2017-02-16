@@ -77,7 +77,7 @@ img.hero-date-md {
     position: relative;
 }
 .tedxwhite img.tedx-vertical {
-    width: 50px;
+    width: 44px;
     display: inline;
     position: relative;
     left: 0;
@@ -95,7 +95,7 @@ img.hero-date-md {
 img#bars {
     max-width: 370px;
     display: block;
-    bottom: -3px;
+    bottom: 0;
     right: 0;
     position: absolute;
     z-index: 1;
@@ -329,6 +329,7 @@ section#partner h1 {
     .tedxwhite p {
         display: block;
         position: relative;
+        width: 100%;
     }
     img#bars {
         right: 15px;
