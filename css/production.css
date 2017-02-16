@@ -46,7 +46,8 @@ img.x-hero {
     display: block;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
+    /* DEFAULT WITH DATE margin: 0 auto;*/
+    margin: 0 0 auto auto;
     position: static;
     z-index: 1;
 }
@@ -306,7 +307,8 @@ section#partner h1 {
         position: relative;
     }
     img.x-hero {
-        margin-top: -270px;
+        /* DEFAULT margin-top: -270px;*/
+        margin: -270px auto 0;
         width: 320px;
     }
     img.hero-date-md {
@@ -345,5 +347,11 @@ section#partner h1 {
     }
     .person .speaker-position {
         font-size: 1rem;
+    }
+    .nav-logo-bg img {
+        width: 140px;
+    }
+    .top-bar ul.menu li {
+        font-size: 12px;
     }
 }
