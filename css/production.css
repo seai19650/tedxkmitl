@@ -35,6 +35,7 @@ p {
 section#main {
     background: #e62b1a;
     position: relative;
+
 }
 .hero-wrap {
     margin: 50px auto 0;
@@ -69,7 +70,7 @@ img.hero-date-md {
     margin-top: 86px;
 }
 .tedxwhite {
-    margin: 86px auto 90px;
+    margin: 86px auto 68px;
     color: #fff;
     width: 610px;
     position: relative;
@@ -208,6 +209,13 @@ section#partner h1 {
 #spon {
     margin-top: 71px;
 }
+.aboutted {
+    padding-bottom: 68px;
+    text-align: justify;
+    color: #fff;
+}
+
+/*MEDIA ZONE*/
 @media screen and (min-width: 40em) {
     .top-bar-right {
         margin-top: 1.5em;
@@ -258,6 +266,10 @@ section#partner h1 {
     section#teaser {
         padding: 25px 0 9px;
     }
+    .aboutted {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 @media screen and (max-width: 639px) {
     .top-bar {
@@ -302,8 +314,8 @@ section#partner h1 {
         margin-top: 35px;
     }
     .tedxwhite {
-        margin-top: 40px;
-        margin-bottom: 50px;
+        margin-top: 45px;
+        margin-bottom: 30px;
         width: 95%;
     }
     img.tedx-vertical {
@@ -322,6 +334,9 @@ section#partner h1 {
     }
     #footer-contact {
         margin-top: 0;
+    }
+    .aboutted {
+        padding-bottom: 35px;
     }
 }
 @media screen and (min-width: 640px) and (max-width: 900px) {
