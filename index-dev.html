@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+    <!--[if lte IE 9]>
+    <link href='/PATH/TO/FOLDER/css/animations-ie-fix.css' rel='stylesheet'>
+    <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +20,7 @@
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/production.min.css">
+    <link rel="stylesheet" href="css/animations.min.css">
     <script>
         document.createElement("picture");
     </script>
@@ -96,8 +100,8 @@
             </picture>
         </div>
     </div>
-    <div class="row aboutted">
-        <div class="small-12 medium-7 medium-offset-1 columns">
+    <div class="row aboutted animatedParent animateOnce">
+        <div class="small-12 medium-7 medium-offset-1 columns animated fadeInLeft">
             <strong>TED (Technology, Entertainment, and Design)</strong> is a non-profit media organization which posts
             talks online for free distribution, under the slogan "ideas worth sharing". TED was founded in February 1984
             as a conference, which has been held annually since 1990. TED's early emphasis was technology and design,
@@ -105,8 +109,8 @@
             scientific, cultural, and academic topics.
         </div>
     </div>
-    <div class="row aboutted">
-        <div class="small-12 medium-7 medium-offset-4 columns">
+    <div class="row aboutted animatedParent animateOnce">
+        <div class="small-12 medium-7 medium-offset-4 columns animated fadeInRight delay-250">
             In the spirit of ideas worth spreading, TED has created a program called <strong>TEDx</strong>. TEDx is a
             program of local, self-organized events that bring people together to share a TED-like experience. Our event
             is called TEDxKMITL, where x = independently organized TED event. At our TEDxKMITL event, TEDTalks video and
@@ -129,8 +133,8 @@
 </section>
 <section id="speaker">
     <div class="row">
-        <div class="small-12 medium-4 columns">
-            <h1>SPEAKERS</h1>
+        <div class="small-12 medium-4 columns animatedParent animateOnce">
+            <h1 class="animated fadeInLeft">SPEAKERS</h1>
             <picture>
                 <source srcset="img/Bars.svg">
                 <source srcset="img/Bars.png 1x, img/2x/Bars.png 2x">
@@ -139,30 +143,30 @@
         </div>
     </div>
     <div class="row" id="speakers">
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 large-4 columns person animatedParent animateOnce">
             <picture>
                 <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center" alt="Speaker"
+                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
             <h2 class="speaker-first">COMING</h2>
             <h2 class="speaker-last">SOOOOON</h2>
             <h3 class="speaker-position">Coming soon</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
+        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
             <picture>
                 <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center" alt="Speaker"
+                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
             <h2 class="speaker-first">COMING</h2>
             <h2 class="speaker-last">SOOOOON</h2>
             <h3 class="speaker-position">Coming soon</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
+        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
             <picture>
                 <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center" alt="Speaker"
+                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
             <h2 class="speaker-first">COMING</h2>
@@ -181,8 +185,8 @@
 </section>
 <section id="event">
     <div class="row">
-        <div class="small-4 columns">
-            <h1>SCHEDULE</h1>
+        <div class="small-4 columns animatedParent animateOnce">
+            <h1 class="animated fadeInLeft">SCHEDULE</h1>
         </div>
     </div>
     <div class="event">
@@ -239,6 +243,7 @@
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="js/vendor/what-input.min.js"></script>
 <script src="js/vendor/foundation.min.js"></script>
+<script src="js/css3-animate-it.min.js" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
