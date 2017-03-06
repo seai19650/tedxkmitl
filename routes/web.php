@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('index');
 });
+Route::get('/pay', function () {
+    return view('test-pay');
+});
