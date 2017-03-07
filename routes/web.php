@@ -20,3 +20,7 @@ Route::get('/index', function () {
 Route::get('/dev', function () {
     return view('index-dev');
 });
+
+Route::get('/id/{id}', function ($id) {
+    return view('id')->with('id', $id);
+});
