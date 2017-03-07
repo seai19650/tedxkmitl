@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function () {
+Route::get('/index', function () {
     return view('index');
+});
+Route::get('/dev', function () {
+    return view('index-dev');
 });
