@@ -18,6 +18,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('token');
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }
