@@ -24,3 +24,9 @@ Route::get('/dev', function () {
 Route::get('/id/{id}', function ($id) {
     return view('id')->with('id', $id);
 });
+
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+Route::resource('/register', 'RegistrationController');
