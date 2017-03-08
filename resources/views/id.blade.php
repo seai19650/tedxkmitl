@@ -29,8 +29,8 @@
 </head>
 <body>
   <div class="row">
-    <h1>Hi {!! $id !!}!</h1>
-    {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$id); !!}
+    <h1>Hi {!! $applicant->first_name !!}!</h1>
+    {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
     <p>Please bring this QR code to the event for check-in!</p>
   </div>
 <script src="js/vendor/jquery-2.2.4.min.js"></script>

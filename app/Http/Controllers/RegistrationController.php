@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Registration;
 
 class RegistrationController extends Controller
 {
@@ -13,7 +14,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        //
+        return view('register');
     }
 
     /**
@@ -35,17 +36,16 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $user = new User;
+        $this->validate(request(),[
+          'first_name' => 'required',
+          'last_name' => 'required',
+        ]);
 
-    $user->first_name = $request->get('first_name');
-    $user->last_name = $request->get('last_name');
-
-    $user->save();
-
-    return \Redirect::route('/show',
-        array($user->id))
-        ->with('message', 'Your category has been created!');
+        $applicant = new Registration;
+        $applicant->fill($request->all());
+        $applicant->token = $applicant->random_gen();
+        $applicant->save();
+        return redirect('/id/'.$applicant->token);
     }
 
     /**
