@@ -41,6 +41,7 @@ class RegistrationController extends Controller
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();
         $applicant->save();
+        return redirect('/id/'.$applicant->token);
     }
 
     /**
