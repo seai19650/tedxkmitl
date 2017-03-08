@@ -269,10 +269,10 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="js/vendor/what-input.min.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script src="js/css3-animate-it.min.js" async></script>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
