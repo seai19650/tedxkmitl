@@ -66,7 +66,7 @@
                 <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
                 <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
             </picture>
-            <a href="#" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>
+            <a data-open="regisModal" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>
             <picture>
                 <source media="(max-width:639px)" type="image/png"
                         srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
@@ -81,7 +81,7 @@
             <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
             <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
-        <a href="#" class="button ghost white large" id="cta-regis-md">REGISTER</a>
+        <a data-open="regisModal" class="button ghost white large" id="cta-regis-md">REGISTER</a>
     </div>
     <div class="row" id="about">
         <div class="tedxwhite">
@@ -235,6 +235,40 @@
         </div>
     </div>
 </footer>
+<div class="reveal large" id="regisModal" data-reveal>
+    <form action="">
+        <div class="row">
+            <div class="small-12 columns">
+                <h1>Register</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-4 columns">
+                <label for="first_name">First name (English)
+                    <input type="text" name="first_name">
+                </label>
+            </div>
+            <div class="small-12 medium-5 columns">
+                <label for="last_name">Last name (English)
+                    <input type="text" name="last_name">
+                </label>
+            </div>
+            <div class="small-12 medium-3 columns">
+                <label for="nickname">Nickname (English)
+                    <input type="text" name="nickname">
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-3 large-2 columns">
+                <button class="button ghost primary expanded">Submit</button>
+            </div>
+        </div>
+    </form>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 <script src="js/vendor/jquery-2.2.4.min.js"></script>
 <script src="js/vendor/what-input.min.js"></script>
 <script src="js/vendor/foundation.min.js"></script>
@@ -258,10 +292,10 @@
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
+                m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
@@ -282,5 +316,20 @@
         a.appendChild(r);
     })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "EducationEvent",
+  "name": "TEDxKMITL",
+  "url": "http://tedxkmitl.com",
+  "startDate": "2017-04-22",
+  "eventStatus": "EventScheduled",
+  "location": {
+     "@type": "Place",
+     "name": "Fac. of Engineering, KMITL",
+     "address": "Lad Krabang, Thailand"
+  }
+}
+</script>
 </body>
 </html>
