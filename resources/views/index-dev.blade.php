@@ -17,14 +17,14 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/production.min.css">
-    <link rel="stylesheet" href="css/animations.min.css">
+    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animations.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="{{asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 <section id="main">
@@ -62,10 +62,10 @@
                         srcset="img/livin-out-loud-lg.png 1x, img/2x/livin-out-loud-lg.png 2x">
                 <img src="img/livin-out-loud.svg" alt="LIVIN OUT LOUD" class="living-out-loud">
             </picture>
-            <!--<picture>
+            <picture>
                 <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
                 <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
-            </picture>-->
+            </picture>
             <picture>
                 <source media="(max-width:639px)" type="image/png"
                         srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
@@ -75,12 +75,12 @@
             </picture>
         </div>
     </div>
-    <!--<div class="row hide-for-large">
+    <div class="row hide-for-large">
         <picture>
             <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
             <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
-    </div>-->
+    </div>
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
@@ -191,13 +191,6 @@
     </div>
     <div class="event">
         <div class="row" id="pic_vi">
-            <!---
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div> --->
             <div class="small-12 columns ">
                 <h2 style="color: white;" class="text-center">COMING SOON</h2>
             </div>
