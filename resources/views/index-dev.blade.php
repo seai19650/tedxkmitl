@@ -66,6 +66,7 @@
                 <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
                 <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
             </picture>
+            <a href="#" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>
             <picture>
                 <source media="(max-width:639px)" type="image/png"
                         srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
@@ -80,6 +81,7 @@
             <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
             <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
+        <a href="#" class="button ghost white large" id="cta-regis-md">REGISTER</a>
     </div>
     <div class="row" id="about">
         <div class="tedxwhite">
