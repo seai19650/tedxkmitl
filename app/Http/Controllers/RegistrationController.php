@@ -36,8 +36,12 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(),[
+          'first_name' => 'required',
+          'last_name' => 'required',
+        ]);
+
         $applicant = new Registration;
-        $applicant->first_name = $request->input('first_name');
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();
         $applicant->save();
