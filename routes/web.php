@@ -21,9 +21,7 @@ Route::get('/dev', function () {
     return view('index-dev');
 });
 
-Route::get('/id/{id}', function ($id) {
-    return view('id')->with('id', $id);
-});
+Route::get('/id/{token}', 'IdController@index');
 
 // Route::get('/register', function () {
 //     return view('register');
