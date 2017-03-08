@@ -17,14 +17,15 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
 Route::get('/dev', function () {
     return view('index-dev');
 });
 
 Route::get('/id/{token}', 'IdController@index');
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
-
 Route::resource('/register', 'RegistrationController');
+
+Route::get('/pay', function () {
+    return view('test-pay');
+});
