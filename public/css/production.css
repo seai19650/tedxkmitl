@@ -68,11 +68,36 @@ img.hero-date-lg {
     width: 290px;
     z-index: 2;
     right: 0;
-    bottom: 61px;
+    bottom: 220px;
 }
 img.hero-date-md {
     width: 290px;
     margin-top: 86px;
+}
+a.button.ghost {
+    border: 4px solid #e62b1a;
+    font-weight: bold;
+}
+a.button.ghost.white {
+    border-color: #fff;
+}
+a.button.ghost.white:hover, a.button.ghost.white:focus {
+    background: #fff;
+    color: #e62b1a;
+}
+a#cta-regis-lg {
+    display: block;
+    position: absolute;
+    width: 200px;
+    margin: 0;
+    z-index: 2;
+    right: 0;
+    bottom: 134px;
+}
+a#cta-regis-md {
+    display: block;
+    width: 290px;
+    margin: 20px auto 0;
 }
 .tedxwhite {
     margin: 86px auto 68px;
