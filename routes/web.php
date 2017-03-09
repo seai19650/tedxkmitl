@@ -28,6 +28,8 @@ Route::resource('/register', 'RegistrationController');
 
 Route::get('/pay/{token}', 'PayController@index');
 
+Route::post('/pay', 'PayController@get_token');
+
 Route::get('/console', function () {
     return view('console.admin');
 });
