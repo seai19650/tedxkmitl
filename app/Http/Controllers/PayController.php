@@ -14,6 +14,18 @@ class PayController extends Controller
     }
 
     public function get_token(Request $request) {
-        dd($request);
+        $omise_token = $request->input('omiseToken');
+        $key = "skey_test_578ip3jv9xxj0hdbfkz";
+        $client = new \GuzzleHttp\Client();
+        $res = $client->post( 'https://api.omise.co/charges',
+            [
+                'auth' => [$key, ''],
+                'form_params' => [
+                    'amount' => '10000',
+                    'currency' => 'thb',
+                    'card' => $omise_token]
+            ]
+            );
+        return '<pre>'.$res->getBody().'</pre>';
     }
 }
