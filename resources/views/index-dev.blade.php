@@ -6,12 +6,13 @@
     this file will break! -->
 
     <!--[if lte IE 9]>
-    <link href='/PATH/TO/FOLDER/css/animations-ie-fix.css' rel='stylesheet'>
+        <style>.animated{opacity:1;}</style>
     <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
+    <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po" />
     <meta name="theme-color" content="#e62b1a">
     <meta property="og:image" content="img/ogimage.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -106,7 +107,7 @@
             </picture>
         </div>
     </div>
-    <div class="row aboutted animatedParent animateOnce">
+    <div class="row aboutted animatedParent animateOnce hide-for-small-only">
         <div class="small-12 medium-7 medium-offset-1 columns animated fadeInLeft">
             <strong>TED (Technology, Entertainment, and Design)</strong> is a non-profit media organization which posts
             talks online for free distribution, under the slogan "ideas worth sharing". TED was founded in February 1984
