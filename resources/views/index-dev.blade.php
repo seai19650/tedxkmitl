@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 
-    <!-- developing process is now on! asset is used so with http on the local host,
+    <!-- developing process is now on! secure_asset is used so with http on the local host,
     this file will break! -->
 
     <!--[if lte IE 9]>
@@ -21,14 +21,14 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animations.min.css')}}">
+    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/animations.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="{{asset('js/picturefill.min.js')}}" async></script>
+    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 <section id="main">
@@ -273,10 +273,10 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{asset('js/css3-animate-it.min.js')}}" async></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
