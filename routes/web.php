@@ -26,9 +26,7 @@ Route::get('/id/{token}', 'IdController@index');
 
 Route::resource('/register', 'RegistrationController');
 
-Route::get('/pay', function () {
-    return view('test-pay');
-});
+Route::get('/pay/{token}', 'PayController@index');
 
 Route::get('/console', function () {
     return view('console.admin');
