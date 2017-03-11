@@ -8,6 +8,10 @@ class Registration extends Model
 {
     protected $guarded = [];
 
+    public function question() {
+        return $this->hasOne(Question::class);
+    }
+
     public function random_gen() {
       $name = $this->first_name;
       $time = $this->created_at;
