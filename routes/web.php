@@ -22,13 +22,21 @@ Route::get('/dev', function () {
     return view('index-dev');
 });
 
+Route::get('/register/th', function () {
+    return view('register-th');
+});
+
+Route::get('/register/en', function () {
+    return view('register-en');
+});
+
 Route::get('/id/{token}', 'IdController@index');
 
 Route::resource('/register', 'RegistrationController');
 
-Route::get('/pay', function () {
-    return view('test-pay');
-});
+Route::get('/pay/{token}', 'PayController@index');
+
+Route::post('/pay', 'PayController@get_token');
 
 Route::get('/console', function () {
     return view('console.admin');
