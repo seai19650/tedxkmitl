@@ -15,6 +15,30 @@
         <h1 class="regis-header">TEDxKMITL Registration</h1>
     </div>
 </div>
+<div class="row">
+    <div class="small-12 columns">
+        <div class="card">
+            <div class="card-section">
+                <p>TEDxKMITL จะจัดขึ้นในวันที่ 22 เมษายน 2560 ณ หอประชุมใหญ่คณะวิศวกรรมศาสตร์
+                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                <p><strong>ราคาบัตร</strong></p>
+                <ul>
+                    <li>นักเรียน นักศึกษา (ไม่เกินระดับปริญญาตรี) 250 บาท</li>
+                    <li>บุคคลทั่วไป 500 บาท</li>
+                    <li>Angel 1000 บาท</li>
+                </ul>
+                <p>(บัตรชนิด Angel เป็นบัตรสำหรับการแบ่งปัน
+                    นั่นหมายถึงเมื่อคุณซื้อบัตรชนิดนี้คุณได้มอบโอกาสให้กับผู้คนที่มีบทบาทในการพัฒนาและกระตุ้นให้สังคมมีการเปลี่ยนแปลงไปในทิศทางที่ดีขึ้น
+                    บุคคลเหล่านั้น จะถูกคัดเลือกจากผลจากการพัฒนาสังคมที่มีประสิทธิภาพ และการจัดการที่มีผลชัดเจน เช่น
+                    คุณครูในพื้นที่ห่างไกล บุคคลที่ทำค่ายอาสา หรือ บุคคลจากมูลนิธิต่างๆ)</p>
+                <p>จำกัดผู้เข้าร่วมเพียง 100 ท่าน ระยะเวลาการสมัครถึงวันที่ 20 มีนาคม 2560 เวลา 23.59 น.</p>
+                <p>*ผู้ที่ผ่านการคัดเลือกจะได้รับอีเมล์ยืนยันจาก tedxkmitl@gmail.com พร้อมรายละเอียดการชำระเงิน
+                    โดยจะต้องโอนเงินภายใน 3 วันนับจากได้รับอีเมล ไม่เช่นนั้นจะถือว่าสละสิทธิ์</p>
+                <p>ติดต่อสอบถาม tedxkmitl@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
 <form action="">
     <div class="row">
         <div class="small-12 medium-6 columns">
@@ -58,10 +82,13 @@
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <legend>เพศ</legend>
-            <input type="radio" name="gender" value="male" id="genderMale" required><label for="genderMale">ชาย</label>
-            <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">หญิง</label>
-            <input type="radio" name="gender" value="unisex" id="genderUnisex"><label for="genderUnisex">เพศทางเลือก</label>
+            <label>เพศ
+                <select name="gender">
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="unisex">เพศทางเลือก</option>
+                </select>
+            </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="occupation">อาชีพ
@@ -76,6 +103,52 @@
                     <option value="student">Angel</option>
                 </select>
             </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <label>ความฝันตอนนี้ของคุณคืออะไร อธิบายให้เราฟังหน่อย
+                <textarea name="q1" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 large-6 columns">
+            <label>นิยามของ Living Out Loud ของคุณคืออะไร
+                <textarea name="q2" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 large-6 columns">
+            <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
+                <textarea name="q3" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 large-6 columns">
+            <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
+                <textarea name="q4" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 large-6 columns">
+            <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
+                <textarea name="q5" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 large-6 columns">
+            <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
+                <textarea name="q6" rows="4"></textarea>
+            </label>
+        </div>
+        <div class="small-12 columns">
+            <div class="card">
+                <div class="card-section">
+                    <p>เมื่อคุณกดปุ่มส่งข้อมูล หมายความว่าคุณยอมรับเงื่อนไขดังนี้</p>
+                    <ul>
+                        <li>ฉันสามารถเข้าร่วมงานTEDxKMITLในวันที่ 22 เมษายน 2560</li>
+                        <li>ฉันเต็มใจที่จะจ่ายค่าบัตรสำหรับเข้าร่วมงานTEDxKMITL ตามราคาบัตรที่ระบุไว้</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 columns">
+            <a class="button ghost primary">ส่งข้อมูล</a>
         </div>
     </div>
 </form>
