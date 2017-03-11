@@ -39,7 +39,8 @@
         </div>
     </div>
 </div>
-<form action="">
+<form name="apply" action="/apply" method="post">
+    {{ csrf_field() }}
     <div class="row">
         <div class="small-12 medium-6 columns">
             <label for="th_firstname">ชื่อจริง
@@ -148,7 +149,7 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <a class="button ghost primary">ส่งข้อมูล</a>
+            <button class="button ghost primary" type="submit">ส่งข้อมูล</>
         </div>
     </div>
 </form>

@@ -22,17 +22,17 @@ Route::get('/dev', function () {
     return view('index-dev');
 });
 
-Route::get('/register/th', function () {
+Route::get('/apply/th', function () {
     return view('register-th');
 });
 
-Route::get('/register/en', function () {
+Route::get('/apply/en', function () {
     return view('register-en');
 });
 
 Route::get('/id/{token}', 'IdController@index');
 
-Route::resource('/register', 'RegistrationController');
+Route::post('/apply', 'RegistrationController@store');
 
 Route::get('/pay/{token}', 'PayController@index');
 
