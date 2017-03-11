@@ -253,6 +253,13 @@ section#partner h1 {
     color: #fff;
 }
 
+/* Registration Page */
+
+h1.regis-header {
+    margin: 50px 0;
+    color: #e62b1a;
+}
+
 /*MEDIA ZONE*/
 @media screen and (min-width: 40em) {
     .top-bar-right {
