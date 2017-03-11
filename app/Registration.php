@@ -8,8 +8,12 @@ class Registration extends Model
 {
     protected $guarded = [];
 
-    public function question() {
-        return $this->hasOne(Question::class);
+    public function questions() {
+        return $this->hasMany(Question::class);
+    }
+
+    public function answers() {
+        return $this->hasMany(Answer::class);
     }
 
     public function random_gen() {
