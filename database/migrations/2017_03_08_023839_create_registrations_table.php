@@ -23,7 +23,6 @@ class CreateRegistrationsTable extends Migration
             $table->string('email');
             $table->string('occupation');
             $table->string('ticket');
-            $table->bool('accept');
             $table->string('token');
             $table->timestamps();
         });
