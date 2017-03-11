@@ -17,9 +17,64 @@
 </div>
 <form action="">
     <div class="row">
-        <div class="small-12 columns">
-            <label for="firstname">First name
+        <div class="small-12 medium-6 columns">
+            <label for="th_firstname">ชื่อจริง
+                <input type="text" name="th_firstname">
+            </label>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <label for="th_lastname">นามสกุล
+                <input type="text" name="th_lastname">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="firstname">ชื่อจริง (ภาษาอังกฤษ)
                 <input type="text" name="firstname">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="lastname">นามสกุล (ภาษาอังกฤษ)
+                <input type="text" name="lastname">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="nickname">ชื่อเล่น (ภาษาอังกฤษ)
+                <input type="text" name="nickname">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="email">อีเมล
+                <input type="text" name="email">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="mobile">โทรศัพท์มือถือ
+                <input type="text" name="mobile">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="age">อายุ
+                <input type="text" name="age">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <legend>เพศ</legend>
+            <input type="radio" name="gender" value="male" id="genderMale" required><label for="genderMale">ชาย</label>
+            <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">หญิง</label>
+            <input type="radio" name="gender" value="unisex" id="genderUnisex"><label for="genderUnisex">เพศทางเลือก</label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label for="occupation">อาชีพ
+                <input type="text" name="occupation">
+            </label>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <label>ประเภทของบัตร
+                <select name="ticket_type">
+                    <option value="student">นักเรียน/นักศึกษา</option>
+                    <option value="student">บุคคลทั่วไป</option>
+                    <option value="student">Angel</option>
+                </select>
             </label>
         </div>
     </div>
