@@ -140,10 +140,10 @@
         </div>
         <fieldset class="small-12 columns">
             <legend>Agreement</legend>
-            <input id="agreement1" type="checkbox"><label for="agreement1">I can attend TEDxKMITL event on April 22,
+            <input name="agreement1" id="agreement1" type="checkbox" value="1"><label for="agreement1">I can attend TEDxKMITL event on April 22,
                 2017.</label>
             <br>
-            <input id="agreement2" type="checkbox"><label for="agreement2"> I am willing to make a payment to join
+            <input name="agreement2" id="agreement2" type="checkbox" value="1"><label for="agreement2"> I am willing to make a payment to join
                 TEDxKMITL according to the ticket rates.</label>
         </fieldset>
         <div class="columns">
