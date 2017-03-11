@@ -29,3 +29,16 @@ Route::resource('/register', 'RegistrationController');
 Route::get('/pay', function () {
     return view('test-pay');
 });
+
+Route::get('/console', function () {
+    return view('console.admin');
+});
+
+// Route::get('email', function(){
+// 	Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+// 	{
+// 		$message->to('demmyseai@gmail.com');
+// 	});
+// });
+
+Route::get('email', 'EmailController@build');

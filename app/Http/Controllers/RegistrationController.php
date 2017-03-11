@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Registration;
+use App\Mail\Respond;
 
 class RegistrationController extends Controller
 {
@@ -45,7 +46,10 @@ class RegistrationController extends Controller
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();
         $applicant->save();
-        return redirect('/id/'.$applicant->token);
+
+        \Mail::to($applicant->email)->send(new Respond($applicant));
+
+        return redirect('index-dev');
     }
 
     /**
