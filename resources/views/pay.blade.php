@@ -8,7 +8,7 @@
     <title>Test Omise Payment</title>
 </head>
 <body>
-<form name="checkoutForm" method="get" action="charge.php" id="card">
+<form name="checkoutForm" method="post" action="/pay" id="card">
     {{--<label for="name">Name</label>
     <input type="text" name="name"><br>
     <label for="number">Card number</label>
@@ -20,9 +20,11 @@
     <label for="security_code">Security code</label>
     <input type="text" name="security_code">
     <button type="submit">Pay</button>--}}
+    {{ csrf_field() }}
+    <input type="hidden" name="token" value="{{ $applicant->token }}">
     <input type="hidden" name="description" value="Product order ฿100.25" />
     <script type="text/javascript" src="https://cdn.omise.co/card.js"
-            data-key="pkey_test_577rpjrv4ksiu89h2w9"
+            data-key="pkey_test_578ip3jugmdf3x69z9w"
             data-frame-label="TEDxKMITL"
             data-image="https://cdn.omise.co/assets/dashboard/images/omise-logo.png"
             data-button-label="Pay now"
