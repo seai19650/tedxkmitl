@@ -33,3 +33,7 @@ Route::get('/pay', function () {
 Route::get('/console', function () {
     return view('console.admin');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
