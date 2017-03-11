@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/index', function () {
     return view('index');
@@ -41,3 +41,7 @@ Route::post('/pay', 'PayController@get_token');
 Route::get('/console', function () {
     return view('console.admin');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
