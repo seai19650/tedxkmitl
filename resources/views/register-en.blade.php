@@ -19,27 +19,28 @@
             <div class="card-section">
                 <p class="text-justify">TEDxKMITL will be held on April 22nd, 2017. </p>
                 <p class="text-justify">At Auditorium, Faculty of Engineering, KMITL </p>
-                <p class="text-justify">Ticket Prices</p>
+                <strong>Ticket Prices</strong>
+
+                <ul>
+                    <li>Student (Undergraduate or any level below) THB 250</li>
+                    <li>General Public THB 500</li>
+                    <li>Angel Ticket THB 1000</li>
+                </ul>
                 <p class="text-justify">
-                    Student (Undergraduate or any level below) THB 250 </p>
-                <p class="text-justify"> General Public THB 500 </p>
-                <p class="text-justify"> Angel Ticket THB 1000
-                    (This
-                    ticket
-                    is a ticket of give that mean when you purchase this ticket you will give an opportunity to a change
-                    maker
-                    who will be a part of TEDxKMITL. The receivers are those who work in organizations for society or
-                    those
-                    who
-                    can potentially spark changes in the society. They will be nominated by impactful organization as
-                    well
-                    as
-                    society development associates such as teachers in remote areas, volunteer camps, and
-                    foundation.)</p>
+                <span style="margin-right:-3px">(</span> Angel ticket
+                is a ticket of give that mean when you purchase this ticket you will give an opportunity to a change
+                maker
+                who will be a part of TEDxKMITL. The receivers are those who work in organizations for society or
+                those
+                who
+                can potentially spark changes in the society. They will be nominated by impactful organization as
+                well
+                as
+                society development associates such as teachers in remote areas, volunteer camps, and
+                foundation.)</p>
                 <p class="text-justify">Only 100 seats are available The application is available until March 20, 2017,
-                    23.59 GMT+7</p>
-                <p class="text-justify">The successful applicants</p>
-                <p class="text-justify">will receive a confirmation email enclosed with payment details from
+                    23.59 GMT+7.</p>
+                <p class="text-justify">The successful applicants will receive a confirmation email enclosed with payment details from
                     tedxkmitl@gmail.com</p>
             </div>
         </div>
@@ -138,14 +139,26 @@
                 <textarea placeholder="None" rows="4" name="q6"></textarea>
             </label>
         </div>
-        <fieldset class="small-12 columns">
-            <legend>Agreement</legend>
-            <input name="agreement1" id="agreement1" type="checkbox" value="1"><label for="agreement1">I can attend TEDxKMITL event on April 22,
-                2017.</label>
-            <br>
-            <input name="agreement2" id="agreement2" type="checkbox" value="1"><label for="agreement2"> I am willing to make a payment to join
-                TEDxKMITL according to the ticket rates.</label>
-        </fieldset>
+        <div class="small-12 columns">
+            <div class="card">
+                <div class="card-section">
+                    <p>When you click submit button mean YOU ACCEPT AGREEMENT.</p>
+                    <ul>
+                        <li>I can attend TEDxKMITL event on April 22,
+                            2017.
+                        </li>
+                        <li>I am willing to make a payment to join
+                            TEDxKMITL according to the ticket rates.
+                        </li>
+                        <li>
+                            *The payment must be made within three days after the date the applicants have received a
+                            confirmation email; otherwise, they will be disqualified from the audience selection
+                            process.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="columns">
             <a class="button ghost primary ">SUBMIT</a>
         </div>
