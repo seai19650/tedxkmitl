@@ -11,7 +11,7 @@
     <img src="{{asset('img/nav-on-w.png')}}" alt="TEDxKMITL" id="logo">
     <h1>Information Received</h1>
     <hr>
-    <p class="sign-off">Dear Steve,</p>
+    <p class="sign-off">Dear {{ $applicant->firstname }},</p>
     <p>Thank you for your interest in our TEDxKMITL event.</p>
     <p>We would like to inform you that your application for TEDxKMITL 2017 has successfully been recorded in our
         system.</p>
