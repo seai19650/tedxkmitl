@@ -50,8 +50,8 @@ img.x-hero {
     display: block;
     width: 100%;
     max-width: 500px;
-    /* DEFAULT WITH DATE margin: 0 auto;*/
-    margin: 0 0 auto auto;
+    margin: 0 auto;
+    /* no date margin: 0 0 auto auto;*/
     position: static;
     z-index: 1;
 }
@@ -68,11 +68,50 @@ img.hero-date-lg {
     width: 290px;
     z-index: 2;
     right: 0;
-    bottom: 61px;
+    bottom: 220px;
 }
 img.hero-date-md {
     width: 290px;
     margin-top: 86px;
+}
+a.button.ghost, button.button.ghost {
+    border: 4px solid #e62b1a;
+    color: #e62b1a;
+    background: none;
+    font-weight: bold;
+}
+.button.ghost.primary:hover, .button.ghost.primary:focus {
+    background: #e62b1a;
+    border-color: #e62b1a;
+    color: #fff;
+}
+a.button.ghost.white {
+    border-color: #fff;
+    color: #fff;
+}
+a.button.ghost.white:hover, a.button.ghost.white:focus {
+    background: #fff;
+    color: #e62b1a;
+}
+a#cta-regis-lg {
+    display: block;
+    position: absolute;
+    width: 200px;
+    margin: 0;
+    z-index: 2;
+    right: 0;
+    bottom: 134px;
+}
+a#cta-regis-md {
+    display: block;
+    width: 290px;
+    margin: 20px auto 0;
+}
+.regis-lang-modal {
+    margin: 40px auto 27px;
+}
+.reveal#regis-modal {
+    border: 5px solid #e62b1a;
 }
 .tedxwhite {
     margin: 86px auto 68px;
@@ -218,6 +257,21 @@ section#partner h1 {
     padding-bottom: 68px;
     text-align: justify;
     color: #fff;
+}
+
+/* Registration Page */
+
+body.regis-page {
+    border: 10px solid #e62b1a;
+    padding: 50px 0;
+}
+h1.regis-header {
+    margin: 0 0 40px;
+    color: #e62b1a;
+}
+img.regis-logo {
+    width: 80%;
+    max-width: 250px;
 }
 
 /*MEDIA ZONE*/
