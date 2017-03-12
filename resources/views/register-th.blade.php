@@ -130,32 +130,32 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>ความฝันตอนนี้ของคุณคืออะไร อธิบายให้เราฟังหน่อย
-                <textarea name="q1" rows="4" required></textarea>
+                <textarea name="question[1]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>นิยามของ Living Out Loud ของคุณคืออะไร
-                <textarea name="q2" rows="4" required></textarea>
+                <textarea name="question[2]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
-                <textarea name="q3" rows="4" required></textarea>
+                <textarea name="question[3]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
-                <textarea name="q4" rows="4" required></textarea>
+                <textarea name="question[4]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
-                <textarea name="q5" rows="4" required></textarea>
+                <textarea name="question[5]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
-                <textarea name="q6" rows="4" required></textarea>
+                <textarea name="question[6]" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 columns">
