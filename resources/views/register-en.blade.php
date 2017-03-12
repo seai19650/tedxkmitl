@@ -32,7 +32,9 @@
     <div class="small-12 columns">
         <div class="card">
             <div class="card-section">
-                <p><strong>Date:</strong> <time datetime="2017-04-22">April 22, 2017</time></p>
+                <p><strong>Date:</strong>
+                    <time datetime="2017-04-22">April 22, 2017</time>
+                </p>
                 <p><strong>Location</strong></p>
                 <p>Auditorium, Faculty of Engineering, KMITL</p>
                 <p><strong>Ticket Prices</strong></p>
@@ -60,41 +62,42 @@
         </div>
     </div>
 </div>
-<form action="">
+<form name="apply" action="/apply" method="post">
+    {{ csrf_field() }}
     <div class="row">
         <div class="small-12 medium-4 columns">
             <label for="firstname">First name
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Given name
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Nickname
-                <input type="text" name="nickname">
+                <input type="text" name="nickname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Email
-                <input type="text" name="email">
+                <input type="text" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Mobile
-                <input type="text" name="mobile">
+                <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Age
-                <input type="text" name="age">
+                <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label>Gender
-                <select name="gender">
+                <select name="gender" required>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="unisex">Unisex</option>
@@ -103,12 +106,12 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">Occupation
-                <input type="text" name="occupation">
+                <input type="text" name="occupation" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label>Ticket type
-                <select name="ticket_type">
+                <select name="ticket_type" required>
                     <option value="student">Student</option>
                     <option value="general">General Public</option>
                     <option value="angel">Angel</option>
@@ -120,37 +123,37 @@
         <div class="small-12 large-6 columns">
             <label>
                 What is your present dream? Please explain.
-                <textarea rows="4" name="q1"></textarea>
+                <textarea rows="4" name="q1" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>
                 Describe your “Living Out Loud”.
-                <textarea rows="4" name="q2"></textarea>
+                <textarea rows="4" name="q2" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>
                 Please, tell us about a kid-mind inside you.
-                <textarea rows="4" name="q3"></textarea>
+                <textarea rows="4" name="q3" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>
                 What do you hope to get from this TEDxKMITL 2017 event?
-                <textarea rows="4" name="q4"></textarea>
+                <textarea rows="4" name="q4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>
                 List 3 topics which you’d love to share them out.
-                <textarea rows="4" name="q5"></textarea>
+                <textarea rows="4" name="q5" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>
                 Anything else we did not ask you, we’d love to know you more.
-                <textarea rows="4" name="q6"></textarea>
+                <textarea rows="4" name="q6" required></textarea>
             </label>
         </div>
         <div class="small-12 columns">
@@ -171,5 +174,8 @@
         </div>
     </div>
 </form>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
 </body>
 </html>
