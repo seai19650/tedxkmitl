@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Registration;
+use App\Answer;
 
 class RegistrationController extends Controller
 {
@@ -36,16 +37,32 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< Updated upstream
         $this->validate(request(),[
           'first_name' => 'required',
           'last_name' => 'required',
         ]);
+=======
+//        $this->validate(request(),[
+//          'first_name' => 'required',
+//          'last_name' => 'required',
+//        ]);
+>>>>>>> Stashed changes
 
         $applicant = new Registration;
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();
         $applicant->save();
-        return redirect('/id/'.$applicant->token);
+
+
+        foreach ($request->input('question') as $key => $value) {
+            $answer = new Answer;
+            $answer->registration_id = $applicant->id;
+            $answer->question_id = $key;
+            $answer->answer = $value;
+            $answer->save();
+        }
+        return redirect("/");
     }
 
     /**
