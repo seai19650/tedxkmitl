@@ -47,6 +47,10 @@ Route::get('/console', function () {
     return view('console.admin');
 });
 
+Route::get('/email-confirm', function () {
+    return view('email');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
