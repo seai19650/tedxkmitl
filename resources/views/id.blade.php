@@ -34,7 +34,7 @@
         {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
       </div>
       <div class="small-12 medium-7 column">
-        <h1 class="small-12 column">Hi {!! $applicant->first_name !!}!</h1>
+        <h1 class="small-12 column">Hi {!! $applicant->firstname !!}!</h1>
         <p class="small-12 column">Please bring this QR code to the event for check-in!</p>
       </div>
     </div>

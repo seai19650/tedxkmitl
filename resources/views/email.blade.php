@@ -37,7 +37,7 @@
 </head>
 <body>
 <div class="wrap">
-    <img src="{{asset('img/nav-on-w.png')}}" alt="TEDxKMITL" id="logo">
+    <img src="{{ $message->embed(public_path() . '/img/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>Information Received</h1>
     <hr>
     <p class="start-end">Dear {{ $applicant->firstname }},</p>
