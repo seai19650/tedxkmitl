@@ -27,6 +27,10 @@ Route::get('/apply/th', function () {
     return view('register-th');
 });
 
+Route::get('/apply', function () {
+    abort(404);
+});
+
 Route::get('/apply/en', function () {
     return view('register-en');
 });
