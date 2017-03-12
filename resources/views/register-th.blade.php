@@ -1,42 +1,26 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ลงทะเบียนร่วมงาน TEDxKMITL</title>
-    <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TEDxKMITL">
-    <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
-                main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
-                audiences full potential to show their inner self, what they truly have in them but doesn’t come out
-                very often.">
-    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <title>Register for TEDxKMITL</title>
     <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
 </head>
-<body class="regis-page">
+<body>
 <div class="row">
     <div class="small-12 columns">
-        <picture>
-            <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
-            <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
-            <img src="{{asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
-        </picture>
-        <h1 class="regis-header">/ลงทะเบียน</h1>
+        <h1 class="regis-header">TEDxKMITL Registration</h1>
     </div>
 </div>
 <div class="row">
     <div class="small-12 columns">
         <div class="card">
             <div class="card-section">
-                <p><strong>วันที่:</strong> 22 เมษายน 2560</p>
-                <p><strong>สถานที่</strong></p>
-                <p>หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                <p>TEDxKMITL จะจัดขึ้นในวันที่ 22 เมษายน 2560</p>
+                <p>ณ หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
                 <p><strong>ราคาบัตร</strong></p>
                 <ul>
                     <li>นักเรียน นักศึกษา (ไม่เกินระดับปริญญาตรี) 250 บาท</li>
@@ -125,32 +109,32 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>ความฝันตอนนี้ของคุณคืออะไร อธิบายให้เราฟังหน่อย
-                <textarea name="q1" rows="4"></textarea>
+                <textarea name="question[1]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>นิยามของ Living Out Loud ของคุณคืออะไร
-                <textarea name="q2" rows="4"></textarea>
+                <textarea name="question[2]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
-                <textarea name="q3" rows="4"></textarea>
+                <textarea name="question[3]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
-                <textarea name="q4" rows="4"></textarea>
+                <textarea name="question[4]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
-                <textarea name="q5" rows="4"></textarea>
+                <textarea name="question[5]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
-                <textarea name="q6" rows="4"></textarea>
+                <textarea name="question[6]" rows="4"></textarea>
             </label>
         </div>
         <div class="small-12 columns">
