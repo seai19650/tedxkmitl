@@ -53,7 +53,7 @@ class RegistrationController extends Controller
             $answer->answer = $value;
             $answer->save();
         }
-        return redirect('/');
+        return view('apply-success');
     }
 
     /**
