@@ -28,6 +28,8 @@
     <script src="{{asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
+
+    <div class="row">
       <div class="small-12 medium-5 column">
         {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
       </div>
@@ -35,6 +37,8 @@
         <h1 class="small-12 column">Hi {!! $applicant->first_name !!}!</h1>
         <p class="small-12 column">Please bring this QR code to the event for check-in!</p>
       </div>
+    </div>
+
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{asset('js/vendor/foundation.min.js')}}"></script>
