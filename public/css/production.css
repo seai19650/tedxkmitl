@@ -93,20 +93,25 @@ a.button.ghost.white:hover, a.button.ghost.white:focus {
     background: #fff;
     color: #e62b1a;
 }
-a#cta-regis-lg, h5#cta-regis-lg {
+a#cta-regis-lg {
     display: block;
     position: absolute;
-    /*width: 200px;*/
+    width: 200px;
     margin: 0;
     z-index: 2;
     right: 0;
     bottom: 134px;
-    color: #fff;
 }
 a#cta-regis-md {
     display: block;
     width: 290px;
     margin: 20px auto 0;
+}
+.regis-lang-modal {
+    margin: 40px auto 27px;
+}
+.reveal#regis-modal {
+    border: 5px solid #e62b1a;
 }
 .tedxwhite {
     margin: 86px auto 68px;
