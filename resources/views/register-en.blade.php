@@ -17,30 +17,26 @@
     <div class="small-12 columns">
         <div class="card">
             <div class="card-section">
-                <p class="text-justify">TEDxKMITL will be held on April 22nd, 2017. </p>
-                <p class="text-justify">At Auditorium, Faculty of Engineering, KMITL </p>
-                <strong>Ticket Prices</strong>
-
+                <p><strong>Date:</strong> April 22nd, 2017.</p>
+                <p><strong>Location</strong></p>
+                <p>Auditorium, Faculty of Engineering, KMITL</p>
+                <p><strong>Ticket Prices</strong></p>
                 <ul>
                     <li>Student (Undergraduate or any level below) THB 250</li>
                     <li>General Public THB 500</li>
                     <li>Angel Ticket THB 1000</li>
                 </ul>
                 <p class="text-justify">
-                <span style="margin-right:-3px">(</span> Angel ticket
-                is a ticket of give that mean when you purchase this ticket you will give an opportunity to a change
-                maker
-                who will be a part of TEDxKMITL. The receivers are those who work in organizations for society or
-                those
-                who
-                can potentially spark changes in the society. They will be nominated by impactful organization as
-                well
-                as
-                society development associates such as teachers in remote areas, volunteer camps, and
-                foundation.)</p>
+                    <span style="margin-right:-4px">(</span> Angel ticket
+                    is a ticket of give that mean when you purchase this ticket you will give an opportunity to a change
+                    maker who will be a part of TEDxKMITL. The receivers are those who work in organizations for society
+                    or those who can potentially spark changes in the society. They will be nominated by impactful
+                    organization as well as society development associates such as teachers in remote areas, volunteer
+                    camps, and foundation.)</p>
                 <p class="text-justify">Only 100 seats are available The application is available until March 20, 2017,
                     23.59 GMT+7.</p>
-                <p class="text-justify">The successful applicants will receive a confirmation email enclosed with payment details from
+                <p class="text-justify">The successful applicants will receive a confirmation email enclosed with
+                    payment details from
                     tedxkmitl@gmail.com</p>
             </div>
         </div>
