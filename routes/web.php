@@ -51,6 +51,10 @@ Route::get('/email-confirm', function () {
     return view('email');
 });
 
+Route::get('/apply-success', function () {
+    return view('apply-success');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
