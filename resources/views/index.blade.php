@@ -8,14 +8,14 @@
     <!--[if lte IE 9]>
         <style>.animated{opacity:1;}</style>
     <![endif]-->
-    <base href="http://tedxkmitl.com/">
+    <!-- <base href="http://tedxkmitl.com/"> -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po" />
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="img/ogimage.png">
+    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
@@ -23,13 +23,13 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/production.min.css">
+    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="{{asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 <section id="main">
@@ -38,9 +38,9 @@
             <div class="top-bar-title">
                 <div class="nav-logo-bg">
                     <picture>
-                        <source type="image/svg+xml" srcset="img/nav-on-w.svg">
-                        <source srcset="img/nav-on-w.png 1x, img/2x/nav-on-w.png 2x">
-                        <img src="img/nav-on-w.png" alt="TEDxKMITL">
+                        <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
+                        <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
+                        <img src="{{asset('img/nav-on-w.png')}}" alt="TEDxKMITL">
                     </picture>
                 </div>
                 <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger">
@@ -60,39 +60,39 @@
         </div>
         <div class="hero-wrap" id="home">
             <picture>
-                <source type="image/svg+xml" srcset="img/livin-out-loud.svg">
+                <source type="image/svg+xml" srcset="{{asset('img/livin-out-loud.svg')}}">
                 <source media="(max-width:639px)"
-                        srcset="img/livin-out-loud-sm.png 1x, img/2x/livin-out-loud-sm.png 2x">
+                        srcset="{{asset('img/livin-out-loud-sm.png')}} 1x, {{asset('img/2x/livin-out-loud-sm.png')}} 2x">
                 <source media="(min-width:640px)"
-                        srcset="img/livin-out-loud-lg.png 1x, img/2x/livin-out-loud-lg.png 2x">
-                <img src="img/livin-out-loud.svg" alt="LIVIN OUT LOUD" class="living-out-loud">
+                        srcset="{{asset('img/livin-out-loud-lg.png')}} 1x, {{asset('img/2x/livin-out-loud-lg.png')}} 2x">
+                <img src="{{asset('img/livin-out-loud.svg')}}" alt="LIVIN OUT LOUD" class="living-out-loud">
             </picture>
             <picture>
-                <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
-                <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
+                <source srcset="{{asset('img/hero-date.png')}} 1x, {{asset('img/2x/hero-date.png')}} 2x">
+                <img src="{{asset('img/hero-date.png')}}" alt="April 22, 2017" class="hero-date-lg show-for-large">
             </picture>
             <h5 id="cta-regis-lg" class="text-right show-for-large">REGISTRATION OPENS<br>ON MON, APR 13</h5>
             <picture>
                 <source media="(max-width:639px)" type="image/png"
-                        srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
+                        srcset="{{asset('img/x-hero-sm.png')}} 1x, {{asset('img/2x/x-hero-sm.png')}} 2x">
                 <source media="(min-width:640px)" type="image/png"
-                        srcset="img/x-hero-lg.png 1x, img/2x/x-hero-lg.png 2x">
-                <img src="img/x-hero-lg.png" class="x-hero">
+                        srcset="{{asset('img/x-hero-lg.png')}} 1x, {{asset('img/2x/x-hero-lg.png')}} 2x">
+                <img src="{{asset('img/x-hero-lg.png')}}" class="x-hero">
             </picture>
         </div>
     </div>
     <div class="row hide-for-large">
         <picture>
-            <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
-            <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
+            <source srcset="{{asset('img/hero-date.png')}} 1x, {{asset('img/2x/hero-date.png')}} 2x">
+            <img src="{{asset('img/hero-date.png')}}" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
         <a class="button ghost white large" id="cta-regis-md">REGISTRATION OPENS ON MON, APR 13</a>
     </div>
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
-                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
-                <img src="img/tedx-vertical.png" class="tedx-vertical">
+                <source srcset="{{asset('img/tedx-vertical.png')}} 1x, {{asset('img/2x/tedx-vertical.png')}}">
+                <img src="{{asset('img/tedx-vertical.png')}}" class="tedx-vertical">
             </picture>
             <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personal. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
@@ -101,9 +101,9 @@
                 and jump out into society. Live the moment, enjoy the life.
             </p>
             <picture>
-                <source srcset="img/Bars.svg">
-                <source srcset="img/Bars.png 1x, img/2x/Bars.png 2x">
-                <img src="img/Bars.png" id="bars">
+                <source srcset="{{asset('img/Bars.svg')}}">
+                <source srcset="{{asset('img/Bars.png')}} 1x, {{asset('img/2x/Bars.png')}} 2x">
+                <img src="{{asset('img/Bars.png')}}" id="bars">
             </picture>
         </div>
     </div>
@@ -143,16 +143,16 @@
         <div class="small-12 medium-4 columns animatedParent animateOnce">
             <h1 class="animated fadeInLeft">SPEAKERS</h1>
             <picture>
-                <source srcset="img/Bars.svg">
-                <source srcset="img/Bars.png 1x, img/2x/Bars.png 2x">
-                <img src="img/Bars.png" id="bars2">
+                <source srcset="{{asset('img/Bars.svg')}}">
+                <source srcset="{{asset('img/Bars.png')}} 1x, {{asset('img/2x/Bars.png')}} 2x">
+                <img src="{{asset('img/Bars.png')}}" id="bars2">
             </picture>
         </div>
     </div>
     <div class="row" id="speakers">
         <div class="small-12 medium-4 large-4 columns person animatedParent animateOnce">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
+                <source srcset="{{asset('img/speaker.png')}} 1x, {{asset('img/2x/speaker.png')}} 2x">
                 <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
@@ -162,7 +162,7 @@
         </div>
         <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
+                <source srcset="{{asset('img/speaker.png')}} 1x, {{asset('img/2x/speaker.png')}} 2x">
                 <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
@@ -172,8 +172,8 @@
         </div>
         <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
+                <source srcset="{{asset('img/speaker.png')}} 1x, {{asset('img/2x/speaker.png')}} 2x">
+                <img src="{{asset('img/speaker-lg.png')}}" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
                      title="An icon by Chanut is Industries">
             </picture>
             <h2 class="speaker-first">COMING</h2>
@@ -212,24 +212,24 @@
         </div>
         <div class="small-12 medium-5 medium-offset-3 columns medium-text-right" id="footer-contact">
             <picture>
-                <source srcset="img/email-icon.png 1x, img/2x/email-icon.png 2x">
-                <img src="img/email-icon.png" alt="Email" title="An icon by Designmodo" class="footer-icon">
+                <source srcset="{{asset('img/email-icon.png')}} 1x, {{asset('img/2x/email-icon.png')}} 2x">
+                <img src="{{asset('img/email-icon.png')}}" alt="Email" title="An icon by Designmodo" class="footer-icon">
             </picture>
             tedxkmitl@gmail.com<br/>
             <a href="https://fb.me/TEDxKMITL" target="_blank">
                 <picture>
-                    <source srcset="img/fb-icon.png 1x, img/2x/fb-icon.png 2x">
-                    <img src="img/fb-icon.png" alt="Facebook" title="An icon by Martial Red" class="footer-icon">
+                    <source srcset="{{asset('img/fb-icon.png')}} 1x, {{asset('img/2x/fb-icon.png')}} 2x">
+                    <img src="{{asset('img/fb-icon.png')}}" alt="Facebook" title="An icon by Martial Red" class="footer-icon">
                 </picture>
                 TEDxKMITL
             </a>
         </div>
     </div>
 </footer>
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="js/vendor/what-input.min.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script src="js/css3-animate-it.min.js" async></script>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
