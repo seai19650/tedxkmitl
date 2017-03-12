@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register for TEDxKMITL</title>
+    <title>ลงทะเบียนร่วมงาน TEDxKMITL</title>
     <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
 </head>
@@ -17,7 +17,7 @@
             <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
             <img src="{{asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
         </picture>
-        <h1 class="regis-header">/Register</h1>
+        <h1 class="regis-header">/ลงทะเบียน</h1>
     </div>
 </div>
 <div class="row">
