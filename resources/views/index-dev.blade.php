@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!--[if lte IE 9]>
-    <link href='/PATH/TO/FOLDER/css/animations-ie-fix.css' rel='stylesheet'>
-    <![endif]-->
+
+    <!-- developing process is now on! ฤsset is used so with http on the local host,
+    this file will break! -->
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
+    <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po"/>
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="img/ogimage.png">
+    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
-    <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/production.min.css">
-    <link rel="stylesheet" href="css/animations.min.css">
+    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
+    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="js/picturefill.min.js" async></script>
+    <script src="{{asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 <section id="main">
@@ -62,10 +63,11 @@
                         srcset="img/livin-out-loud-lg.png 1x, img/2x/livin-out-loud-lg.png 2x">
                 <img src="img/livin-out-loud.svg" alt="LIVIN OUT LOUD" class="living-out-loud">
             </picture>
-            <!--<picture>
+            <picture>
                 <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
                 <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
-            </picture>-->
+            </picture>
+            <a data-open="regisModal" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>
             <picture>
                 <source media="(max-width:639px)" type="image/png"
                         srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
@@ -75,12 +77,13 @@
             </picture>
         </div>
     </div>
-    <!--<div class="row hide-for-large">
+    <div class="row hide-for-large">
         <picture>
             <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
             <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
-    </div>-->
+        <a data-open="regisModal" class="button ghost white large" id="cta-regis-md">REGISTER</a>
+    </div>
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
@@ -100,7 +103,7 @@
             </picture>
         </div>
     </div>
-    <div class="row aboutted animatedParent animateOnce">
+    <div class="row aboutted animatedParent animateOnce hide-for-small-only">
         <div class="small-12 medium-7 medium-offset-1 columns animated fadeInLeft">
             <strong>TED (Technology, Entertainment, and Design)</strong> is a non-profit media organization which posts
             talks online for free distribution, under the slogan "ideas worth sharing". TED was founded in February 1984
@@ -191,13 +194,6 @@
     </div>
     <div class="event">
         <div class="row" id="pic_vi">
-            <!---
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div>
-            <div class="small-12 medium-4 columns"><img src="http://placehold.it/350x200" class="float-center">
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p></div> --->
             <div class="small-12 columns ">
                 <h2 style="color: white;" class="text-center">COMING SOON</h2>
             </div>
@@ -240,10 +236,24 @@
         </div>
     </div>
 </footer>
-<script src="js/vendor/jquery-2.2.4.min.js"></script>
-<script src="js/vendor/what-input.min.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script src="js/css3-animate-it.min.js" async></script>
+<div class="reveal" id="regisModal" data-reveal>
+    <div class="regis-lang-modal">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
+            </div>
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/en')}}" class="button ghost primary large expanded">English</a>
+            </div>
+        </div>
+    </div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
@@ -263,10 +273,10 @@
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
+                m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
@@ -287,5 +297,21 @@
         a.appendChild(r);
     })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "EducationEvent",
+  "name": "TEDxKMITL",
+  "url": "http://tedxkmitl.com",
+  "startDate": "2017-04-22",
+  "eventStatus": "EventScheduled",
+  "location": {
+     "@type": "Place",
+     "name": "Fac. of Engineering, KMITL",
+     "address": "Lad Krabang, Thailand"
+  }
+}
+
+</script>
 </body>
 </html>
