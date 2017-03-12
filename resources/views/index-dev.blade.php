@@ -254,8 +254,9 @@
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{asset('js/on-screen.umd.min.js')}}"></script>
 <script type="text/javascript">
-    $(document).foundation()
+    $(document).foundation();
     $(document).ready(function () {
         $("a").on('click', function (event) {
             if (this.hash !== "") {
@@ -267,6 +268,22 @@
                 }, 800)
             }
         });
+    });
+    var secTeaser = new OnScreen({
+        container: window,
+        tolerance: 150
+    });
+    secTeaser.on('enter', 'section#teaser', (element) => {
+        element.className += 'blacken';
+        secTeaser.destroy();
+    });
+    var secEvent = new OnScreen({
+        container: window,
+        tolerance: 100
+    });
+    secEvent.on('enter', 'section#event', (element) => {
+        element.className += 'blacken';
+        secEvent.destroy();
     });
 </script>
 <script>
