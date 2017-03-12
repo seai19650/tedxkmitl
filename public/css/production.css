@@ -256,9 +256,17 @@ section#partner h1 {
 
 /* Registration Page */
 
+body.regis-page {
+    border: 10px solid #e62b1a;
+    padding: 50px 0;
+}
 h1.regis-header {
-    margin: 50px 0;
+    margin: 0 0 40px;
     color: #e62b1a;
+}
+img.regis-logo {
+    width: 80%;
+    max-width: 250px;
 }
 
 /*MEDIA ZONE*/
