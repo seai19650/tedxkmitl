@@ -39,19 +39,12 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
-
-        $this->validate(request(),[
-          'first_name' => 'required',
-          'last_name' => 'required',
-        ]);
-
         $applicant = new Registration;
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();
         $applicant->save();
 
         \Mail::to($applicant->email)->send(new Respond($applicant));
-
 
         foreach ($request->input('question') as $key => $value) {
             $answer = new Answer;
@@ -60,7 +53,7 @@ class RegistrationController extends Controller
             $answer->answer = $value;
             $answer->save();
         }
-        return 'Suss';
+        return redirect('/');
     }
 
     /**
