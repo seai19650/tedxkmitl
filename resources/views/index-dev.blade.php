@@ -5,27 +5,23 @@
     <!-- developing process is now on! ฤsset is used so with http on the local host,
     this file will break! -->
 
-    <!--[if lte IE 9]>
-        <style>.animated{opacity:1;}</style>
-    <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
-    <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po" />
+    <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po"/>
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="img/ogimage.png">
+    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
-    <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
+    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
     <link rel="icon" href="{{asset('img/favicon.png')}}">
     <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animations.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
@@ -240,36 +236,17 @@
         </div>
     </div>
 </footer>
-<div class="reveal large" id="regisModal" data-reveal>
-    <form action="">
+<div class="reveal" id="regisModal" data-reveal>
+    <div class="regis-lang-modal">
         <div class="row">
-            <div class="small-12 columns">
-                <h1>Register</h1>
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
+            </div>
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/en')}}" class="button ghost primary large expanded">English</a>
             </div>
         </div>
-        <div class="row">
-            <div class="small-12 medium-4 columns">
-                <label for="first_name">First name (English)
-                    <input type="text" name="first_name">
-                </label>
-            </div>
-            <div class="small-12 medium-5 columns">
-                <label for="last_name">Last name (English)
-                    <input type="text" name="last_name">
-                </label>
-            </div>
-            <div class="small-12 medium-3 columns">
-                <label for="nickname">Nickname (English)
-                    <input type="text" name="nickname">
-                </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="small-12 medium-3 large-2 columns">
-                <button class="button ghost primary expanded">Submit</button>
-            </div>
-        </div>
-    </form>
+    </div>
     <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -277,7 +254,6 @@
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
@@ -335,6 +311,7 @@
      "address": "Lad Krabang, Thailand"
   }
 }
+
 </script>
 </body>
 </html>
