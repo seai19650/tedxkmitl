@@ -62,42 +62,46 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post">
+<form name="apply" action="/apply" method="post" data-abide>
     {{ csrf_field() }}
     <div class="row">
+        <div class="small-12 columns">
+            <p><strong>Please fill in all the fields.</strong></p>
+        </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">First name
                 <input type="text" name="firstname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Given name
+            <label for="lastname">Given name
                 <input type="text" name="lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Nickname
+            <label for="nickname">Nickname
                 <input type="text" name="nickname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Email
+            <label for="email">Email
                 <input type="text" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Mobile
+            <label for="mobile">Mobile
                 <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Age
+            <label for="age">Age
                 <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>Gender
+            <label for="gender">Gender
                 <select name="gender" required>
+                    <option disabled>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="unisex">Unisex</option>
@@ -105,13 +109,14 @@
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label for="firstname">Occupation
+            <label for="occupation">Occupation
                 <input type="text" name="occupation" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>Ticket type
+            <label for="ticket_type">Ticket type
                 <select name="ticket_type" required>
+                    <option disabled>Select a type</option>
                     <option value="student">Student</option>
                     <option value="general">General Public</option>
                     <option value="angel">Angel</option>
@@ -170,12 +175,15 @@
             </div>
         </div>
         <div class="columns">
-            <a class="button ghost primary ">SUBMIT</a>
+            <button class="button ghost primary" type="submit">Submit</button>
         </div>
     </div>
 </form>
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).foundation();
+</script>
 </body>
 </html>

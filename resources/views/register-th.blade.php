@@ -55,9 +55,12 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post">
+<form name="apply" action="/apply" method="post" data-abide>
     {{ csrf_field() }}
     <div class="row">
+        <div class="small-12 columns">
+            <p><strong>กรุณากรอกข้อมูลอย่างถูกต้องให้ครบถ้วน</strong></p>
+        </div>
         <div class="small-12 medium-6 columns">
             <label for="th_firstname">ชื่อจริง
                 <input type="text" name="th_firstname" required>
@@ -99,8 +102,9 @@
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>เพศ
+            <label for="gender">เพศ
                 <select name="gender" required>
+                    <option disabled>เพศ</option>
                     <option value="male">ชาย</option>
                     <option value="female">หญิง</option>
                     <option value="unisex">เพศทางเลือก</option>
@@ -113,8 +117,9 @@
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>ประเภทของบัตร
+            <label for="ticket_type">ประเภทของบัตร
                 <select name="ticket_type" required>
+                    <option disabled>เลือกประเภทบัตร</option>
                     <option value="student">นักเรียน/นักศึกษา</option>
                     <option value="student">บุคคลทั่วไป</option>
                     <option value="student">Angel</option>
@@ -165,12 +170,15 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <button class="button ghost primary" type="submit">ส่งข้อมูล</>
+            <button class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
     </div>
 </form>
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).foundation();
+</script>
 </body>
 </html>
