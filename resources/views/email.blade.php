@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Email Testing</title>
+    <title>Email</title>
   </head>
   <body>
-    <h1>This is test email for TEDxKMITL Welcome {{ $applicant->first_name }}!</h1>
+    <h1>Hello {{ $applicant->firstname }}!</h1>
+    <p>Thanks for being here!</p>
   </body>
 </html>
