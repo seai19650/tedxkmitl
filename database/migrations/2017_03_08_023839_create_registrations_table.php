@@ -21,10 +21,11 @@ class CreateRegistrationsTable extends Migration
             $table->string('lastname');
             $table->string('nickname');
             $table->string('age');
-            $table->string('phone');
+            $table->string('mobile');
             $table->string('email');
+            $table->string('gender');
             $table->string('occupation');
-            $table->string('ticket');
+            $table->string('ticket_type');
             $table->string('token');
             $table->timestamps();
         });
