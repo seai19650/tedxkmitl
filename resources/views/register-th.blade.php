@@ -1,26 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register for TEDxKMITL</title>
+    <title>ลงทะเบียนร่วมงาน TEDxKMITL</title>
+    <meta name="theme-color" content="#e62b1a">
+    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TEDxKMITL">
+    <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
+                main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
+                audiences full potential to show their inner self, what they truly have in them but doesn’t come out
+                very often.">
+    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
+    <link rel="icon" href="{{asset('img/favicon.png')}}">
     <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
 </head>
-<body>
+<body class="regis-page">
 <div class="row">
     <div class="small-12 columns">
-        <h1 class="regis-header">TEDxKMITL Registration</h1>
+        <picture>
+            <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
+            <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
+            <img src="{{asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
+        </picture>
+        <h1 class="regis-header">/ลงทะเบียน</h1>
     </div>
 </div>
 <div class="row">
     <div class="small-12 columns">
         <div class="card">
             <div class="card-section">
-                <p>TEDxKMITL จะจัดขึ้นในวันที่ 22 เมษายน 2560</p>
-                <p>ณ หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                <p><strong>วันที่:</strong> 22 เมษายน 2560</p>
+                <p><strong>สถานที่</strong></p>
+                <p>หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
                 <p><strong>ราคาบัตร</strong></p>
                 <ul>
                     <li>นักเรียน นักศึกษา (ไม่เกินระดับปริญญาตรี) 250 บาท</li>
@@ -39,52 +55,56 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post">
+<form name="apply" action="/apply" method="post" data-abide>
     {{ csrf_field() }}
     <div class="row">
+        <div class="small-12 columns">
+            <p><strong>กรุณากรอกข้อมูลอย่างถูกต้องให้ครบถ้วน</strong></p>
+        </div>
         <div class="small-12 medium-6 columns">
             <label for="th_firstname">ชื่อจริง
-                <input type="text" name="th_firstname">
+                <input type="text" name="th_firstname" required>
             </label>
         </div>
         <div class="small-12 medium-6 columns">
             <label for="th_lastname">นามสกุล
-                <input type="text" name="th_lastname">
+                <input type="text" name="th_lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">ชื่อจริง (ภาษาอังกฤษ)
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="lastname">นามสกุล (ภาษาอังกฤษ)
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="nickname">ชื่อเล่น (ภาษาอังกฤษ)
-                <input type="text" name="nickname">
+                <input type="text" name="nickname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="email">อีเมล
-                <input type="text" name="email">
+                <input type="text" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="mobile">โทรศัพท์มือถือ
-                <input type="text" name="mobile">
+                <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="age">อายุ
-                <input type="text" name="age">
+                <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>เพศ
-                <select name="gender">
+            <label for="gender">เพศ
+                <select name="gender" required>
+                    <option disabled>เพศ</option>
                     <option value="male">ชาย</option>
                     <option value="female">หญิง</option>
                     <option value="unisex">เพศทางเลือก</option>
@@ -93,12 +113,13 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="occupation">อาชีพ
-                <input type="text" name="occupation">
+                <input type="text" name="occupation" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>ประเภทของบัตร
-                <select name="ticket_type">
+            <label for="ticket_type">ประเภทของบัตร
+                <select name="ticket_type" required>
+                    <option disabled>เลือกประเภทบัตร</option>
                     <option value="student">นักเรียน/นักศึกษา</option>
                     <option value="student">บุคคลทั่วไป</option>
                     <option value="student">Angel</option>
@@ -109,32 +130,32 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>ความฝันตอนนี้ของคุณคืออะไร อธิบายให้เราฟังหน่อย
-                <textarea name="question[1]" rows="4"></textarea>
+                <textarea name="q1" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>นิยามของ Living Out Loud ของคุณคืออะไร
-                <textarea name="question[2]" rows="4"></textarea>
+                <textarea name="q2" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
-                <textarea name="question[3]" rows="4"></textarea>
+                <textarea name="q3" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
-                <textarea name="question[4]" rows="4"></textarea>
+                <textarea name="q4" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
-                <textarea name="question[5]" rows="4"></textarea>
+                <textarea name="q5" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
-                <textarea name="question[6]" rows="4"></textarea>
+                <textarea name="q6" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 columns">
@@ -149,9 +170,15 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <button class="button ghost primary" type="submit">ส่งข้อมูล</>
+            <button class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
     </div>
 </form>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).foundation();
+</script>
 </body>
 </html>
