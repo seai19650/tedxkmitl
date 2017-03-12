@@ -33,6 +33,7 @@ class Respond extends Mailable
      */
     public function build()
     {
-        return $this->view('email');
+        return $this->view('email')
+                    ->subject('We are excited that you\'re here!');
     }
 }

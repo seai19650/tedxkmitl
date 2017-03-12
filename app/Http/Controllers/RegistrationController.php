@@ -49,7 +49,7 @@ class RegistrationController extends Controller
 
         \Mail::to($applicant->email)->send(new Respond($applicant));
 
-        return redirect('index-dev');
+        return redirect('dev');
     }
 
     /**
