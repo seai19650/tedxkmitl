@@ -27,6 +27,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('occupation');
             $table->string('ticket_type');
             $table->string('token');
+            $table->boolean('is_approved')->default(false);
             $table->timestamps();
         });
     }
