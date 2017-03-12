@@ -121,8 +121,8 @@
                 <select name="ticket_type" required>
                     <option disabled>เลือกประเภทบัตร</option>
                     <option value="student">นักเรียน/นักศึกษา</option>
-                    <option value="student">บุคคลทั่วไป</option>
-                    <option value="student">Angel</option>
+                    <option value="general">บุคคลทั่วไป</option>
+                    <option value="angel">Angel</option>
                 </select>
             </label>
         </div>
