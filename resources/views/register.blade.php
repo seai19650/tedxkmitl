@@ -55,7 +55,14 @@
         'placeholder'=>'Last Name'
       )) !!}
 </div>
-
+<div class="form-group">
+    {!! Form::label('Email') !!}
+    {!! Form::text('email', null,
+      array(
+        'class'=>'form-control',
+        'placeholder'=>'Last Name'
+      )) !!}
+</div>
 <div class="form-group">
     {!! Form::submit('Register Now!',
       array('class'=>'btn btn-primary'
