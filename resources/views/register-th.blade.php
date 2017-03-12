@@ -55,52 +55,56 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post">
+<form name="apply" action="/apply" method="post" data-abide>
     {{ csrf_field() }}
     <div class="row">
+        <div class="small-12 columns">
+            <p><strong>กรุณากรอกข้อมูลอย่างถูกต้องให้ครบถ้วน</strong></p>
+        </div>
         <div class="small-12 medium-6 columns">
             <label for="th_firstname">ชื่อจริง
-                <input type="text" name="th_firstname">
+                <input type="text" name="th_firstname" required>
             </label>
         </div>
         <div class="small-12 medium-6 columns">
             <label for="th_lastname">นามสกุล
-                <input type="text" name="th_lastname">
+                <input type="text" name="th_lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="firstname">ชื่อจริง (ภาษาอังกฤษ)
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="lastname">นามสกุล (ภาษาอังกฤษ)
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="nickname">ชื่อเล่น (ภาษาอังกฤษ)
-                <input type="text" name="nickname">
+                <input type="text" name="nickname" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="email">อีเมล
-                <input type="text" name="email">
+                <input type="text" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="mobile">โทรศัพท์มือถือ
-                <input type="text" name="mobile">
+                <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="age">อายุ
-                <input type="text" name="age">
+                <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>เพศ
-                <select name="gender">
+            <label for="gender">เพศ
+                <select name="gender" required>
+                    <option disabled>เพศ</option>
                     <option value="male">ชาย</option>
                     <option value="female">หญิง</option>
                     <option value="unisex">เพศทางเลือก</option>
@@ -109,12 +113,13 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="occupation">อาชีพ
-                <input type="text" name="occupation">
+                <input type="text" name="occupation" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
-            <label>ประเภทของบัตร
-                <select name="ticket_type">
+            <label for="ticket_type">ประเภทของบัตร
+                <select name="ticket_type" required>
+                    <option disabled>เลือกประเภทบัตร</option>
                     <option value="student">นักเรียน/นักศึกษา</option>
                     <option value="student">บุคคลทั่วไป</option>
                     <option value="student">Angel</option>
@@ -125,32 +130,32 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>ความฝันตอนนี้ของคุณคืออะไร อธิบายให้เราฟังหน่อย
-                <textarea name="q1" rows="4"></textarea>
+                <textarea name="q1" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>นิยามของ Living Out Loud ของคุณคืออะไร
-                <textarea name="q2" rows="4"></textarea>
+                <textarea name="q2" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
-                <textarea name="q3" rows="4"></textarea>
+                <textarea name="q3" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
-                <textarea name="q4" rows="4"></textarea>
+                <textarea name="q4" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
-                <textarea name="q5" rows="4"></textarea>
+                <textarea name="q5" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 large-6 columns">
             <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
-                <textarea name="q6" rows="4"></textarea>
+                <textarea name="q6" rows="4" required></textarea>
             </label>
         </div>
         <div class="small-12 columns">
@@ -165,9 +170,15 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <button class="button ghost primary" type="submit">ส่งข้อมูล</>
+            <button class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
     </div>
 </form>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).foundation();
+</script>
 </body>
 </html>
