@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
 </head>
-<body>
+<body class="regis-page">
 <div class="row">
     <div class="small-12 columns">
-        <h1 class="regis-header">TEDxKMITL Registration</h1>
+        <picture>
+            <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
+            <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
+            <img src="{{asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
+        </picture>
+        <h1 class="regis-header">/Register</h1>
     </div>
 </div>
 <div class="row">
     <div class="small-12 columns">
         <div class="card">
             <div class="card-section">
-                <p>TEDxKMITL จะจัดขึ้นในวันที่ 22 เมษายน 2560</p>
-                <p>ณ หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                <p><strong>วันที่:</strong> 22 เมษายน 2560</p>
+                <p><strong>สถานที่</strong></p>
+                <p>หอประชุมใหญ่คณะวิศวกรรมศาสตร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
                 <p><strong>ราคาบัตร</strong></p>
                 <ul>
                     <li>นักเรียน นักศึกษา (ไม่เกินระดับปริญญาตรี) 250 บาท</li>
