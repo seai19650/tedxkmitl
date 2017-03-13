@@ -7,21 +7,21 @@
     <title>TEDxKMITL</title>
     <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po"/>
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
+    <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
-    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
+    <meta name="twitter:image" content="{{secure_asset('img/ogimage.png')}}">
+    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="{{asset('js/picturefill.min.js')}}" async></script>
+    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 <section id="main">
@@ -233,10 +233,10 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{asset('js/on-screen.umd.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{secure_asset('js/on-screen.umd.min.js')}}"></script>
 <script type="text/javascript">
     $(document).foundation();
     $(document).ready(function () {
