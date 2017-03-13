@@ -179,6 +179,22 @@
         </div>
     </div>
 </form>
+<script type="text/javascript" async>
+    var areYouReallySure = false;
+    function areYouSure() {
+        if(allowPrompt){
+            if (!areYouReallySure && true) {
+                areYouReallySure = true;
+                return 0;
+            }
+        }else{
+            allowPrompt = true;
+        }
+    }
+
+    var allowPrompt = true;
+    window.onbeforeunload = areYouSure;
+</script>
 <script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
