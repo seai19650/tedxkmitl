@@ -52,4 +52,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/console', function () {
     return view('console.index');
 });
+Route::get('/tables', function () {
+    return view('console.tables');
+});
 
