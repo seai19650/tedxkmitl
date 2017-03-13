@@ -102,7 +102,7 @@ RewriteRule ^ index.php [L]
     Header set Cache-Control "max-age=604800, public"
   </filesMatch>
   <filesMatch "\\.(js)$">
-    Header set Cache-Control "max-age=216000, public"
+    Header set Cache-Control "max-age=604800, public"
   </filesMatch>
   <filesMatch "\\.(xml|txt)$">
     Header set Cache-Control "max-age=216000, public, must-revalidate"
