@@ -86,7 +86,7 @@
                 <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
                 <img src="img/tedx-vertical.png" class="tedx-vertical">
             </picture>
-            <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personal. Our
+            <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personel. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often. Every person has a part in their life that they keep in secret, now is the time to get up
