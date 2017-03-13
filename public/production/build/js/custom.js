@@ -2510,37 +2510,6 @@ if (typeof NProgress != 'undefined') {
 				if( typeof ($.fn.DataTable) === 'undefined'){ return; }
 				console.log('init_DataTables');
 
-				var handleDataTableButtons = function() {
-				  if ($("#datatable-buttons").length) {
-					$("#datatable-buttons").DataTable({
-					  dom: "Bfrtip",
-					  buttons: [
-						{
-						  extend: "copy",
-						  className: "btn-sm"
-						},
-						{
-						  extend: "csv",
-						  className: "btn-sm"
-						},
-						{
-						  extend: "excel",
-						  className: "btn-sm"
-						},
-						{
-						  extend: "pdfHtml5",
-						  className: "btn-sm"
-						},
-						{
-						  extend: "print",
-						  className: "btn-sm"
-						},
-					  ],
-					  responsive: true
-					});
-				  }
-				};
-
 				TableManageButtons = function() {
 				  "use strict";
 				  return {
@@ -2550,22 +2519,17 @@ if (typeof NProgress != 'undefined') {
 				  };
 				}();
 
-				$('#datatable').dataTable();
-
-				$('#datatable-keytable').DataTable({
-				  keys: true
-				});
-
-                // datatables ajax
+                // datatables ajax: warp
 				$('#datatable-responsive').DataTable({
                     ajax: {
-                        url: "getprofile",
+                        url: "gettable",
                         type: "POST",
                         data: function(d) {
                             d._token = $('meta[name="csrf_token"]').attr('content');
                         },
                         dataSrc: function(json) {
-                            return json['intl'].concat(json['overs']);
+                            alert(JSON.stringify(json));
+                            return json;
                         }
                     },
                     columns: [
@@ -2579,14 +2543,11 @@ if (typeof NProgress != 'undefined') {
                         { data: 'mobile' },
                         { data: 'email' },
                         {
-                            data: "is-paid",
+                            data: "is_paid",
                             render: function (data, type, row) {
-                                if () {
-                                    return '-';
-                                } else if (data) {
-                                    return data;
+                                if (data) {
+                                    return "yes";
                                 }
-                                return config.invoice_status[0];
                             }
                         },
                         { data: 'time' },
@@ -2602,32 +2563,6 @@ if (typeof NProgress != 'undefined') {
                         }
                     ],
                 });
-
-				$('#datatable-scroller').DataTable({
-				  ajax: "js/datatables/json/scroller-demo.json",
-				  deferRender: true,
-				  scrollY: 380,
-				  scrollCollapse: true,
-				  scroller: true
-				});
-
-				$('#datatable-fixed-header').DataTable({
-				  fixedHeader: true
-				});
-
-				var $datatable = $('#datatable-checkbox');
-
-				$datatable.dataTable({
-				  'order': [[ 1, 'asc' ]],
-				  'columnDefs': [
-					{ orderable: false, targets: [0] }
-				  ]
-				});
-				$datatable.on('draw.dt', function() {
-				  $('checkbox input').iCheck({
-					checkboxClass: 'icheckbox_flat-green'
-				  });
-				});
 
 				TableManageButtons.init();
 
