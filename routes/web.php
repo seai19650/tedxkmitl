@@ -43,18 +43,13 @@ Route::get('/pay/{token}', 'PayController@index');
 
 Route::post('/pay', 'PayController@get_token');
 
-Route::get('/console', function () {
-    return view('console.admin');
-});
-
 Route::get('/email-confirm', function () {
     return view('email');
 });
 
-// Route::get('/apply-success', function () {
-//     return view('apply-success');
-// });
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+Route::get('/console', function () {
+    return view('console.index');
+});
+
