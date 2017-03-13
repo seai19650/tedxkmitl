@@ -51,11 +51,10 @@ Route::get('/email-confirm', function () {
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index');
-Route::get('/console', function () {
-    return view('console.index');
+Route::get('/home', function (){
+    return redirect('/console'); // Redirect to console after login
 });
-Route::get('/tables', function () {
-    return view('console.tables');
-});
+Route::get('/console', 'ConsoleController@index')->middleware('auth');
+Route::get('/table', 'ConsoleController@table')->middleware('auth');
+Route::post('/table', 'ConsoleController@getTable')->middleware('auth');
 
