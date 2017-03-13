@@ -88,17 +88,17 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="email">อีเมล
-                <input type="text" name="email" required>
+                <input type="email" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="mobile">โทรศัพท์มือถือ
-                <input type="text" name="mobile" required>
+                <input type="number" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="age">อายุ
-                <input type="text" name="age" required>
+                <input type="number" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <button class="button ghost primary" type="submit">ส่งข้อมูล</button>
+            <button name="submit" class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
     </div>
 </form>
