@@ -51,7 +51,12 @@ Route::get('/email-confirm', function () {
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index');
+Route::get('/home', function () {
+    return view('index');
+});
+Route::get('/login', function () {
+    return view('index');
+});
 Route::get('/console', function () {
     return view('console.index');
 });
