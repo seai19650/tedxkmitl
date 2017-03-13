@@ -233,9 +233,9 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/4.1.1/what-input.min.js"></script>
+<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
 <script src="{{secure_asset('js/on-screen.umd.min.js')}}"></script>
 <script type="text/javascript">
     $(document).foundation();
