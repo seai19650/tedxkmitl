@@ -65,6 +65,10 @@ RewriteRule ^ index.php [L]
     Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
 
+<FilesMatch "c/hotjar">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
 Options -Indexes
 Options +FollowSymlinks
 
