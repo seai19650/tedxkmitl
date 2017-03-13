@@ -53,12 +53,12 @@
     </style>
 </head>
 <body>
-<img src="{{asset("img/404.svg")}}" alt="404" id="emoji">
+<img src="{{secure_asset("img/404.svg")}}" alt="404" id="emoji">
 <hr>
 <h1>There's nothing here except you and me.</h1>
 <picture>
-    <source srcset="{{asset('img/logo-for-404.png')}} 1x, {{asset('img/2x/logo-for-404.png')}} 2x">
-    <img src="{{asset('img/logo-for-404.png')}}" alt="TEDxKMITL" id="logo">
+    <source srcset="{{secure_asset('img/logo-for-404.png')}} 1x, {{secure_asset('img/2x/logo-for-404.png')}} 2x">
+    <img src="{{secure_asset('img/logo-for-404.png')}}" alt="TEDxKMITL" id="logo">
 </picture>
 </body>
 </html>
