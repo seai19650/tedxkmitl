@@ -2528,11 +2528,11 @@ if (typeof NProgress != 'undefined') {
                             d._token = $('meta[name="csrf_token"]').attr('content');
                         },
                         dataSrc: function(json) {
-                            alert(JSON.stringify(json));
                             return json;
                         }
                     },
                     columns: [
+                        { data: 'id' },
                         {
                             data: 'firstname',
                             render: function (data, type, row) {
@@ -2540,27 +2540,29 @@ if (typeof NProgress != 'undefined') {
                             }
                         },
                         { data: 'ticket_type' },
-                        { data: 'mobile' },
-                        { data: 'email' },
                         {
-                            data: "is_paid",
+                            data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return "yes";
+                                    return 'Unevaluated';
+                                } else {
+                                    return 'Approved';
                                 }
                             }
                         },
-                        { data: 'time' },
                         {
-                            data: null,
+                            data: 'is_paid',
                             render: function (data, type, row) {
-                                if (row.app_status == 0) {
-                                    return "<button class='button setStateButton'>Unevaluated</button>";
-                                } else if (row.app_status == 1) {
-                                    return "<button class='button is-success setStateButton'>Validated</button>";
+                                if (data) {
+                                    return 'Paid';
+                                } else {
+                                    return 'Unpaid';
                                 }
                             }
-                        }
+                        },
+                        { data: 'mobile' },
+                        { data: 'email' },
+                        { data: 'time' },
                     ],
                 });
 
