@@ -12,13 +12,21 @@
             font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
             color: #fff;
             padding: 0 10px;
+            overflow-x: hidden;
         }
         img#emoji {
             width: 100%;
             max-width: 600px;
             margin: 100px auto 0;
             display: block;
+            animation: nathan .5s ease;
         }
+
+        @@keyframes nathan {
+          from{transform: scale(12);}
+          to{transform: scale(1);}
+        }
+
         img#logo {
             width: 230px;
             display: block;
