@@ -45,7 +45,6 @@ class RegistrationController extends Controller
         $applicant->save();
 
         \Mail::to($applicant->email)->send(new Respond($applicant));
-
         foreach ($request->input('question') as $key => $value) {
             $answer = new Answer;
             $answer->registration_id = $applicant->id;
@@ -53,7 +52,7 @@ class RegistrationController extends Controller
             $answer->answer = $value;
             $answer->save();
         }
-        return view('apply-success');
+        return redirect('/success');
     }
 
     /**
