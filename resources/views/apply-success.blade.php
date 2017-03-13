@@ -19,7 +19,18 @@
             padding: 2em auto;
             text-align: center;
         }
-        img#wow {width: 250px;display: block;margin: 0 auto;}
+        img#wow {
+          width: 250px;
+          display: block;
+          margin: 0 auto;
+          animation: nodd 1s infinite alternate steps(2);
+        }
+
+        @@keyframes nodd {
+          from{transform: translateX(20px);}
+          to{transform: translateX(-20px);}
+        }
+
         img#logo {width: 90%;max-width: 240px;margin-top: 2em;}
         h2 {color: #818181;font-weight: normal;letter-spacing: 0.5px;}
         @media (min-width: 768px) {
