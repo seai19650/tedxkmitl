@@ -127,5 +127,5 @@
 <script src="production/vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="production/build/js/custom.min.js"></script>
+<script src="production/build/js/custom.js"></script>
 @endsection('script')
