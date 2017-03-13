@@ -19,7 +19,9 @@
     <style type="text/css">
         @include('include.foundation')
     </style>
-    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
+    <style type="text/css">
+        @include('include.production')
+    </style>
     <script>
         document.createElement("picture");
     </script>
