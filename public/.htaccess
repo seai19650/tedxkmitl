@@ -26,8 +26,8 @@ RewriteRule ^ index.php [L]
   RewriteEngine On
   RewriteCond %{HTTP:X-Forwarded-Proto} =http
   RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [R=301,L]
-  RewriteCond %{HTTP:Host} ^tedxkmitl.com$ [NC]
-  RewriteRule ^(.*)$ https://www.%{HTTP:HOST}%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTP:Host} ^www.tedxkmitl.com$ [NC]
+  RewriteRule ^(.*)$ https://%{HTTP:HOST}%{REQUEST_URI} [R=301,L]
 </IfModule>
 
 # ------------------------------------------------------------------------------
