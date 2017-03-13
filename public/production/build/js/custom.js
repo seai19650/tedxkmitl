@@ -2507,17 +2507,48 @@ if (typeof NProgress != 'undefined') {
 
 				console.log('run_datatables');
 
-				if( typeof ($.fn.DataTable) === 'undefined'){ return; }
-				console.log('init_DataTables');
+                if( typeof ($.fn.DataTable) === 'undefined'){ return; }
+                console.log('init_DataTables');
 
-				TableManageButtons = function() {
-				  "use strict";
-				  return {
-					init: function() {
-					  handleDataTableButtons();
-					}
-				  };
-				}();
+                var handleDataTableButtons = function() {
+                  if ($("#datatable-buttons").length) {
+                    $("#datatable-buttons").DataTable({
+                      dom: "Bfrtip",
+                      buttons: [
+                        {
+                          extend: "copy",
+                          className: "btn-sm"
+                        },
+                        {
+                          extend: "csv",
+                          className: "btn-sm"
+                        },
+                        {
+                          extend: "excel",
+                          className: "btn-sm"
+                        },
+                        {
+                          extend: "pdfHtml5",
+                          className: "btn-sm"
+                        },
+                        {
+                          extend: "print",
+                          className: "btn-sm"
+                        },
+                      ],
+                      responsive: true
+                    });
+                  }
+                };
+
+                TableManageButtons = function() {
+                  "use strict";
+                  return {
+                    init: function() {
+                      handleDataTableButtons();
+                    }
+                  };
+                }();
 
                 // datatables ajax: warp
 				$('#datatable-responsive').DataTable({
@@ -2544,9 +2575,9 @@ if (typeof NProgress != 'undefined') {
                             data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return 'Unevaluated';
-                                } else {
                                     return 'Approved';
+                                } else {
+                                    return 'Unevaluated';
                                 }
                             }
                         },
@@ -2564,11 +2595,39 @@ if (typeof NProgress != 'undefined') {
                         { data: 'email' },
                         { data: 'time' },
                     ],
+                    scrollY: $(window).height()-250,
+                    paging: false,
+                    info: false,
+                    oLanguage: { "sSearch": "" },
+                    dom: '<"top"i>rt<"bottom"flp><"clear">'
                 });
 
 				TableManageButtons.init();
-
+                elastic_table();
+                disable_scroll();
+                show_search_text();
 			};
+
+            function elastic_table() {
+                // resize table according to the window size
+                $(window).resize(function() {
+                    $('.dataTables_scrollBody').height($(window).height() - 350);
+                });
+                $(window).trigger('resize');
+            }
+
+            function disable_scroll() {
+                // disable scrolling
+                $('html').css({
+                    overflow: 'hidden',
+                    height: '100%'
+                });
+            }
+
+            function show_search_text() {
+                // show search place holder
+                $('#datatable-responsive_filter input').attr('placeholder', 'Search')
+            }
 
 			/* CHART - MORRIS  */
 
@@ -5033,6 +5092,7 @@ if (typeof NProgress != 'undefined') {
 		init_skycons();
 		init_select2();
 		init_validator();
+        // datatables
 		init_DataTables();
 		init_chart_doughnut();
 		init_gauge();

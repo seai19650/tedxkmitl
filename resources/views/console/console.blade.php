@@ -1,4 +1,4 @@
-@extends('layouts.console')
+@extends('layouts.gentelella')
 
 @section('header')
 <!-- Bootstrap -->
