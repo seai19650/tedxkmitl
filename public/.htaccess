@@ -1,6 +1,3 @@
-DirectoryIndex index.php index.html index.htm
-
-# HSTS header
 <IfModule mod_headers.c>
   Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload"
 </IfModule>
