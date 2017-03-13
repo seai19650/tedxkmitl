@@ -101,7 +101,7 @@
         <div class="small-12 medium-4 columns">
             <label for="gender">Gender
                 <select name="gender" required>
-                    <option disabled>Gender</option>
+                    <option value="" disabled>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="unisex">Unisex</option>
@@ -116,7 +116,7 @@
         <div class="small-12 medium-4 columns">
             <label for="ticket_type">Ticket type
                 <select name="ticket_type" required>
-                    <option disabled>Select a type</option>
+                    <option value="" disabled>Select a type</option>
                     <option value="student">Student</option>
                     <option value="general">General Public</option>
                     <option value="angel">Angel</option>
