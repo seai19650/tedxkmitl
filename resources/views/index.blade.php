@@ -16,7 +16,9 @@
                 very often.">
     <meta name="twitter:image" content="{{secure_asset('img/ogimage.png')}}">
     <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
+    <style type="text/css">
+        @include('include.foundation')
+    </style>
     <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
     <script>
         document.createElement("picture");
