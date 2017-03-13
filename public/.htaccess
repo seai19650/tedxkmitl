@@ -61,7 +61,7 @@ RewriteRule ^ index.php [L]
 </IfModule>
 
 # set css and js cache
-<FilesMatch "\.(jpg|jpeg|png|gif|swf|css|js)$">
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|svg|css|js)$">
     Header set Cache-Control "max-age=604800, public"
 </FilesMatch>
 
