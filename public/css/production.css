@@ -51,7 +51,6 @@ img.x-hero {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    /* no date margin: 0 0 auto auto;*/
     position: static;
     z-index: 1;
 }
@@ -172,8 +171,14 @@ img.footer-icon {
     margin-top: -3px;
 }
 section#teaser {
-    background: #000000;
+    background: #e62b1a;
     padding: 90px 0 74px;
+}
+.blacken {
+    background: #000 !important;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
 }
 section#teaser h1{
     color: white;
@@ -218,7 +223,7 @@ section#speaker h1 {
     margin-bottom: 1.3rem;
 }
 section#event {
-    background: #000000;
+    background: #e62b1a;
     min-height: auto;
     padding: 67px 0;
 }
