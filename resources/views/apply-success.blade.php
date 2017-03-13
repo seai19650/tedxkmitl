@@ -37,17 +37,17 @@
 <body>
 <div class="wrap">
     <picture>
-        <source type="image/svg+xml" srcset="{{asset('img/apply-success.svg')}}">
-        <source srcset="{{asset('img/apply-success.png')}} 1x, {{asset('img/2x/apply-success.png')}} 2x">
-        <img src="{{asset('img/apply-success.svg')}}" alt="Wow!!" id="wow">
+        <source type="image/svg+xml" srcset="{{secure_asset('img/apply-success.svg')}}">
+        <source srcset="{{secure_asset('img/apply-success.png')}} 1x, {{secure_asset('img/2x/apply-success.png')}} 2x">
+        <img src="{{secure_asset('img/apply-success.svg')}}" alt="Wow!!" id="wow">
     </picture>
     <h1>Your application has been submitted.</h1>
     <h2>Please check your email for confirmation.</h2>
     <picture>
-        <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
-        <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
+        <source type="image/svg+xml" srcset="{{secure_asset('img/nav-on-w.svg')}}">
+        <source srcset="{{secure_asset('img/nav-on-w.png')}} 1x, {{secure_asset('img/2x/nav-on-w.png')}} 2x">
         <a href="{{url('/')}}">
-            <img src="{{asset('img/nav-on-w.png')}}" alt="TEDxKMITL" id="logo">
+            <img src="{{secure_asset('img/nav-on-w.png')}}" alt="TEDxKMITL" id="logo">
         </a>
     </picture>
 </div>

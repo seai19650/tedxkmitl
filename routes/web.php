@@ -19,6 +19,9 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/success', function () {
+    return view('apply-success');
+});
 Route::get('/dev', function () {
     return view('index-dev');
 });
