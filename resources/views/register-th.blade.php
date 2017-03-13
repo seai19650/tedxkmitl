@@ -7,25 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ลงทะเบียนร่วมงาน TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
+    <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
-    <meta name="twitter:image" content="{{asset('img/ogimage.png')}}">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
+    <meta name="twitter:image" content="{{secure_asset('img/ogimage.png')}}">
+    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
 </head>
 <body class="regis-page">
 <div class="row">
     <div class="small-12 columns">
         <picture>
-            <source type="image/svg+xml" srcset="{{asset('img/nav-on-w.svg')}}">
-            <source srcset="{{asset('img/nav-on-w.png')}} 1x, {{asset('img/2x/nav-on-w.png')}} 2x">
-            <img src="{{asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
+            <source type="image/svg+xml" srcset="{{secure_asset('img/nav-on-w.svg')}}">
+            <source srcset="{{secure_asset('img/nav-on-w.png')}} 1x, {{secure_asset('img/2x/nav-on-w.png')}} 2x">
+            <img src="{{secure_asset('img/nav-on-w.png')}}" class="regis-logo" alt="TEDxKMITL">
         </picture>
         <h1 class="regis-header">/ลงทะเบียน</h1>
     </div>
@@ -174,9 +174,9 @@
         </div>
     </div>
 </form>
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
 <script type="text/javascript">
     $(document).foundation();
 </script>
