@@ -1,5 +1,6 @@
 DirectoryIndex index.php index.html index.htm
 
+# Laravel support
 <IfModule mod_rewrite.c>
 <IfModule mod_negotiation.c>
 Options -MultiViews
@@ -16,6 +17,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [L]
 </IfModule>
 
+# HSTS header
 <IfModule mod_headers.c>
   Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload"
 </IfModule>
@@ -58,6 +60,11 @@ RewriteRule ^ index.php [L]
   </IfModule>
 </IfModule>
 
+# set css and js cache
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
 Options -Indexes
 Options +FollowSymlinks
 
@@ -68,4 +75,3 @@ Options +FollowSymlinks
 <Files appspec.yml>
   deny from all
 </Files>
-
