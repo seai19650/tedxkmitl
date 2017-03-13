@@ -16,12 +16,16 @@
                 very often.">
     <meta name="twitter:image" content="{{secure_asset('img/ogimage.png')}}">
     <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
+    <style type="text/css">
+        @include('include.foundation')
+    </style>
+    <style type="text/css">
+        @include('include.production')
+    </style>
     <script>
         document.createElement("picture");
     </script>
-    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js" async></script>
 </head>
 <body>
 <section id="main">
@@ -86,7 +90,7 @@
                 <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
                 <img src="img/tedx-vertical.png" class="tedx-vertical">
             </picture>
-            <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personal. Our
+            <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personel. Our
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often. Every person has a part in their life that they keep in secret, now is the time to get up
@@ -233,10 +237,10 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{secure_asset('js/on-screen.umd.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/4.1.1/what-input.min.js"></script>
+<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+<script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
 <script type="text/javascript">
     $(document).foundation();
     $(document).ready(function () {

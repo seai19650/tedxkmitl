@@ -7,3 +7,6 @@
 Homestead.json
 Homestead.yaml
 .env
+.env.origin
+.env.reserve
+.env.save
