@@ -104,7 +104,7 @@
         <div class="small-12 medium-4 columns">
             <label for="gender">เพศ
                 <select name="gender" required>
-                    <option disabled>เพศ</option>
+                    <option value="" disabled>เพศ</option>
                     <option value="male">ชาย</option>
                     <option value="female">หญิง</option>
                     <option value="unisex">เพศทางเลือก</option>
@@ -119,7 +119,7 @@
         <div class="small-12 medium-4 columns">
             <label for="ticket_type">ประเภทของบัตร
                 <select name="ticket_type" required>
-                    <option disabled>เลือกประเภทบัตร</option>
+                    <option value="" disabled>เลือกประเภทบัตร</option>
                     <option value="student">นักเรียน/นักศึกษา</option>
                     <option value="general">บุคคลทั่วไป</option>
                     <option value="angel">Angel</option>
