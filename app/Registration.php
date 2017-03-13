@@ -17,7 +17,7 @@ class Registration extends Model
     }
 
     public function random_gen() {
-      $name = $this->first_name;
+      $name = $this->firstname;
       $time = $this->created_at;
       $bytes = random_bytes(5);
       $token = sha1($name.$time.$bytes);
