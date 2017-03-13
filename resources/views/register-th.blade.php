@@ -93,12 +93,12 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="mobile">โทรศัพท์มือถือ
-                <input type="number" name="mobile" required>
+                <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="age">อายุ
-                <input type="number" name="age" required>
+                <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">

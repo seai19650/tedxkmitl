@@ -90,12 +90,12 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="mobile">Mobile
-                <input type="number" name="mobile" required>
+                <input type="text" name="mobile" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
             <label for="age">Age
-                <input type="number" name="age" required>
+                <input type="text" name="age" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
