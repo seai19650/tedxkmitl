@@ -11,6 +11,8 @@
 
     @yield('header')
 
+    @yield('style')
+
   </head>
 
   <body class="nav-md">

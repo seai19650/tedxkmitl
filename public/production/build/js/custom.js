@@ -2551,7 +2551,7 @@ if (typeof NProgress != 'undefined') {
                 }();
 
                 // datatables ajax: warp
-				$('#datatable-responsive').DataTable({
+				var profile_table = $('#datatable-responsive').DataTable({
                     ajax: {
                         url: "gettable",
                         type: "POST",
@@ -2594,15 +2594,17 @@ if (typeof NProgress != 'undefined') {
                         { data: 'mobile' },
                         { data: 'email' },
                         { data: 'time' },
+                        { data: 'created_at' },
                     ],
                     scrollY: $(window).height()-250,
                     paging: false,
                     info: false,
                     oLanguage: { "sSearch": "" },
-                    dom: '<"top"i>rt<"bottom"flp><"clear">'
+                    dom: '<"top"i>rt<"bottom"flp><"clear">',
+                    order: [[ 0, "desc" ]]
                 });
-
 				TableManageButtons.init();
+
                 elastic_table();
                 disable_scroll();
                 show_search_text();

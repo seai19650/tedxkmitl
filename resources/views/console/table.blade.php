@@ -1,5 +1,16 @@
 @extends('layouts.gentelella')
 
+@section('style')
+<style type="text/css">
+  #datatable-responsive_filter {
+    margin-top: 10px;
+  }
+  #datatable-responsive_filter input {
+    border-radius: 5px;
+  }
+</style>
+@endsection
+
 @section('header')
 <meta name="csrf_token" content="{{ csrf_token() }}"/>
 <!-- Bootstrap -->
@@ -83,6 +94,7 @@
                   <th>Mobile</th>
                   <th>Email</th>
                   <th>Registration Date</th>
+                  <th>Timestamp</th>
                 </tr>
               </thead>
             </table>
