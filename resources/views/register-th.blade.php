@@ -55,7 +55,7 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post" data-abide>
+<form name="apply" action="/apply" method="post" onsubmit="submit.disabled = true; return true;" data-abide>
     {{ csrf_field() }}
     <div class="row">
         <div class="small-12 columns">
