@@ -106,9 +106,11 @@ $MENU_TOGGLE.on('click', function() {
 		if ($BODY.hasClass('nav-md')) {
 			$SIDEBAR_MENU.find('li.active ul').hide();
 			$SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
+            $('.logo-bg-sq').show();
 		} else {
 			$SIDEBAR_MENU.find('li.active-sm ul').show();
 			$SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
+            $('.logo-bg-sq').hide();
 		}
 
 	$BODY.toggleClass('nav-md nav-sm');
@@ -5072,7 +5074,7 @@ if (typeof NProgress != 'undefined') {
 
 		init_sparklines();
 		init_flot_chart();
-		// init_sidebar();
+		init_sidebar();
 		init_wysiwyg();
 		init_InputMask();
 		init_JQVmap();

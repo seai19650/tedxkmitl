@@ -4249,6 +4249,15 @@ a.site_title {
 }
 
 .logo-bg img {
-    width: 150px;
+    width: 130px;
+    position: relative;
+    top: -3px;
 }
 
+.logo-bg-sq {
+    display: none;
+}
+
+.logo-bg-sq img {
+    width: 40px;
+}
