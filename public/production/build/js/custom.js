@@ -2563,7 +2563,7 @@ if (typeof NProgress != 'undefined') {
                         }
                     },
                     columns: [
-                        { data: 'id' },
+                        // { data: 'id' },
                         {
                             data: 'firstname',
                             render: function (data, type, row) {
@@ -2601,7 +2601,7 @@ if (typeof NProgress != 'undefined') {
                     info: false,
                     oLanguage: { "sSearch": "" },
                     dom: '<"top"i>rt<"bottom"flp><"clear">',
-                    order: [[ 0, "desc" ]]
+                    order: [[ 7, "desc" ]]
                 });
 				TableManageButtons.init();
 
