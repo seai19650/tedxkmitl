@@ -81,8 +81,8 @@
                   <th>Payment</th>
                   <th>Mobile</th>
                   <th>Email</th>
-                  <th>Registration Date</th>
-                  <th>Timestamp</th>
+                  <th>Recent</th>
+                  <th>Registration Time</th>
                 </tr>
               </thead>
             </table>
