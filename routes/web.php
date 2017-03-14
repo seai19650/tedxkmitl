@@ -54,7 +54,8 @@ Auth::routes();
 Route::get('/home', function (){
     return redirect('/console'); // Redirect to console after login
 });
-Route::get('/console', 'ConsoleController@index')->middleware('auth');
-Route::get('/table', 'TableController@index')->middleware('auth');
+Route::get('/console', 'ConsoleController@index')->middleware('auth')->name('console');;
+Route::get('/table', 'TableController@index')->middleware('auth')->name('table');;
 Route::post('/gettable', 'TableController@getTable');
+
 
