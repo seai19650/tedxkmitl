@@ -62,7 +62,7 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post" onsubmit="submit.disabled = true; return true;" data-abide>
+<form name="apply" action="/apply" method="post" onsubmit="submission_control()" data-abide>
     {{ csrf_field() }}
     <div class="row">
         <div class="small-12 columns">
@@ -184,6 +184,20 @@
 <script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
 <script type="text/javascript">
     $(document).foundation();
+    function submission_control() {
+        $(document)
+        // form validation passed, form will submit if submit event not returned false
+            .on("formvalid.zf.abide", function(ev,frm) {
+                $("form button").prop("disabled", true);
+                $("form button").text("กำลังส่ง...");
+                return true;
+            });
+        return false;
+    }
+
+    $('form').on("keydown", function() {
+        $("form button").attr("disabled", false);
+    })
 </script>
 </body>
 </html>
