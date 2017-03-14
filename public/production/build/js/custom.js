@@ -2613,7 +2613,7 @@ if (typeof NProgress != 'undefined') {
             function elastic_table() {
                 // resize table according to the window size
                 $(window).resize(function() {
-                    $('.dataTables_scrollBody').height($(window).height() - 350);
+                    $('.dataTables_scrollBody').height($(window).height() - 325);
                 });
                 $(window).trigger('resize');
             }
@@ -5072,7 +5072,7 @@ if (typeof NProgress != 'undefined') {
 
 		init_sparklines();
 		init_flot_chart();
-		init_sidebar();
+		// init_sidebar();
 		init_wysiwyg();
 		init_InputMask();
 		init_JQVmap();
