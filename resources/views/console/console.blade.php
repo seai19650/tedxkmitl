@@ -18,7 +18,7 @@
 <link href="production/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
 <!-- Custom Theme Style -->
-<link href="production/build/css/custom.min.css" rel="stylesheet">
+<link href="production/build/css/custom.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')
