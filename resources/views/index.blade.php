@@ -39,7 +39,7 @@
                         <img src="img/nav-on-w.png" alt="TEDxKMITL">
                     </picture>
                 </div>
-                <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger">
+                <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger show-for-small-only">
                     <button class="menu-icon" type="button" data-toggle></button>
                 </span>
             </div>
