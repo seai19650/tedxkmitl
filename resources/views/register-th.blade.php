@@ -55,7 +55,7 @@
         </div>
     </div>
 </div>
-<form name="apply" action="/apply" method="post" data-abide>
+<form name="apply" action="/apply" method="post" onsubmit="submit.disabled = true; return true;" data-abide>
     {{ csrf_field() }}
     <div class="row">
         <div class="small-12 columns">
@@ -88,7 +88,7 @@
         </div>
         <div class="small-12 medium-4 columns">
             <label for="email">อีเมล
-                <input type="text" name="email" required>
+                <input type="email" name="email" required>
             </label>
         </div>
         <div class="small-12 medium-4 columns">
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div class="small-12 columns">
-            <button class="button ghost primary" type="submit">ส่งข้อมูล</button>
+            <button name="submit" class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
     </div>
 </form>
