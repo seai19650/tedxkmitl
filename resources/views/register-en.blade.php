@@ -189,7 +189,7 @@
         // form validation passed, form will submit if submit event not returned false
             .on("formvalid.zf.abide", function(ev,frm) {
                 $("form button").prop("disabled", true);
-                $("form button").text("กำลังส่ง...");
+                $("form button").text("Submitting...");
                 return true;
             });
         return false;
