@@ -2615,7 +2615,7 @@ if (typeof NProgress != 'undefined') {
             function elastic_table() {
                 // resize table according to the window size
                 $(window).resize(function() {
-                    $('.dataTables_scrollBody').height($(window).height() - 325);
+                    $('.dataTables_scrollBody').height($(window).height() - 300);
                 });
                 $(window).trigger('resize');
             }
