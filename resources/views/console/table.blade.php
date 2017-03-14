@@ -8,9 +8,6 @@
   #datatable-responsive_filter input {
     border-radius: 5px;
   }
-  div.right_col {
-    margin: 0px !important;
-  }
 </style>
 @endsection
 
@@ -32,7 +29,6 @@
 <link href="production/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="production/build/css/custom.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.min.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')

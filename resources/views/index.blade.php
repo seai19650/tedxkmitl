@@ -226,10 +226,10 @@
     <div class="regis-lang-modal">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <a href="{{url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
+                <a href="{{secure_url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
             </div>
             <div class="small-12 medium-6 columns">
-                <a href="{{url('apply/en')}}" class="button ghost primary large expanded">English</a>
+                <a href="{{secure_url('apply/en')}}" class="button ghost primary large expanded">English</a>
             </div>
         </div>
     </div>
