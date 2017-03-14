@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-
-    <!-- developing process is now on! ฤsset is used so with http on the local host,
-    this file will break! -->
-
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +35,7 @@
                         <img src="img/nav-on-w.png" alt="TEDxKMITL">
                     </picture>
                 </div>
-                <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger">
+                <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger show-for-small-only">
                     <button class="menu-icon" type="button" data-toggle></button>
                 </span>
             </div>
