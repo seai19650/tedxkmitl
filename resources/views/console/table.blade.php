@@ -28,7 +28,7 @@
 <link href="production/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
 <link href="production/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
-<link href="production/build/css/custom.min.css" rel="stylesheet">
+<link href="production/build/css/custom.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')
