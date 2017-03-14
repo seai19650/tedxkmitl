@@ -24,6 +24,9 @@
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{ secure_url('/') }}" class="site_title text-center">
 
+                <div class="logo-bg-sq">
+                  <img src="img/logo-sq.png">
+                </div>
                 <div class="logo-bg">
                   <picture>
                       <source type="image/svg+xml" srcset="img/nav-on-w.svg">
