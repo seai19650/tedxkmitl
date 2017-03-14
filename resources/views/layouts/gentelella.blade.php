@@ -22,19 +22,28 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title text-center"><span>TEDxKMITL</span></a>
+              <a href="{{ secure_url('/') }}" class="site_title text-center">
+
+                <div class="logo-bg">
+                  <picture>
+                      <source type="image/svg+xml" srcset="img/nav-on-w.svg">
+                      <source srcset="img/nav-on-w.png 1x, img/2x/nav-on-w.png 2x">
+                      <img src="img/nav-on-w.png" alt="TEDxKMITL">
+                  </picture>
+                </div>
+
+              </a>
             </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            <div class="profile clearfix">
+            <!-- <div class="profile clearfix">
               <div class="profile_info text-center">
                 <span>Welcome,</span>
                 <h2>{{ Auth::user()->name }}</h2><br>
-                <!-- Authentication Links -->
               </div>
-            </div>
+            </div> -->
             <!-- /menu profile quick info -->
 
             <br />
