@@ -2598,7 +2598,7 @@ if (typeof NProgress != 'undefined') {
                         { data: 'time' },
                         { data: 'created_at' },
                     ],
-                    scrollY: $(window).height()-250,
+                    scrollY: $(window).height()-300,
                     paging: false,
                     info: false,
                     oLanguage: { "sSearch": "" },
@@ -2609,12 +2609,6 @@ if (typeof NProgress != 'undefined') {
                         init_approveButton($datatable);
                     }
                 });
-
-                // $datatable.on('draw.dt', function() {
-                //   $('checkbox input').iCheck({
-                //     checkboxClass: 'icheckbox_flat-green'
-                //   });
-                // });
 
 				TableManageButtons.init();
 
