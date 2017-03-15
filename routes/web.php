@@ -57,5 +57,6 @@ Route::get('/home', function (){
 Route::get('/console', 'ConsoleController@index')->middleware('auth')->name('console');;
 Route::get('/table', 'TableController@index')->middleware('auth')->name('table');;
 Route::post('/gettable', 'TableController@getTable');
+Route::post('/setapprove', 'TableController@setApprove');
 
 

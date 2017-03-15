@@ -28,7 +28,9 @@
 <link href="production/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
 <link href="production/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
-<link href="production/build/css/custom.min.css" rel="stylesheet">
+<link href="production/build/css/custom.css" rel="stylesheet">
+<link href="css/console/bulma.css" rel="stylesheet">
+<link href="css/console/custom.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')
@@ -41,14 +43,7 @@
       </div>
 
       <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div>
-        </div>
+        <!-- search bar -->
       </div>
     </div>
 
@@ -78,27 +73,21 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <p class="text-muted font-13 m-b-30">
-              To approve the audience, click the approval button.
-            </p>
-
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
               <thead>
                 <tr>
-                  <th>No.</th>
+                  <!-- <th>No.</th> -->
                   <th>Name</th>
+                  <th>Invite</th>
                   <th>Card Type</th>
-                  <th>Approval</th>
                   <th>Payment</th>
                   <th>Mobile</th>
                   <th>Email</th>
-                  <th>Registration Date</th>
-                  <th>Timestamp</th>
+                  <th>Recent</th>
+                  <th>Registration Time</th>
                 </tr>
               </thead>
             </table>
-
-          <button class="button">sdfkljsdflj</button>
 
           </div>
         </div>
@@ -139,4 +128,5 @@
 
 <!-- Custom Theme Scripts -->
 <script src="production/build/js/custom.js"></script>
+<script src="js/console/custom.js"></script>
 @endsection('script')
