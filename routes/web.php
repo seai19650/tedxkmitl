@@ -32,8 +32,6 @@ Route::get('/apply/en', function () {
     return view('register-en');
 });
 
-Route::get('/id/{token}', 'IdController@index');
-
 Route::post('/apply', 'RegistrationController@store');
 
 Route::get('/pay/{token}', 'PayController@index');
@@ -53,3 +51,7 @@ Route::get('/table', 'TableController@index')->middleware('auth')->name('table')
 Route::get('/mail', 'MailController@index')->middleware('auth')->name('mail');;
 Route::post('/gettable', 'TableController@getTable');
 Route::post('/setapprove', 'TableController@setApprove');
+
+Route::get('/id/{token}', 'IdController@index');
+Route::post('/post/{token}', ['uses' => 'StatusController@store', 'as' => 'status.post']);
+Route::post('/verify/{token}', ['uses' => 'StatusController@check', 'as' => 'status.login']);
