@@ -20,10 +20,11 @@ class Respond extends Mailable
      *
      * @return void
      */
-    public function __construct($applicant)
+    public function __construct($applicant, $status)
     {
         //
         $this->applicant = $applicant;
+        $this->status = $status;
     }
 
     /**
@@ -33,7 +34,15 @@ class Respond extends Mailable
      */
     public function build()
     {
-        return $this->view('email')
-                    ->subject('Registration Succeeded!');
+        if ($this->status == 'normal') {
+            return $this->view('email')
+                ->subject('Registration Succeeded!');
+        } elseif ($this->status == 'batch') {
+            return $this->view('email')
+                ->subject('Congratulations! A seat is reserved for you.');
+        } else {
+            return redirect('/');
+        }
+
     }
 }

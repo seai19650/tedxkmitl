@@ -44,7 +44,8 @@ class RegistrationController extends Controller
         $applicant->token = $applicant->random_gen();
         $applicant->save();
 
-        \Mail::to($applicant->email)->send(new Respond($applicant));
+        $status = 'normal';
+        \Mail::to($applicant->email)->send(new Respond($applicant, $status));
         foreach ($request->input('question') as $key => $value) {
             $answer = new Answer;
             $answer->registration_id = $applicant->id;
