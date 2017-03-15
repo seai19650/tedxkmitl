@@ -17,7 +17,10 @@ class TableController extends Controller
         }
         return $registrations;
     }
-    public function readTime() {
-
+    public function setApprove(Request $request) {
+        $application = Registration::find($request->id);
+        $application->is_approved = $request->state;
+        $application->save();
+        return $application->is_approved;
     }
 }

@@ -29,6 +29,8 @@
 <link href="production/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="production/build/css/custom.css" rel="stylesheet">
+<link href="css/console/bulma.css" rel="stylesheet">
+<link href="css/console/custom.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')
@@ -76,8 +78,8 @@
                 <tr>
                   <!-- <th>No.</th> -->
                   <th>Name</th>
+                  <th>Invite</th>
                   <th>Card Type</th>
-                  <th>Approval</th>
                   <th>Payment</th>
                   <th>Mobile</th>
                   <th>Email</th>
@@ -126,4 +128,5 @@
 
 <!-- Custom Theme Scripts -->
 <script src="production/build/js/custom.js"></script>
+<script src="js/console/custom.js"></script>
 @endsection('script')
