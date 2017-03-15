@@ -8,6 +8,10 @@ class Registration extends Model
 {
     protected $guarded = ['question'];
 
+    public function transaction() {
+        return $this->hasOne(Transaction::class);
+    }
+
     public function questions() {
         return $this->hasMany(Question::class);
     }
