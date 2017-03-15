@@ -15,15 +15,9 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/index', function () {
-    return view('index');
-});
 
 Route::get('/success', function () {
     return view('apply-success');
-});
-Route::get('/dev', function () {
-    return view('index-dev');
 });
 
 Route::get('/apply/th', function () {
