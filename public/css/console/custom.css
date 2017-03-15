@@ -30,12 +30,12 @@ a.site_title {
 tr td {
     padding-top: 11px !important;
     padding-right: 15px !important;
-    padding-bottom: 12px !important;
+    padding-bottom: 10px !important;
     padding-left: 15px !important;
 }
 
 tr td:nth-child(1) {
-    padding-left: 35px !important;
+    padding-left: 37px !important;
 }
 
 tr td:nth-child(n+2):nth-child(-n+4) {
