@@ -2553,7 +2553,7 @@ if (typeof NProgress != 'undefined') {
                 }();
 
                 // datatables ajax: warp
-				var profile_table = $('#datatable-responsive').DataTable({
+				var $datatable = $('#datatable-responsive').DataTable({
                     ajax: {
                         url: "gettable",
                         type: "POST",
@@ -2572,17 +2572,17 @@ if (typeof NProgress != 'undefined') {
                                 return data + ' ' + row.lastname;
                             }
                         },
-                        { data: 'ticket_type' },
                         {
                             data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return 'Approved';
+                                    return '<button class="button setStateButton is-success">Yes</button>';
                                 } else {
-                                    return 'Unevaluated';
+                                    return '<button class="button setStateButton">No</button>';
                                 }
                             }
                         },
+                        { data: 'ticket_type' },
                         {
                             data: 'is_paid',
                             render: function (data, type, row) {
@@ -2603,8 +2603,19 @@ if (typeof NProgress != 'undefined') {
                     info: false,
                     oLanguage: { "sSearch": "" },
                     dom: '<"top"i>rt<"bottom"flp><"clear">',
-                    order: [[ 7, "desc" ]]
+                    order: [[ 7, "desc" ]],
+                    initComplete: function(settings, json) {
+                        // setLoading();
+                        init_approveButton($datatable);
+                    }
                 });
+
+                // $datatable.on('draw.dt', function() {
+                //   $('checkbox input').iCheck({
+                //     checkboxClass: 'icheckbox_flat-green'
+                //   });
+                // });
+
 				TableManageButtons.init();
 
                 elastic_table();
@@ -2631,6 +2642,68 @@ if (typeof NProgress != 'undefined') {
             function show_search_text() {
                 // show search place holder
                 $('#datatable-responsive_filter input').attr('placeholder', 'Search')
+            }
+
+            function setLoading() {
+                $('.setStateButton').on('click', function() {
+                    $(this).addClass('is-loading');
+                });
+            }
+
+            function removeLoading() {
+                $('.setStateButton').on('click', function() {
+                    $(this).removeClass('is-loading');
+                });
+            }
+
+            function init_approveButton($datatable) {
+                // set document validation status
+                $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
+                    var thisRow = $(this).parents('tr');
+                    var registration;
+                    if (thisRow.attr('class') == 'child') {
+                        registration = $datatable.row(thisRow.prev()).data();
+                    } else {
+                        registration = $datatable.row(thisRow).data();
+                    }
+                    var thisButton = $(this);
+                    thisButton.addClass('is-loading');
+                    var state;
+                    if ($(this).html() == 'No') {
+                        state = 1;
+                    } else {
+                        state = 0;
+                    }
+                    $.ajax({
+                        url: "setapprove",
+                        type: "POST",
+                        data: {
+                            _token: $('meta[name="csrf_token"]').attr('content'),
+                            id: registration.id,
+                            state: state,
+                            is_internal: registration.is_internal
+                        },
+                        success:function(data){
+                            if (data == 0) {
+                                thisButton.removeClass('is-success');
+                                thisButton.removeClass('is-warning');
+                                thisButton.html('No');
+                            } else if (data == 1) {
+                                thisButton.removeClass('is-warning');
+                                thisButton.addClass('is-success');
+                                thisButton.html('Yes');
+                            } else {
+                                thisButton.addClass('is-warning');
+                                thisButton.removeClass('is-success');
+                                thisButton.html('Invalidated');
+                            }
+                            thisButton.removeClass('is-loading');
+                        },
+                        error:function(){
+                            thisButton.removeClass('is-loading');
+                        }
+                    });
+                });
             }
 
 			/* CHART - MORRIS  */
