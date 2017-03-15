@@ -25,7 +25,7 @@ a.site_title {
     padding: 0 8px;
     margin: 0;
     height: 35px;
-    width: 100%;
+    width: 83% !important;
 }
 
 tr td {

@@ -2605,7 +2605,8 @@ if (typeof NProgress != 'undefined') {
                     dom: '<"top"i>rt<"bottom"flp><"clear">',
                     order: [[ 7, "desc" ]],
                     initComplete: function(settings, json) {
-                        setLoading();
+                        // setLoading();
+                        init_approveButton($datatable);
                     }
                 });
 
@@ -2646,6 +2647,56 @@ if (typeof NProgress != 'undefined') {
             function setLoading() {
                 $('.setStateButton').on('click', function() {
                     $(this).addClass('is-loading');
+                });
+            }
+
+            function removeLoading() {
+                $('.setStateButton').on('click', function() {
+                    $(this).removeClass('is-loading');
+                });
+            }
+
+            function init_approveButton($datatable) {
+                // set document validation status
+                $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
+                    var registration = $datatable.row($(this).parents('tr')).data();
+                    var thisButton = $(this);
+                    thisButton.addClass('is-loading');
+                    var state;
+                    if ($(this).html() == 'Unevaluated') {
+                        state = 1;
+                    } else {
+                        state = 0;
+                    }
+                    $.ajax({
+                        url: "setapprove",
+                        type: "POST",
+                        data: {
+                            _token: $('meta[name="csrf_token"]').attr('content'),
+                            id: registration.id,
+                            state: state,
+                            is_internal: registration.is_internal
+                        },
+                        success:function(data){
+                            if (data == 0) {
+                                thisButton.removeClass('is-success');
+                                thisButton.removeClass('is-warning');
+                                thisButton.html('Unevaluated');
+                            } else if (data == 1) {
+                                thisButton.removeClass('is-warning');
+                                thisButton.addClass('is-success');
+                                thisButton.html('Validated');
+                            } else {
+                                thisButton.addClass('is-warning');
+                                thisButton.removeClass('is-success');
+                                thisButton.html('Invalidated');
+                            }
+                            thisButton.removeClass('is-loading');
+                        },
+                        error:function(){
+                            thisButton.removeClass('is-loading');
+                        }
+                    });
                 });
             }
 
