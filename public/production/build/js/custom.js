@@ -2553,7 +2553,7 @@ if (typeof NProgress != 'undefined') {
                 }();
 
                 // datatables ajax: warp
-				var profile_table = $('#datatable-responsive').DataTable({
+				var $datatable = $('#datatable-responsive').DataTable({
                     ajax: {
                         url: "gettable",
                         type: "POST",
@@ -2577,9 +2577,9 @@ if (typeof NProgress != 'undefined') {
                             data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return 'Approved';
+                                    return '<button class="button setStateButton">Unevaluated</button>';
                                 } else {
-                                    return 'Unevaluated';
+                                    return '<button class="button setStateButton">Unevaluated</button>';
                                 }
                             }
                         },
@@ -2603,8 +2603,18 @@ if (typeof NProgress != 'undefined') {
                     info: false,
                     oLanguage: { "sSearch": "" },
                     dom: '<"top"i>rt<"bottom"flp><"clear">',
-                    order: [[ 7, "desc" ]]
+                    order: [[ 7, "desc" ]],
+                    initComplete: function(settings, json) {
+                        setLoading();
+                    }
                 });
+
+                // $datatable.on('draw.dt', function() {
+                //   $('checkbox input').iCheck({
+                //     checkboxClass: 'icheckbox_flat-green'
+                //   });
+                // });
+
 				TableManageButtons.init();
 
                 elastic_table();
@@ -2631,6 +2641,12 @@ if (typeof NProgress != 'undefined') {
             function show_search_text() {
                 // show search place holder
                 $('#datatable-responsive_filter input').attr('placeholder', 'Search')
+            }
+
+            function setLoading() {
+                $('.setStateButton').on('click', function() {
+                    $(this).addClass('is-loading');
+                });
             }
 
 			/* CHART - MORRIS  */
