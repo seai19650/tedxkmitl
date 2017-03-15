@@ -2572,17 +2572,17 @@ if (typeof NProgress != 'undefined') {
                                 return data + ' ' + row.lastname;
                             }
                         },
-                        { data: 'ticket_type' },
                         {
                             data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return '<button class="button setStateButton is-success">Approved</button>';
+                                    return '<button class="button setStateButton is-success">Yes</button>';
                                 } else {
-                                    return '<button class="button setStateButton">Unevaluated</button>';
+                                    return '<button class="button setStateButton">No</button>';
                                 }
                             }
                         },
+                        { data: 'ticket_type' },
                         {
                             data: 'is_paid',
                             render: function (data, type, row) {
@@ -2659,11 +2659,17 @@ if (typeof NProgress != 'undefined') {
             function init_approveButton($datatable) {
                 // set document validation status
                 $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
-                    var registration = $datatable.row($(this).parents('tr')).data();
+                    var thisRow = $(this).parents('tr');
+                    var registration;
+                    if (thisRow.attr('class') == 'child') {
+                        registration = $datatable.row(thisRow.prev()).data();
+                    } else {
+                        registration = $datatable.row(thisRow).data();
+                    }
                     var thisButton = $(this);
                     thisButton.addClass('is-loading');
                     var state;
-                    if ($(this).html() == 'Unevaluated') {
+                    if ($(this).html() == 'No') {
                         state = 1;
                     } else {
                         state = 0;
@@ -2681,11 +2687,11 @@ if (typeof NProgress != 'undefined') {
                             if (data == 0) {
                                 thisButton.removeClass('is-success');
                                 thisButton.removeClass('is-warning');
-                                thisButton.html('Unevaluated');
+                                thisButton.html('No');
                             } else if (data == 1) {
                                 thisButton.removeClass('is-warning');
                                 thisButton.addClass('is-success');
-                                thisButton.html('Approved');
+                                thisButton.html('Yes');
                             } else {
                                 thisButton.addClass('is-warning');
                                 thisButton.removeClass('is-success');

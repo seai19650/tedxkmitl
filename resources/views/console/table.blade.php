@@ -78,8 +78,8 @@
                 <tr>
                   <!-- <th>No.</th> -->
                   <th>Name</th>
+                  <th>Invite</th>
                   <th>Card Type</th>
-                  <th>Approval</th>
                   <th>Payment</th>
                   <th>Mobile</th>
                   <th>Email</th>
