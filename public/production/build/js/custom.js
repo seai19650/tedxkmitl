@@ -2577,7 +2577,7 @@ if (typeof NProgress != 'undefined') {
                             data: 'is_approved',
                             render: function (data, type, row) {
                                 if (data) {
-                                    return '<button class="button setStateButton">Unevaluated</button>';
+                                    return '<button class="button setStateButton is-success">Approved</button>';
                                 } else {
                                     return '<button class="button setStateButton">Unevaluated</button>';
                                 }
@@ -2685,7 +2685,7 @@ if (typeof NProgress != 'undefined') {
                             } else if (data == 1) {
                                 thisButton.removeClass('is-warning');
                                 thisButton.addClass('is-success');
-                                thisButton.html('Validated');
+                                thisButton.html('Approved');
                             } else {
                                 thisButton.addClass('is-warning');
                                 thisButton.removeClass('is-success');
