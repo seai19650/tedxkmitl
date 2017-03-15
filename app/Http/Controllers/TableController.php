@@ -8,7 +8,7 @@ use App\Registration;
 class TableController extends Controller
 {
     public function index() {
-        return view('console.table');
+        return view('console/table');
     }
     public function getTable() {
         $registrations = Registration::all();

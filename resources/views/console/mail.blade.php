@@ -15,6 +15,8 @@
 <link href="production/vendors/nprogress/nprogress.css" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="production/build/css/custom.min.css" rel="stylesheet">
+<link href="css/console/bulma.css" rel="stylesheet">
+<link href="css/console/custom.css" rel="stylesheet">
 @endsection('header')
 
 @section('content')
@@ -84,4 +86,5 @@
 <script src="production/vendors/nprogress/nprogress.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="production/build/js/custom.min.js"></script>
+<script src="js/console/custom.js"></script>
 @endsection('script')

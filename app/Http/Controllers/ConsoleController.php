@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ConsoleController extends Controller
 {
     public function index() {
-        return view('console.console');
+        return view('console/dashboard');
     }
 }
