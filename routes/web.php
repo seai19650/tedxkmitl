@@ -59,5 +59,3 @@ Route::get('/table', 'TableController@index')->middleware('auth')->name('table')
 Route::get('/mail', 'TableController@index')->middleware('auth')->name('mail');;
 Route::post('/gettable', 'TableController@getTable');
 Route::post('/setapprove', 'TableController@setApprove');
-
-
