@@ -55,3 +55,4 @@ Route::post('/gettable', 'TableController@getTable');
 Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
 Route::get('/gettime', 'ConsoleController@getTime');
+Route::post('/getagestat', 'ConsoleController@getAgeStat');

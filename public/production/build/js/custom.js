@@ -1984,7 +1984,7 @@ if (typeof NProgress != 'undefined') {
 			};
 
 
-		function init_charts() {
+		function init_charts(json) {
 
 				console.log('run_charts  typeof [' + typeof (Chart) + ']');
 
@@ -1996,8 +1996,6 @@ if (typeof NProgress != 'undefined') {
 				Chart.defaults.global.legend = {
 					enabled: false
 				};
-
-
 
 			if ($('#canvas_line').length ){
 
@@ -2163,18 +2161,16 @@ if (typeof NProgress != 'undefined') {
 
 			}
 
-
-			  // Line chart
-
+			  // Line chart chart.js
 			if ($('#lineChart').length ){
 
 			  var ctx = document.getElementById("lineChart");
 			  var lineChart = new Chart(ctx, {
 				type: 'line',
 				data: {
-				  labels: ["January", "February", "March", "April", "May", "June", "July"],
+				  labels: json.age,
 				  datasets: [{
-					label: "My First dataset",
+					label: "Female",
 					backgroundColor: "rgba(38, 185, 154, 0.31)",
 					borderColor: "rgba(38, 185, 154, 0.7)",
 					pointBorderColor: "rgba(38, 185, 154, 0.7)",
@@ -2182,9 +2178,9 @@ if (typeof NProgress != 'undefined') {
 					pointHoverBackgroundColor: "#fff",
 					pointHoverBorderColor: "rgba(220,220,220,1)",
 					pointBorderWidth: 1,
-					data: [31, 74, 6, 39, 20, 85, 7]
+					data: json.female
 				  }, {
-					label: "My Second dataset",
+					label: "Male",
 					backgroundColor: "rgba(3, 88, 106, 0.3)",
 					borderColor: "rgba(3, 88, 106, 0.70)",
 					pointBorderColor: "rgba(3, 88, 106, 0.70)",
@@ -2192,7 +2188,7 @@ if (typeof NProgress != 'undefined') {
 					pointHoverBackgroundColor: "#fff",
 					pointHoverBorderColor: "rgba(151,187,205,1)",
 					pointBorderWidth: 1,
-					data: [82, 23, 66, 9, 99, 4, 2]
+					data: json.male
 				  }]
 				},
 			  });
@@ -4964,7 +4960,7 @@ if (typeof NProgress != 'undefined') {
 		init_daterangepicker_reservation();
 		init_SmartWizard();
 		init_EasyPieChart();
-		init_charts();
+		// init_charts();
 		init_echarts();
 		init_morris_charts();
 		init_skycons();
