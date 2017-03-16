@@ -54,5 +54,5 @@ Route::get('/mail', 'MailController@index')->middleware('auth')->name('mail');;
 Route::post('/gettable', 'TableController@getTable');
 Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
-Route::get('/gettime', 'ConsoleController@getTime');
 Route::post('/getagestat', 'ConsoleController@getAgeStat');
+Route::post('/gettimestat', 'ConsoleController@getTimeStat');

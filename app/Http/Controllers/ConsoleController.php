@@ -10,7 +10,7 @@ class ConsoleController extends Controller
 {
     public function index() {
         $now = Carbon::now();
-        $end = Carbon::parse('2017-03-20 00:00:00');
+        $end = Carbon::parse('2017-03-21 00:00:00');
         $dayleft = $end->diffInDays($now);
 
         $stat = [
@@ -42,6 +42,10 @@ class ConsoleController extends Controller
             }
         }
         return compact('age', 'male', 'female');
+    }
+    public function getTimeStat() {
+        $data = Registration::pluck('created_at');
+        return $data;
     }
     public function getTime() {
         return Carbon::now();
