@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
-    <meta name="_token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
@@ -37,9 +37,12 @@
         <div class="small-12 medium-7 column">
             <h1 class="small-12">Hi {!! $applicant->firstname !!}!</h1>
             <p class="small-12">Welcome to your ID page.</p>
-            <a href="/verify" class="button expand secondary">Post Something!</a>
         </div>
     </div>
+    <form action="">
+        <input name="lastname" type="text" required>
+        <button type="submit" class="button secondary small-12">Verify</button>
+    </form>
 
 
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
@@ -58,6 +61,28 @@
                     scrollTop: go
                 }, 800)
             }
+        });
+
+        $('form').on('submit', function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                method: 'POST', // Type of response and matches what we said in the route
+                url: window.location.pathname, // This is the url we gave in the route
+                data: $(this).serialize(), // a JSON object to send back
+                success: function(response){ // What to do if we succeed
+                    console.log(response);
+                    alert('Finish');
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                    console.log(JSON.stringify(jqXHR));
+                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                }
+            });
         });
     });
 </script>

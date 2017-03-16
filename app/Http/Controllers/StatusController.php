@@ -9,10 +9,15 @@ use App\Registration;
 class StatusController extends Controller
 {
 
-    public function verify(Request $request)
+    public function verify(Request $request, $token)
     {
-//        $lastname = Registration::where('token', $token)->value('lastname');
-//        $applicant = Registration::where('token', $token)->first();
+        $data = $request->lastname;
+        $lastname = Registration::where('token', $token)->value('lastname');
+        if ($data == $lastname){
+            return '1';
+        } else {
+            return '0';
+        }
 
     }
 
