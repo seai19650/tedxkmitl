@@ -13,6 +13,7 @@
 
 @section('header')
 <meta name="csrf_token" content="{{ csrf_token() }}"/>
+<meta charset="utf-8" http-equiv="content-Type" content="text/html">
 <!-- Bootstrap -->
 <link href="production/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Font Awesome -->
@@ -31,6 +32,7 @@
 <link href="production/build/css/custom.css" rel="stylesheet">
 <link href="css/console/bulma.css" rel="stylesheet">
 <link href="css/console/custom.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 @endsection('header')
 
 @section('content')
@@ -79,6 +81,7 @@
                   <!-- <th>No.</th> -->
                   <th>Name</th>
                   <th>Invite</th>
+                  <th>Answer</th>
                   <th>Card Type</th>
                   <th>Payment</th>
                   <th>Mobile</th>
@@ -88,6 +91,30 @@
                 </tr>
               </thead>
             </table>
+
+            <!-- modal -->
+            <div class="modal" id="answerModal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="text-box">
+                  <!-- tabs -->
+                  <div class="tabs is-large">
+                    <ul>
+                      <li class="is-active"><a class="questionTab">1</a></li>
+                      <li><a class="questionTab">2</a></li>
+                      <li><a class="questionTab">3</a></li>
+                      <li><a class="questionTab">4</a></li>
+                      <li><a class="questionTab">5</a></li>
+                      <li><a class="questionTab">6</a></li>
+                    </ul>
+                  </div>
+                  <!-- question -->
+                  <div id="question"></div>
+                  <!-- answer -->
+                  <div id="answer" class="notification"></div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -129,4 +156,5 @@
 <!-- Custom Theme Scripts -->
 <script src="production/build/js/custom.js"></script>
 <script src="js/console/custom.js"></script>
+<script src="js/console/table.js"></script>
 @endsection('script')
