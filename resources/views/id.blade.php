@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
+    <meta name="_token" content="{{ csrf_token() }}" />
     <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
@@ -30,32 +31,16 @@
 <body>
 
     <div class="row">
-
-      <div class="small-12 medium-5 column">
-        {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
-      </div>
-      <div class="small-12 medium-7 column">
-        <h1 class="small-12 column">Hi {!! $applicant->firstname !!}!</h1>
-        <p class="small-12 column">Please bring this QR code to the event for check-in!</p>
-      </div>
-        @if ($accessed == 1)
-        {{ Form::open(array('url' => route('status.post', $applicant->token), 'method' => 'POST')) }}
-            {{ csrf_field() }}
-            <input type="text" name="status" required>
-        {{ Form::close() }}
-        @else
-            <p>Provide your lastname please (all lowercase)</p>
-            {{ Form::open(array('url' => route('status.login', $applicant->token), 'method' => 'POST')) }}
-            {{ csrf_field() }}
-            <input type="text" name="lastname" required>
-            {{ Form::close() }}
-        @endif
-
-        @if ($accessed == 2)
-            <p>Your lastname is incorrect!</p>
-            @endif
-
+        <div class="small-12 medium-5 column">
+            {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
+        </div>
+        <div class="small-12 medium-7 column">
+            <h1 class="small-12">Hi {!! $applicant->firstname !!}!</h1>
+            <p class="small-12">Welcome to your ID page.</p>
+            <a href="/verify" class="button expand secondary">Post Something!</a>
+        </div>
     </div>
+
 
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>

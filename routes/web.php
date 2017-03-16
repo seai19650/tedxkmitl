@@ -53,5 +53,4 @@ Route::post('/gettable', 'TableController@getTable');
 Route::post('/setapprove', 'TableController@setApprove');
 
 Route::get('/id/{token}', 'IdController@index');
-Route::post('/post/{token}', ['uses' => 'StatusController@store', 'as' => 'status.post']);
-Route::post('/verify/{token}', ['uses' => 'StatusController@check', 'as' => 'status.login']);
+Route::post('/verify', 'StatusController@verify');

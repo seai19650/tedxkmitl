@@ -9,17 +9,11 @@ use App\Registration;
 class StatusController extends Controller
 {
 
-    public function check(Request $request, $token)
+    public function verify(Request $request)
     {
-        $lastname = Registration::where('token', $token)->value('lastname');
-        $applicant = Registration::where('token', $token)->first();
-        if ($request->lastname == $lastname) {
-            $accessed = 1;
-            return view('id', compact('applicant', 'accessed'));
-        } else {
-            $accessed = 2;
-            return view('id', compact('applicant', 'accessed'));
-        }
+//        $lastname = Registration::where('token', $token)->value('lastname');
+//        $applicant = Registration::where('token', $token)->first();
+
     }
 
     public function store(Request $request, $token)
