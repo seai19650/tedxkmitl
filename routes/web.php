@@ -53,4 +53,4 @@ Route::post('/gettable', 'TableController@getTable');
 Route::post('/setapprove', 'TableController@setApprove');
 
 Route::get('/id/{token}', 'IdController@index');
-Route::post('/verify', 'StatusController@verify');
+Route::post('/id/{token}', 'StatusController@verify');
