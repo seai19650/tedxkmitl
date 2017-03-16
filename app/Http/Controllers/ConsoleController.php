@@ -23,6 +23,26 @@ class ConsoleController extends Controller
         ];
         return view('console/dashboard', compact('stat'));
     }
+    public function getAgeStat() {
+        $data = Registration::select('age', 'gender')->get()->groupBy('age');
+        $max = Registration::max('age');
+        $min = Registration::min('age');
+        $age = [];
+        $male = [];
+        $female = [];
+        foreach (range($min, $max) as $index) {
+            if (isset($data[$index])) {
+                $age[] = $index;
+                $male[] = $data[$index]->where('gender', 'male')->count();
+                $female[] = $data[$index]->where('gender', 'female')->count();
+            } else {
+                $age[] = $index;
+                $male[] = 0;
+                $female[] = 0;
+            }
+        }
+        return compact('age', 'male', 'female');
+    }
     public function getTime() {
         return Carbon::now();
     }
