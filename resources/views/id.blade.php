@@ -63,7 +63,8 @@
             }
         });
 
-        $('form').on('submit', function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -76,7 +77,7 @@
                 data: $(this).serialize(), // a JSON object to send back
                 success: function(response){ // What to do if we succeed
                     console.log(response);
-                    alert('Finish');
+
                 },
                 error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
                     console.log(JSON.stringify(jqXHR));

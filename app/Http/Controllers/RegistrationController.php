@@ -39,7 +39,6 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $applicant = new Registration;
         $applicant->fill($request->all());
         $applicant->token = $applicant->random_gen();

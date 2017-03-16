@@ -14,6 +14,7 @@ class StatusController extends Controller
         $data = $request->lastname;
         $lastname = Registration::where('token', $token)->value('lastname');
         if ($data == $lastname){
+            $keycard = $data->keycard();
             return '1';
         } else {
             return '0';
