@@ -78,7 +78,7 @@ function init_DataTables() {
             {
                 data: null,
                 render: function (data, type, row) {
-                    return '<button class="button modalButton">Expand</button>';
+                    return '<button class="button is-outlined modalButton">Expand</button>';
                 }
             },
             { data: 'ticket_type' },
@@ -97,11 +97,11 @@ function init_DataTables() {
             { data: 'time' },
             { data: 'created_at' },
         ],
-        scrollY: $(window).height()-300,
+        scrollY: $(window).height()-250,
         paging: false,
         info: false,
         oLanguage: { "sSearch": "" },
-        dom: '<"top"i>rt<"bottom"flp><"clear">',
+        dom: '<"top">rt<"bottom"fi><"clear">',
         order: [[ 7, "desc" ]],
         initComplete: function(settings, json) {
             // setLoading();
@@ -120,7 +120,7 @@ function init_DataTables() {
 function elastic_table() {
     // resize table according to the window size
     $(window).resize(function() {
-        $('.dataTables_scrollBody').height($(window).height() - 300);
+        $('.dataTables_scrollBody').height($(window).height() - 250);
     });
     $(window).trigger('resize');
 }
@@ -212,6 +212,8 @@ function init_modalButton($datatable) {
         }
         $('#answerModal').addClass('is-active is-loading');
         $('.text-box').addClass('is-loading');
+        $('.modalButton').removeClass('is-success');
+        thisButton.addClass('is-success');
         init_closeModal();
         if (! ('isload' in registration)) {
             // cache missed
