@@ -45,7 +45,7 @@ tr td:nth-child(1) {
     padding-left: 37px !important;
 }
 
-tr td:nth-child(n+2):nth-child(-n+5) {
+tr td:nth-child(n+2):nth-child(-n+6) {
     text-align: center;
 }
 
