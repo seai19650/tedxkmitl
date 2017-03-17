@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
-    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
+    <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
@@ -18,14 +18,14 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/production.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/animations.min.css')}}">
+    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/animations.min.css')}}">
     <script>
         document.createElement("picture");
     </script>
-    <script src="{{asset('js/picturefill.min.js')}}" async></script>
+    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 
@@ -39,10 +39,10 @@
       </div>
     </div>
 
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{asset('js/css3-animate-it.min.js')}}" async></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
+<script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
