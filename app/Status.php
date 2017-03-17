@@ -11,6 +11,6 @@ class Status extends Model
     }
 
     public function keycard() {
-
+        return str_random(10);
     }
 }
