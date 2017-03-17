@@ -54,4 +54,5 @@ Route::post('/setapprove', 'TableController@setApprove');
 
 Route::get('/id/{token}', 'IdController@index');
 Route::post('/id/{token}', 'StatusController@verify');
-Route::post('/post/{keycard}', 'StatusController@store');
+Route::post('/post/{token}', 'StatusController@store');
+Route::get('/delete/{token}/{keycard}', 'StatusController@delete');

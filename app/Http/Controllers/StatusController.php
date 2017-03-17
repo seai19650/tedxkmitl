@@ -13,7 +13,7 @@ class StatusController extends Controller
     {
         $data = $request->lastname;
         $profile = Registration::where('token', $token)->first();
-        if ($data == $profile->lastname){
+        if ($data == $profile->lastname) {
             $post = new Status;
             $post->registration_id = $profile->id;
             $post->keycard = $post->keycard();
@@ -27,11 +27,33 @@ class StatusController extends Controller
 
     public function store(Request $request, $token)
     {
-        $post = Status::where('keycard', $keycard)->first();
-        $post->registration_id = $id;
-        $post->status = $request->status;
-        $post->keycard = null;
-        $post->save();
-        return redirect('/');
+        $keycard = $request->keycard;
+        $post = $request->status;
+        $index = Status::where('keycard', $keycard)->first();
+        $profile = Registration::where('token', $token)->first();
+
+        if ($index != null && ($index->registration_id == $profile->id)) {
+            $index->status = $post;
+            $index->keycard = $index->keycard."done";
+            $index->save();
+            return $post;
+        } else {
+            return 0;
+        }
+    }
+
+    public function delete(Request $request, $token, $keycard)
+    {
+        $target = Status::where('keycard', $keycard."done")->first();
+        $profile = Registration::where('token', $token)->first();
+        $lastname = $request->del_lastname;
+        if ($target == null || $target->registration_id != $profile->id) {
+            return $keycard."done";
+        } elseif ($lastname == $profile->lastname){
+            $target->delete();
+            return 1;
+        } else {
+            return $keycard;
+        }
     }
 }
