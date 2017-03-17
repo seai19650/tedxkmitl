@@ -39,11 +39,14 @@
             <p class="small-12">Welcome to your ID page.</p>
         </div>
     </div>
-    <form action="">
+    <form name="login" action="">
         <input name="lastname" type="text" required>
         <button type="submit" class="button secondary small-12">Verify</button>
     </form>
-
+    <form name="post" action="" style="display: none;">
+        <input name="status" type="text" required>
+        <button type="submit" class="button secondary small-12">Post</button>
+    </form>
 
 <script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{asset('js/vendor/what-input.min.js')}}"></script>
@@ -63,7 +66,8 @@
             }
         });
 
-        $('form').on('submit', function (e) {
+
+        $('form[name="login"]').on('submit', function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -74,6 +78,32 @@
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
                 url: window.location.pathname, // This is the url we gave in the route
+                data: $(this).serialize(), // a JSON object to send back
+                success: function(response){ // What to do if we succeed
+                    console.log(response);
+                    $('<input>').attr('type','hidden').val(response).appendTo('form[name="post"]');
+                    $('form[name="login"]').hide();
+                    $('form[name="post"]').fadeIn();
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                    console.log(JSON.stringify(jqXHR));
+                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                }
+            });
+        });
+
+        $('form[name="post"]').on('submit', function (e) {
+            e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $keycard = $('form[name="post"]').val();
+            $.ajax({
+                method: 'POST', // Type of response and matches what we said in the route
+                url: '/post/'.$('form[name="post"]).value(), // This is the url we gave in the route
                 data: $(this).serialize(), // a JSON object to send back
                 success: function(response){ // What to do if we succeed
                     console.log(response);
