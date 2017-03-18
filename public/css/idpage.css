@@ -1,0 +1,73 @@
+img.logo {
+    display: block;
+    width: 100%;
+    max-width: 235px;
+    margin: 2.3em auto 0;
+}
+
+.qrcode svg {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto -1.3em;
+}
+
+.textinput, .card, .manage-status {
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    margin-top: 0.4em;
+    width: 100%;
+    max-width: 30em;
+}
+
+input.verify {
+    margin-bottom: 2.5em;
+}
+
+.manage-status {
+    margin-bottom: 1em;
+}
+
+button.rounded {
+    border-radius: 3em;
+    padding: 1.2em;
+    margin-bottom: 0;
+    box-shadow: 0 0.8em 1em rgba(0, 0, 0, 0.2);
+}
+
+button.write-post {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+
+button.submit-post {
+    margin: 1em auto;
+    display: block;
+}
+
+button img {
+    width: 24px;
+}
+
+@media (max-width: 414px) {
+    button.write-post {
+        bottom: 1.2em;
+        right: 1.2em;
+    }
+
+    .small-12.columns:last-of-type {
+        margin-bottom: 1.7em;
+    }
+
+    input.verify {
+        margin: -1.65em auto 2.5em;
+    }
+
+    hr {
+        margin-top: -3.3em;
+    }
+}
