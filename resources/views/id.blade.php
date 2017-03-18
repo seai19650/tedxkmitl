@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
@@ -25,19 +26,51 @@
     <script>
         document.createElement("picture");
     </script>
+    <style>
+        form {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+    </style>
+
     <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
 
     <div class="row">
-      <div class="small-12 medium-5 column">
-        {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token); !!}
-      </div>
-      <div class="small-12 medium-7 column">
-        <h1 class="small-12 column">Hi {!! $applicant->firstname !!}!</h1>
-        <p class="small-12 column">Please bring this QR code to the event for check-in!</p>
-      </div>
+        <div class="small-12 medium-5 column">
+            {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token) !!}
+        </div>
+        <div class="small-12 medium-7 column">
+            <h1 class="small-12">Hi {!! $applicant->firstname !!}!</h1>
+            <p class="small-12">Thinking about...</p>
+        </div>
+        @foreach($post as $status)
+            <div class="small-12 column">
+                <span>{{ $status['status'] }}</span>
+            </div>
+        @endforeach
     </div>
+    <form id="login" name="login" action="">
+        <input name="lastname" type="hidden" required>
+        <button type="submit" class="button secondary small-12">Verify</button>
+    </form>
+    <form id="post" name="post" action="" style="display: none;">
+        <input name="status" type="text" required>
+        <button type="submit" class="button secondary small-12">Post</button>
+        @foreach($post as $status)
+            @if ($status['status'] != null)
+            <div class="small-12 column">
+                <span>{{ $status['status'] }}</span>
+                <a href="#{{ str_replace("done", "",$status['keycard']) }}" class="close float-right">&times;</a>
+                <br>
+            </div>
+            @endif
+        @endforeach
+    </form>
 
 <script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
@@ -46,15 +79,114 @@
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
-        $("a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                var go = $(hash).offset().top;
-                $('html, body').animate({
-                    scrollTop: go
-                }, 800)
-            }
+
+        var login_form = $('form[name="login"]');
+        var post_form = $('form[name="post"]');
+        var token = location.pathname.split('/').pop();
+
+        function blink(element) {
+            $(element).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+
+        $('a.close').on('click', function (e) {
+            e.preventDefault;
+            var keycard = $(this).attr('href').replace('#', '');
+            var sp_token = $('input[name="keycard"]').val();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                method: 'POST', // Type of response and matches what we said in the route
+                url: '/delete/'+token, // This is the url we gave in the route
+                data: {'keycard': keycard, 'sp_token': sp_token}, // a JSON object to send back
+                success: function(response){ // What to do if we succeed
+                    console.log(response);
+                    if (response == 'del') {
+                        $(this).parent().remove(); //not working
+                    } else {
+                        blink($(this));
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                    console.log(JSON.stringify(jqXHR));
+                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                }
+            });
+        });
+
+        $(login_form).on('click', function (e) {
+            e.preventDefault;
+            $('form input[name="lastname"]').attr('type', 'text');
+        })
+
+        $(login_form).on('submit', function (e) {
+            e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $.ajax({
+                method: 'POST', // Type of response and matches what we said in the route
+                url: window.location.pathname, // This is the url we gave in the route
+                data: $(this).serialize(), // a JSON object to send back
+                success: function(response){ // What to do if we succeed
+                    console.log(response);
+                    if (response != 0) {
+                        $('<input>').attr({type:"hidden", name:"keycard"}).val(response).appendTo('form[name="post"]');
+                        $(login_form).hide();
+                        $(post_form).fadeIn();
+                    } else {
+                        $('form input[name="lastname"]').
+                            val('Verification Failed! Please try again').attr('readonly', true);
+                        setTimeout(function(){
+                            $('form input[name="lastname"]').attr('readonly', false).val('');
+                        }, 1000);
+                    }
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                    console.log(JSON.stringify(jqXHR));
+                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                }
+            });
+        });
+
+        $(post_form).on('submit', function (e) {
+            e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                method: 'POST', // Type of response and matches what we said in the route
+                url: '/post/'+token, // This is the url we gave in the route
+                data: $(this).serialize(), // a JSON object to send back
+                success: function(response){ // What to do if we succeed
+                    console.log(response);
+                    if (response != 0) {
+                        $('form input[name="keycard"]').remove();
+                        $('form input[name="lastname"]').attr('type', 'hidden').val('');
+                        $('form input[name="status"]').val('');
+                        location.reload();
+                    } else {
+                        $('form input[name="status"]').val('Verification Failed! Refreshing Page...').attr('readonly', true);
+                        setTimeout(function() {
+                            location.reload();
+                        },2000);
+                    }
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                    console.log(JSON.stringify(jqXHR));
+                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                }
+            });
         });
     });
 </script>

@@ -16,6 +16,10 @@ class Registration extends Model
         return $this->hasMany(Answer::class);
     }
 
+    public function status() {
+        return $this->hasOne(Status::class);
+    }
+
     public function random_gen() {
       $name = $this->firstname;
       $time = $this->created_at;
