@@ -53,7 +53,6 @@ class StatusController extends Controller
         if ($target == null || $target->registration_id != $profile->id || $stack == null) {
             return 0;
         } else {
-            $stack->delete();
             $target->delete();
             return 'del';
         }

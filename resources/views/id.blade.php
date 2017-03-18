@@ -98,6 +98,8 @@
                 }
             });
 
+            var target = $(this).parent();
+
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
                 url: '/delete/' + token, // This is the url we gave in the route
@@ -105,7 +107,7 @@
                 success: function (response) { // What to do if we succeed
                     console.log(response);
                     if (response == 'del') {
-                        $(this).parent().remove(); //not working
+                        $(target).remove();
                     } else {
                         blink($(this));
                     }
