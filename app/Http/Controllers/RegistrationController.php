@@ -45,7 +45,8 @@ class RegistrationController extends Controller
         $applicant->save();
 
         $status = 'normal';
-        \Mail::to($applicant->email)->send(new Respond($applicant, $status));
+        $is_approve = 0;
+        \Mail::to($applicant->email)->send(new Respond($applicant, $status, $is_approve));
         foreach ($request->input('question') as $key => $value) {
             $answer = new Answer;
             $answer->registration_id = $applicant->id;
