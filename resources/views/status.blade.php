@@ -7,7 +7,7 @@
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
+    <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
@@ -15,7 +15,7 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
     <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
     <style>
         body {
@@ -48,9 +48,9 @@
 <body>
 <div id="status">
 </div>
-<img src="{{asset('img/2x/nav-on-w.png')}}" alt="TEDxKMITL">
+<img src="{{secure_asset('img/2x/nav-on-w.png')}}" alt="TEDxKMITL">
 </body>
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script>
     var i = 0, // index of data to iterate.
         d = null, // where we store the result of the query.
