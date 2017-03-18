@@ -35,6 +35,7 @@
             margin: 0;
         }
     </style>
+
     <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
 </head>
 <body>
@@ -71,7 +72,7 @@
         @endforeach
     </form>
 
-    <script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
 <script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
