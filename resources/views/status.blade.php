@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- <base href="http://tedxkmitl.com/"> -->
-    <!--[if lte IE 9]>
-    <link href='css/animations-ie-fix.css' rel='stylesheet'>
-    <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
     <meta name="theme-color" content="#e62b1a">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
+    <meta property="og:image" content="{{asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
     <meta name="twitter:description" content="TEDxKMITL is an independently organized TEDx event by KMITL students and personal. Our
@@ -19,32 +15,42 @@
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
     <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
-    <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/animations.min.css')}}">
-    <script>
-        document.createElement("picture");
-    </script>
-    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
+    <link rel="icon" href="{{asset('img/favicon.png')}}">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+        }
         #status {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: Kanit;
+            font-size: 3em;
+            line-height: 1.8em;
+            text-align: center;
+        }
+        h2 {
+            max-width: 80vw;
+            padding: 0.6em 0;
+            border-top: 6px solid #e62b1a;
+            border-bottom: 6px solid #e62b1a;
+            margin-top: -0.6em;
+        }
+        img {
+            width: 250px;
+            margin: -7em auto 0;
+            display: block;
         }
     </style>
 </head>
 <body>
 <div id="status">
-
 </div>
+<img src="{{asset('img/2x/nav-on-w.png')}}" alt="TEDxKMITL">
 </body>
-<script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
+<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script>
     var i = 0, // index of data to iterate.
         d = null, // where we store the result of the query.
