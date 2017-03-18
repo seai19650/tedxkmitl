@@ -27,17 +27,11 @@
         document.createElement("picture");
     </script>
     <style>
-        .backgroundRed{
-            background: red;
-        }
         form {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            margin: 0;
-        }
-        form button, form input {
             margin: 0;
         }
     </style>
@@ -56,8 +50,6 @@
         @foreach($post as $status)
             <div class="small-12 column">
                 <span>{{ $status['status'] }}</span>
-                <a class="close float-right">&times;</a><br>
-                <input name="keycard_done" type="hidden" value="{{ str_replace("done", "", $status['keycard'])  }}">
             </div>
         @endforeach
     </div>
@@ -68,10 +60,15 @@
     <form id="post" name="post" action="" style="display: none;">
         <input name="status" type="text" required>
         <button type="submit" class="button secondary small-12">Post</button>
-    </form>
-    <form id="delete" name="delete" action="" style="display: none;">
-        <input name="del_lastname" type="text" required>
-        <button type="submit" class="button alert small-12">Delete</button>
+        @foreach($post as $status)
+            @if ($status['status'] != null)
+            <div class="small-12 column">
+                <span>{{ $status['status'] }}</span>
+                <a href="#{{ str_replace("done", "",$status['keycard']) }}" class="close float-right">&times;</a>
+                <br>
+            </div>
+            @endif
+        @endforeach
     </form>
 
     <script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
@@ -81,57 +78,31 @@
 <script type="text/javascript">
     $(document).foundation()
     $(document).ready(function () {
-        $("a").on('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                var go = $(hash).offset().top;
-                $('html, body').animate({
-                    scrollTop: go
-                }, 800)
-            }
-        });
 
-        var keycard = $('a.close').next().next().val();
+        var login_form = $('form[name="login"]');
+        var post_form = $('form[name="post"]');
+        var token = location.pathname.split('/').pop();
 
-        $('a.close').on('click', function (){
-            $('form[name="login"]').hide();
-            $('form[name="delete"]').show();
-            console.log(keycard);
-        });
-
-        $('form[name="delete"]').on('submit', function (e, keycard) {
-            e.preventDefault();
-            alert(keycard);
+        $('a.close').on('click', function (e) {
+            e.preventDefault;
+            var keycard = $(this).attr('href').replace('#', '');
+            var sp_token = $('input[name="keycard"]').val();
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
 
-            var token = location.pathname.split('/').pop();
             $.ajax({
-                method: 'GET', // Type of response and matches what we said in the route
-                url: '/delete/'+token+'/'+keycard, // This is the url we gave in the route
-                data: $(this).serialize(), // a JSON object to send back
+                method: 'POST', // Type of response and matches what we said in the route
+                url: '/delete/'+token, // This is the url we gave in the route
+                data: {'keycard': keycard, 'sp_token': sp_token}, // a JSON object to send back
                 success: function(response){ // What to do if we succeed
                     console.log(response);
-                    if (response == 1) {
-                        $(this).remove();
+                    if (response != 0) {
+
                     } else {
-                        if (response == 2) {
-                            $('form input[name="del_lastname"]').attr('readonly', true)
-                                .val('Verification Failed! Refreshing this page...');
-                            setTimeout(function() {
-                                location.reload();
-                            },2000);
-                        } else {
-                            $('form input[name="del_lastname"]').fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100)
-                                .attr('readonly', true).val('Verification Failed! Please try again');
-                            setTimeout(function(){
-                                $('form input[name="del_lastname"]').attr('readonly', false).val('');
-                            }, 500);
-                        }
+
                     }
 
                 },
@@ -142,12 +113,12 @@
             });
         });
 
-        $('form[name="login"]').on('click', function (e) {
+        $(login_form).on('click', function (e) {
             e.preventDefault;
             $('form input[name="lastname"]').attr('type', 'text');
         })
 
-        $('form[name="login"]').on('submit', function (e) {
+        $(login_form).on('submit', function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -163,8 +134,8 @@
                     console.log(response);
                     if (response != 0) {
                         $('<input>').attr({type:"hidden", name:"keycard"}).val(response).appendTo('form[name="post"]');
-                        $('form[name="login"]').hide();
-                        $('form[name="post"]').fadeIn();
+                        $(login_form).hide();
+                        $(post_form).fadeIn();
                     } else {
                         $('form input[name="lastname"]').
                             val('Verification Failed! Please try again').attr('readonly', true);
@@ -181,17 +152,16 @@
             });
         });
 
-        $('form[name="post"]').on('submit', function (e) {
+        $(post_form).on('submit', function (e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            var keycard = location.pathname.split('/').pop();
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
-                url: '/post/'+keycard, // This is the url we gave in the route
+                url: '/post/'+token, // This is the url we gave in the route
                 data: $(this).serialize(), // a JSON object to send back
                 success: function(response){ // What to do if we succeed
                     console.log(response);
@@ -199,8 +169,8 @@
                         $('form input[name="keycard"]').remove();
                         $('form input[name="lastname"]').attr('type', 'hidden').val('');
                         $('form input[name="status"]').val('');
-                        $('form[name="post"]').fadeOut();
-                        $('form[name="login"]').fadeIn();
+                        $(post_form).fadeOut();
+                        $(login_form).fadeIn();
                     } else {
                         $('form input[name="status"]').val('Verification Failed! Refreshing Page...').attr('readonly', true);
                         setTimeout(function() {
