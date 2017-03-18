@@ -56,3 +56,8 @@ Route::get('/id/{token}', 'IdController@index');
 Route::post('/id/{token}', 'StatusController@verify');
 Route::post('/post/{token}', 'StatusController@store');
 Route::post('/delete/{token}', 'StatusController@delete');
+
+Route::get('/status', function (){
+    return view('status');
+});
+Route::get('/getstatus', 'StatusController@show');
