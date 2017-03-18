@@ -10,7 +10,7 @@ class IdController extends Controller
 {
     public function index($token) {
       $applicant = Registration::where('token', $token)->first();
-      $post = Status::where('registration_id', $applicant->id)->get();
+      $post = Status::where([['registration_id', $applicant->id],['status', '!=', null]])->get();
       $post = json_decode($post, true);
 
       if ($applicant == null) abort(404);
