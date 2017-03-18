@@ -83,6 +83,10 @@
         var post_form = $('form[name="post"]');
         var token = location.pathname.split('/').pop();
 
+        function blink(element) {
+            $(element).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+        }
+
         $('a.close').on('click', function (e) {
             e.preventDefault;
             var keycard = $(this).attr('href').replace('#', '');
@@ -99,12 +103,11 @@
                 data: {'keycard': keycard, 'sp_token': sp_token}, // a JSON object to send back
                 success: function(response){ // What to do if we succeed
                     console.log(response);
-                    if (response != 0) {
-
+                    if (response == 'del') {
+                        $(this).parent().remove(); //not working
                     } else {
-
+                        blink($(this));
                     }
-
                 },
                 error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
                     console.log(JSON.stringify(jqXHR));
@@ -169,8 +172,7 @@
                         $('form input[name="keycard"]').remove();
                         $('form input[name="lastname"]').attr('type', 'hidden').val('');
                         $('form input[name="status"]').val('');
-                        $(post_form).fadeOut();
-                        $(login_form).fadeIn();
+                        location.reload();
                     } else {
                         $('form input[name="status"]').val('Verification Failed! Refreshing Page...').attr('readonly', true);
                         setTimeout(function() {

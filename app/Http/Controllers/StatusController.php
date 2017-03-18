@@ -54,7 +54,7 @@ class StatusController extends Controller
         } else {
             $stack->delete();
             $target->delete();
-            return 1;
+            return 'del';
         }
     }
 }
