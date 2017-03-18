@@ -86,21 +86,21 @@
                       <li><a href="calendar.html">Calendar</a></li>
                     </ul> -->
                   </li>
-                  <li><a><i class="fa fa-table"></i> Tables </a>
-                    <!-- <ul class="nav child_menu">
+                  <!-- <li><a><i class="fa fa-table"></i> Tables </a>
+                    <ul class="nav child_menu">
                       <li><a href="tables.html">Tables</a></li>
                       <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul> -->
+                    </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation </a>
-                    <!-- <ul class="nav child_menu">
+                    <ul class="nav child_menu">
                       <li><a href="chartjs.html">Chart JS</a></li>
                       <li><a href="chartjs2.html">Chart JS2</a></li>
                       <li><a href="morisjs.html">Moris JS</a></li>
                       <li><a href="echarts.html">ECharts</a></li>
                       <li><a href="other_charts.html">Other Charts</a></li>
-                    </ul> -->
-                  </li>
+                    </ul>
+                  </li> -->
                 </ul>
               </div>
 
@@ -141,11 +141,11 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="{{ route('logout') }}"
+                    <li><a href="{{ secure_url('/logout') }}"
                         onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{ secure_url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
 
