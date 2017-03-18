@@ -48,7 +48,6 @@
 <script>
     var i = 0; // index of data to iterate.
     var d = null; // where we store the result of the query.
-    var end = null;
     var interval = 5000; // interval in ms.
 
     $(document).ready(function()
@@ -60,8 +59,6 @@
         });
         // get the data *once* when the page loads.
 
-        ajax();
-
         function ajax () {
             $.ajax({
                 method: 'get', // Type of response and matches what we said in the route
@@ -69,9 +66,7 @@
                 data: '', // a JSON object to send back
                 success: function(data){ // What to do if we succeed
                     d = data;
-                    end = data.length-1;
 
-                    // create a recurring call to update().
                     setInterval(function()
                         {
                             update();
@@ -87,21 +82,20 @@
 
         setInterval( ajax, 30000 );
 
+        ajax();
         });
 
-    function update()
-    {
-        console.log(i, end);
-        // if there isn't another element, reset to the first one.
-        if (i == end) {
+    function update() {
+
+        if (!d[i]) {
             i = 0;
+            console.log('Index is reseted');
         }
-
-        $('#status').fadeOut(800, function(){
-            $(this).empty().append('<h2>"'+d[i]['status']+'"</h2>').fadeIn();
+        $('#status').fadeOut(800, function () {
+            console.log('Message '+i+' is on screen.');
+            $(this).empty().append('<h2>"' + d[i-1]['status'] + '"</h2>').fadeIn();
         });
 
-        // increment index for next iteration.
         i++;
     }
 </script>
