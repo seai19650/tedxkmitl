@@ -53,12 +53,14 @@ Route::post('/gettable', 'TableController@getTable');
 Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
 
-
 Route::get('/id/{token}', 'IdController@index');
+Route::get('/getstatus', 'StatusController@show');
 Route::post('/id/{token}', 'StatusController@verify');
 Route::post('/post/{token}', 'StatusController@store');
 Route::post('/delete/{token}', 'StatusController@delete');
+Route::get('/status', function (){
+    return view('status');
+});
 
 Route::post('/getagestat', 'ConsoleController@getAgeStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
-
