@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- <base href="http://tedxkmitl.com/"> -->
-    <!--[if lte IE 9]>
-    <link href='css/animations-ie-fix.css' rel='stylesheet'>
-    <![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDxKMITL</title>
+    <meta name="google-site-verification" content="oiy1A4gyGbD1cOFZYPSHXUzKgRWMwYbPH81hxiJZ6Po"/>
     <meta name="theme-color" content="#e62b1a">
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <meta property="og:image" content="{{secure_asset('img/ogimage.png')}}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TEDxKMITL">
@@ -18,66 +15,69 @@
                 main concept and theme of our event is “Living Out Loud” or LOL which is to bring out the speakers and
                 audiences full potential to show their inner self, what they truly have in them but doesn’t come out
                 very often.">
-    <meta name="twitter:image" content="http://tedxkmitl.com/img/ogimage.png">
+    <meta name="twitter:image" content="{{secure_asset('img/ogimage.png')}}">
     <link rel="icon" href="{{secure_asset('img/favicon.png')}}">
     <link rel="stylesheet" href="{{secure_asset('css/foundation.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/production.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/animations.min.css')}}">
-    <script>
-        document.createElement("picture");
-    </script>
-    <style>
-        form {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0;
-        }
-    </style>
-
-    <script src="{{secure_asset('js/picturefill.min.js')}}" async></script>
+    <link rel="stylesheet" href="{{secure_asset('css/idpage.css')}}">
 </head>
 <body>
-
-    <div class="row">
-        <div class="small-12 medium-5 column">
+<div class="row">
+    <img src="{{secure_asset('img/2x/nav-on-w.png')}}" alt="TEDxKMITL" class="logo">
+    <div class="small-12 columns text-center">
+        <div class="qrcode">
             {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token) !!}
         </div>
-        <div class="small-12 medium-7 column">
-            <h1 class="small-12">Hi {!! $applicant->firstname !!}!</h1>
-            <p class="small-12">Thinking about...</p>
-        </div>
-        @foreach($post as $status)
-            <div class="small-12 column">
-                <span>{{ $status['status'] }}</span>
-            </div>
-        @endforeach
     </div>
-    <form id="login" name="login" action="">
-        <input name="lastname" type="hidden" required>
-        <button type="submit" class="button secondary small-12">Verify</button>
-    </form>
-    <form id="post" name="post" action="" style="display: none;">
-        <input name="status" type="text" required>
-        <button type="submit" class="button secondary small-12">Post</button>
-        @foreach($post as $status)
-            @if ($status['status'] != null)
-            <div class="small-12 column">
-                <span>{{ $status['status'] }}</span>
-                <a href="#{{ str_replace("done", "",$status['keycard']) }}" class="close float-right">&times;</a>
-                <br>
+    <div class="small-12 columns text-center">
+        <h1><strong>Hi {!! $applicant->firstname !!}!</strong></h1>
+        <p style="margin-bottom:1.6em;">Thinking about...</p>
+    </div>
+    @foreach($post as $status)
+        <div class="small-12 columns">
+            <div class="card">
+                <div class="card-section">
+                    {{ $status['status'] }}
+                </div>
             </div>
-            @endif
-        @endforeach
-    </form>
-
+        </div>
+    @endforeach
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <form id="login" name="login" action="">
+            <input name="lastname" type="hidden" class="textinput verify" placeholder="Enter your password" required>
+            <button type="submit" class="button primary rounded write-post">
+                <img src="{{secure_asset('img/pen.png')}}" alt="Write a Post" title="Write a Post">
+            </button>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <form id="post" name="post" action="" style="display: none;">
+            <hr>
+            <input name="status" type="text" class="textinput" placeholder="Type your status here" required>
+            <button type="submit" class="button primary rounded submit-post">
+                <img src="{{secure_asset('img/pen.png')}}" alt="Post" title="Submit your Post">
+            </button>
+            @foreach($post as $status)
+                @if ($status['status'] != null)
+                    <div class="manage-status">
+                        <span>{{ $status['status'] }}</span>
+                        <a href="#{{ str_replace("done", "",$status['keycard']) }}"
+                           class="close float-right">&times;</a>
+                        <br>
+                    </div>
+                @endif
+            @endforeach
+        </form>
+    </div>
+</div>
 <script src="{{secure_asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/what-input.min.js')}}"></script>
 <script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
 <script type="text/javascript">
-    $(document).foundation()
+    $(document).foundation();
     $(document).ready(function () {
 
         var login_form = $('form[name="login"]');
@@ -100,9 +100,9 @@
 
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
-                url: '/delete/'+token, // This is the url we gave in the route
+                url: '/delete/' + token, // This is the url we gave in the route
                 data: {'keycard': keycard, 'sp_token': sp_token}, // a JSON object to send back
-                success: function(response){ // What to do if we succeed
+                success: function (response) { // What to do if we succeed
                     console.log(response);
                     if (response == 'del') {
                         $(this).parent().remove(); //not working
@@ -110,7 +110,7 @@
                         blink($(this));
                     }
                 },
-                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                error: function (jqXHR, textStatus, errorThrown) { // What to do if we fail
                     console.log(JSON.stringify(jqXHR));
                     console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
                 }
@@ -134,22 +134,24 @@
                 method: 'POST', // Type of response and matches what we said in the route
                 url: window.location.pathname, // This is the url we gave in the route
                 data: $(this).serialize(), // a JSON object to send back
-                success: function(response){ // What to do if we succeed
+                success: function (response) { // What to do if we succeed
                     console.log(response);
                     if (response != 0) {
-                        $('<input>').attr({type:"hidden", name:"keycard"}).val(response).appendTo('form[name="post"]');
+                        $('<input>').attr({
+                            type: "hidden",
+                            name: "keycard"
+                        }).val(response).appendTo('form[name="post"]');
                         $(login_form).hide();
                         $(post_form).fadeIn();
                     } else {
-                        $('form input[name="lastname"]').
-                            val('Verification Failed! Please try again').attr('readonly', true);
-                        setTimeout(function(){
+                        $('form input[name="lastname"]').val('Verification Failed! Please try again').attr('readonly', true);
+                        setTimeout(function () {
                             $('form input[name="lastname"]').attr('readonly', false).val('');
                         }, 1000);
                     }
 
                 },
-                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                error: function (jqXHR, textStatus, errorThrown) { // What to do if we fail
                     console.log(JSON.stringify(jqXHR));
                     console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
                 }
@@ -165,9 +167,9 @@
             });
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
-                url: '/post/'+token, // This is the url we gave in the route
+                url: '/post/' + token, // This is the url we gave in the route
                 data: $(this).serialize(), // a JSON object to send back
-                success: function(response){ // What to do if we succeed
+                success: function (response) { // What to do if we succeed
                     console.log(response);
                     if (response != 0) {
                         $('form input[name="keycard"]').remove();
@@ -176,13 +178,13 @@
                         location.reload();
                     } else {
                         $('form input[name="status"]').val('Verification Failed! Refreshing Page...').attr('readonly', true);
-                        setTimeout(function() {
+                        setTimeout(function () {
                             location.reload();
-                        },2000);
+                        }, 2000);
                     }
 
                 },
-                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+                error: function (jqXHR, textStatus, errorThrown) { // What to do if we fail
                     console.log(JSON.stringify(jqXHR));
                     console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
                 }
