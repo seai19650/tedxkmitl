@@ -1984,7 +1984,7 @@ if (typeof NProgress != 'undefined') {
 			};
 
 
-		function init_charts() {
+		function init_charts(json) {
 
 				console.log('run_charts  typeof [' + typeof (Chart) + ']');
 
@@ -1996,8 +1996,6 @@ if (typeof NProgress != 'undefined') {
 				Chart.defaults.global.legend = {
 					enabled: false
 				};
-
-
 
 			if ($('#canvas_line').length ){
 
@@ -2163,18 +2161,16 @@ if (typeof NProgress != 'undefined') {
 
 			}
 
-
-			  // Line chart
-
+			  // Line chart chart.js
 			if ($('#lineChart').length ){
 
 			  var ctx = document.getElementById("lineChart");
 			  var lineChart = new Chart(ctx, {
 				type: 'line',
 				data: {
-				  labels: ["January", "February", "March", "April", "May", "June", "July"],
+				  labels: json.age,
 				  datasets: [{
-					label: "My First dataset",
+					label: "Female",
 					backgroundColor: "rgba(38, 185, 154, 0.31)",
 					borderColor: "rgba(38, 185, 154, 0.7)",
 					pointBorderColor: "rgba(38, 185, 154, 0.7)",
@@ -2182,9 +2178,9 @@ if (typeof NProgress != 'undefined') {
 					pointHoverBackgroundColor: "#fff",
 					pointHoverBorderColor: "rgba(220,220,220,1)",
 					pointBorderWidth: 1,
-					data: [31, 74, 6, 39, 20, 85, 7]
+					data: json.female
 				  }, {
-					label: "My Second dataset",
+					label: "Male",
 					backgroundColor: "rgba(3, 88, 106, 0.3)",
 					borderColor: "rgba(3, 88, 106, 0.70)",
 					pointBorderColor: "rgba(3, 88, 106, 0.70)",
@@ -2192,7 +2188,7 @@ if (typeof NProgress != 'undefined') {
 					pointHoverBackgroundColor: "#fff",
 					pointHoverBorderColor: "rgba(151,187,205,1)",
 					pointBorderWidth: 1,
-					data: [82, 23, 66, 9, 99, 4, 2]
+					data: json.male
 				  }]
 				},
 			  });
@@ -2505,200 +2501,7 @@ if (typeof NProgress != 'undefined') {
 
 		/* DATA TABLES */
 
-			function init_DataTables() {
 
-				console.log('run_datatables');
-
-                if( typeof ($.fn.DataTable) === 'undefined'){ return; }
-                console.log('init_DataTables');
-
-                var handleDataTableButtons = function() {
-                  if ($("#datatable-buttons").length) {
-                    $("#datatable-buttons").DataTable({
-                      dom: "Bfrtip",
-                      buttons: [
-                        {
-                          extend: "copy",
-                          className: "btn-sm"
-                        },
-                        {
-                          extend: "csv",
-                          className: "btn-sm"
-                        },
-                        {
-                          extend: "excel",
-                          className: "btn-sm"
-                        },
-                        {
-                          extend: "pdfHtml5",
-                          className: "btn-sm"
-                        },
-                        {
-                          extend: "print",
-                          className: "btn-sm"
-                        },
-                      ],
-                      responsive: true
-                    });
-                  }
-                };
-
-                TableManageButtons = function() {
-                  "use strict";
-                  return {
-                    init: function() {
-                      handleDataTableButtons();
-                    }
-                  };
-                }();
-
-                // datatables ajax: warp
-				var $datatable = $('#datatable-responsive').DataTable({
-                    ajax: {
-                        url: "gettable",
-                        type: "POST",
-                        data: function(d) {
-                            d._token = $('meta[name="csrf_token"]').attr('content');
-                        },
-                        dataSrc: function(json) {
-                            return json;
-                        }
-                    },
-                    columns: [
-                        // { data: 'id' },
-                        {
-                            data: 'firstname',
-                            render: function (data, type, row) {
-                                return data + ' ' + row.lastname;
-                            }
-                        },
-                        {
-                            data: 'is_approved',
-                            render: function (data, type, row) {
-                                if (data) {
-                                    return '<button class="button setStateButton is-success">Yes</button>';
-                                } else {
-                                    return '<button class="button setStateButton">No</button>';
-                                }
-                            }
-                        },
-                        { data: 'ticket_type' },
-                        {
-                            data: 'is_paid',
-                            render: function (data, type, row) {
-                                if (data) {
-                                    return 'Paid';
-                                } else {
-                                    return 'Unpaid';
-                                }
-                            }
-                        },
-                        { data: 'mobile' },
-                        { data: 'email' },
-                        { data: 'time' },
-                        { data: 'created_at' },
-                    ],
-                    scrollY: $(window).height()-300,
-                    paging: false,
-                    info: false,
-                    oLanguage: { "sSearch": "" },
-                    dom: '<"top"i>rt<"bottom"flp><"clear">',
-                    order: [[ 7, "desc" ]],
-                    initComplete: function(settings, json) {
-                        // setLoading();
-                        init_approveButton($datatable);
-                    }
-                });
-
-				TableManageButtons.init();
-
-                elastic_table();
-                disable_scroll();
-                show_search_text();
-			};
-
-            function elastic_table() {
-                // resize table according to the window size
-                $(window).resize(function() {
-                    $('.dataTables_scrollBody').height($(window).height() - 300);
-                });
-                $(window).trigger('resize');
-            }
-
-            function disable_scroll() {
-                // disable scrolling
-                $('html').css({
-                    overflow: 'hidden',
-                    height: '100%'
-                });
-            }
-
-            function show_search_text() {
-                // show search place holder
-                $('#datatable-responsive_filter input').attr('placeholder', 'Search')
-            }
-
-            function setLoading() {
-                $('.setStateButton').on('click', function() {
-                    $(this).addClass('is-loading');
-                });
-            }
-
-            function removeLoading() {
-                $('.setStateButton').on('click', function() {
-                    $(this).removeClass('is-loading');
-                });
-            }
-
-            function init_approveButton($datatable) {
-                // set document validation status
-                $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
-                    var thisRow = $(this).parents('tr');
-                    var registration;
-                    if (thisRow.attr('class') == 'child') {
-                        registration = $datatable.row(thisRow.prev()).data();
-                    } else {
-                        registration = $datatable.row(thisRow).data();
-                    }
-                    var thisButton = $(this);
-                    thisButton.addClass('is-loading');
-                    var state;
-                    if ($(this).html() == 'No') {
-                        state = 1;
-                    } else {
-                        state = 0;
-                    }
-                    $.ajax({
-                        url: "setapprove",
-                        type: "POST",
-                        data: {
-                            _token: $('meta[name="csrf_token"]').attr('content'),
-                            id: registration.id,
-                            state: state,
-                            is_internal: registration.is_internal
-                        },
-                        success:function(data){
-                            if (data == 0) {
-                                thisButton.removeClass('is-success');
-                                thisButton.removeClass('is-warning');
-                                thisButton.html('No');
-                            } else if (data == 1) {
-                                thisButton.removeClass('is-warning');
-                                thisButton.addClass('is-success');
-                                thisButton.html('Yes');
-                            } else {
-                                thisButton.addClass('is-warning');
-                                thisButton.removeClass('is-success');
-                                thisButton.html('Invalidated');
-                            }
-                            thisButton.removeClass('is-loading');
-                        },
-                        error:function(){
-                            thisButton.removeClass('is-loading');
-                        }
-                    });
-                });
-            }
 
 			/* CHART - MORRIS  */
 
@@ -5157,14 +4960,14 @@ if (typeof NProgress != 'undefined') {
 		init_daterangepicker_reservation();
 		init_SmartWizard();
 		init_EasyPieChart();
-		init_charts();
+		// init_charts();
 		init_echarts();
 		init_morris_charts();
 		init_skycons();
 		init_select2();
 		init_validator();
         // datatables
-		init_DataTables();
+		// init_DataTables();
 		init_chart_doughnut();
 		init_gauge();
 		init_PNotify();

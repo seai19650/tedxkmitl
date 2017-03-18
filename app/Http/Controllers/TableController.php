@@ -17,6 +17,19 @@ class TableController extends Controller
         }
         return $registrations;
     }
+    public function getAnswer(Request $request) {
+        $registration = Registration::find($request->id);
+        $answers = $registration->answers;
+        $array = [];
+        foreach ($answers as $answer) {
+            $question = $answer->question;
+            $array[$question->id] = [
+                'question' => $question->en_question,
+                'answer' => $answer->answer
+            ];
+        }
+        return $array;
+    }
     public function setApprove(Request $request) {
         $application = Registration::find($request->id);
         $application->is_approved = $request->state;
