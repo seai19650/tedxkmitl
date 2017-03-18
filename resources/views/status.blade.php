@@ -46,50 +46,52 @@
 <script src="{{secure_asset('js/vendor/foundation.min.js')}}"></script>
 <script src="{{secure_asset('js/css3-animate-it.min.js')}}" async></script>
 <script>
-    var i = 0; // index of data to iterate.
-    var d = null; // where we store the result of the query.
-    var interval = 5000; // interval in ms.
+    var i = 0, // index of data to iterate.
+        d = null, // where we store the result of the query.
+        x = null, // stored interval so clearInterval() can be used.
+        interval = 5000; // interval in ms.
 
     $(document).ready(function()
     {
+        data_load();
+
+    });
+
+    function data_load() {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-        // get the data *once* when the page loads.
+        $.ajax({
+            method: 'get',
+            url: '/getstatus',
+            data: '',
+            success: function(data){
+                d = data;
+                console.log('Data Refreshed');
 
-        function ajax () {
-            $.ajax({
-                method: 'get', // Type of response and matches what we said in the route
-                url: '/getstatus', // This is the url we gave in the route
-                data: '', // a JSON object to send back
-                success: function(data){ // What to do if we succeed
-                    d = data;
-
-                    setInterval(function()
-                        {
-                            update();
-                        },
-                        interval);
-                },
-                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
-                    console.log(JSON.stringify(jqXHR));
-                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
-                }
-            });
-        }
-
-        setInterval( ajax, 30000 );
-
-        ajax();
+                x = setInterval(function()
+                    {
+                        update();
+                    },
+                    interval);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(JSON.stringify(jqXHR));
+                console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+            }
         });
+    }
 
     function update() {
 
         if (!d[i]) {
+            clearInterval(x);
             i = 0;
+            data_load();
             console.log('Index is reseted');
+            return;
         }
         $('#status').fadeOut(800, function () {
             console.log('Message '+i+' is on screen.');
