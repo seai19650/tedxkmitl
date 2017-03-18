@@ -103,8 +103,8 @@
             </picture>
         </div>
     </div>
-    <div class="row aboutted animatedParent animateOnce hide-for-small-only">
-        <div class="small-12 medium-7 medium-offset-1 columns animated fadeInLeft">
+    <div class="row aboutted hide-for-small-only">
+        <div class="small-12 medium-7 medium-offset-1 columns ">
             <strong>TED (Technology, Entertainment, and Design)</strong> is a non-profit media organization which posts
             talks online for free distribution, under the slogan "ideas worth sharing". TED was founded in February 1984
             as a conference, which has been held annually since 1990. TED's early emphasis was technology and design,
@@ -112,8 +112,8 @@
             scientific, cultural, and academic topics.
         </div>
     </div>
-    <div class="row aboutted animatedParent animateOnce">
-        <div class="small-12 medium-7 medium-offset-4 columns animated fadeInRight delay-250">
+    <div class="row aboutted">
+        <div class="small-12 medium-7 medium-offset-4 columns delay-250">
             In the spirit of ideas worth spreading, TED has created a program called <strong>TEDx</strong>. TEDx is a
             program of local, self-organized events that bring people together to share a TED-like experience. Our event
             is called TEDxKMITL, where x = independently organized TED event. At our TEDxKMITL event, TEDTalks video and
@@ -136,8 +136,8 @@
 </section>
 <section id="speaker">
     <div class="row">
-        <div class="small-12 medium-4 columns animatedParent animateOnce">
-            <h1 class="animated fadeInLeft">SPEAKERS</h1>
+        <div class="small-12 medium-4 columns">
+            <h1>SPEAKERS</h1>
             <picture>
                 <source srcset="img/Bars.svg">
                 <source srcset="img/Bars.png 1x, img/2x/Bars.png 2x">
@@ -146,50 +146,71 @@
         </div>
     </div>
     <div class="row" id="speakers">
-        <div class="small-12 medium-4 large-4 columns person animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk1.png 1x, img/2x/spk1.png 2x">
+                <img src="img/spk1.png" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk2.png 1x, img/2x/spk2.png 2x">
+                <img src="img/spk2.png" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk3.jpg 1x, img/2x/spk3.jpg 2x">
+                <img src="img/spk3.jpg" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk4.png 1x, img/2x/spk4.png 2x">
+                <img src="img/spk4.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk5.png 1x, img/2x/spk5.png 2x">
+                <img src="img/spk5.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk6.png 1x, img/2x/spk6.png 2x">
+                <img src="img/spk6.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
     </div>
     <div class="row">
         <div class="small-12 columns">
-            <h3 class="text-center hide-for-small-only" style="margin-top: 40px">We have more than three speakers for
-                sure.</h3>
-            <h3 class="text-center show-for-small-only" style="margin-top: 40px">We have more than one speaker for
-                sure.</h3>
+            <h3 class="text-center" style="margin-top: 35px">guess who they are<br>/more to come/</h3>
         </div>
     </div>
 </section>
 <section id="event">
     <div class="row">
-        <div class="small-4 columns animatedParent animateOnce">
-            <h1 class="animated fadeInLeft">SCHEDULE</h1>
+        <div class="small-4 columns">
+            <h1>SCHEDULE</h1>
         </div>
     </div>
     <div class="event">
