@@ -42,18 +42,19 @@ class StatusController extends Controller
         }
     }
 
-    public function delete(Request $request, $token, $keycard)
+    public function delete(Request $request, $token)
     {
+        $keycard = $request->keycard;
+        $sp_token = $request->sp_token;
         $target = Status::where('keycard', $keycard."done")->first();
+        $stack = Status::where('keycard', $sp_token)->first();
         $profile = Registration::where('token', $token)->first();
-        $lastname = $request->del_lastname;
-        if ($target == null || $target->registration_id != $profile->id) {
-            return $keycard."done";
-        } elseif ($lastname == $profile->lastname){
+        if ($target == null || $target->registration_id != $profile->id || $stack == null) {
+            return 0;
+        } else {
+            $stack->delete();
             $target->delete();
             return 1;
-        } else {
-            return $keycard;
         }
     }
 }
