@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Status;
 use App\Registration;
+use Response;
 
 class StatusController extends Controller
 {
@@ -56,5 +57,13 @@ class StatusController extends Controller
             $target->delete();
             return 'del';
         }
+    }
+
+    public function show()
+    {
+        $output = Status::where('status', '!=', null)->get();
+        $output = json_decode($output, true);
+
+        return Response::json($output);
     }
 }
