@@ -58,7 +58,7 @@
             <hr>
             <input name="status" type="text" class="textinput" placeholder="Type your status here" required>
             <button type="submit" class="button primary rounded submit-post">
-                <img src="{{secure_asset('img/pen.png')}}" alt="Post" title="Submit your Post">
+                <img src="{{secure_asset('img/post.png')}}" alt="Post" title="Submit your Post">
             </button>
             @foreach($post as $status)
                 @if ($status['status'] != null)
@@ -97,9 +97,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-
             var target = $(this).parent();
-
             $.ajax({
                 method: 'POST', // Type of response and matches what we said in the route
                 url: '/delete/' + token, // This is the url we gave in the route
