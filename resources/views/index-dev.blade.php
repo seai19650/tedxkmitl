@@ -35,7 +35,8 @@
                         <img src="img/nav-on-w.png" alt="TEDxKMITL">
                     </picture>
                 </div>
-                <span data-responsive-toggle="responsive-menu" data-hide-for="medium" class="hamburger show-for-small-only">
+                <span data-responsive-toggle="responsive-menu" data-hide-for="medium"
+                      class="hamburger show-for-small-only">
                     <button class="menu-icon" type="button" data-toggle></button>
                 </span>
             </div>
@@ -142,43 +143,64 @@
         </div>
     </div>
     <div class="row" id="speakers">
-        <div class="small-12 medium-4 large-4 columns person animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk1.png 1x, img/2x/spk1.png 2x">
+                <img src="img/spk1.png" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk2.png 1x, img/2x/spk2.png 2x">
+                <img src="img/spk2.png" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only animatedParent animateOnce">
+        <div class="small-12 medium-4 large-4 columns person">
             <picture>
-                <source srcset="img/speaker.png 1x, img/2x/speaker.png 2x">
-                <img src="img/speaker-lg.png" class="float-center animated fadeInUpShort delay-250" alt="Speaker"
-                     title="An icon by Chanut is Industries">
+                <source srcset="img/spk3.jpg 1x, img/2x/spk3.jpg 2x">
+                <img src="img/spk3.jpg" class="float-center" alt="Speaker">
             </picture>
-            <h2 class="speaker-first">COMING</h2>
-            <h2 class="speaker-last">SOOOOON</h2>
-            <h3 class="speaker-position">Coming soon</h3>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk4.png 1x, img/2x/spk4.png 2x">
+                <img src="img/spk4.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk5.png 1x, img/2x/spk5.png 2x">
+                <img src="img/spk5.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 large-4 columns person">
+            <picture>
+                <source srcset="img/spk6.png 1x, img/2x/spk6.png 2x">
+                <img src="img/spk6.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
     </div>
     <div class="row">
         <div class="small-12 columns">
-            <h3 class="text-center hide-for-small-only" style="margin-top: 40px">We have more than three speakers for
-                sure.</h3>
-            <h3 class="text-center show-for-small-only" style="margin-top: 40px">We have more than one speaker for
-                sure.</h3>
+            <h3 class="text-center" style="margin-top: 35px">guess who they are<br>/more to come/</h3>
         </div>
     </div>
 </section>
@@ -269,27 +291,29 @@
         container: window,
         tolerance: 150
     });
-    secTeaser.on('enter', 'section#teaser', (element) => {
+    secTeaser.on('enter', 'section#teaser', (element) = > {
         element.className += 'blacken';
-        secTeaser.destroy();
-    });
+    secTeaser.destroy();
+    })
+    ;
     var secEvent = new OnScreen({
         container: window,
         tolerance: 100
     });
-    secEvent.on('enter', 'section#event', (element) => {
+    secEvent.on('enter', 'section#event', (element) = > {
         element.className += 'blacken';
-        secEvent.destroy();
-    });
+    secEvent.destroy();
+    })
+    ;
 </script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
+            m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
@@ -324,6 +348,7 @@
      "address": "Lad Krabang, Thailand"
   }
 }
+
 </script>
 </body>
 </html>
