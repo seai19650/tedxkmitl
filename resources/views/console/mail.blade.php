@@ -65,7 +65,9 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-              Content
+            <button class="btn btn-warning col-xs-12">Batching Email</button>
+            <p>This option will be available on 25 March, 2017. It will send an email to all
+              registers based on 'invite' value.</p>
           </div>
         </div>
       </div>
