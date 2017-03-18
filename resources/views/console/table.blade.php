@@ -13,6 +13,7 @@
 
 @section('header')
 <meta name="csrf_token" content="{{ csrf_token() }}"/>
+<meta charset="utf-8" http-equiv="content-Type" content="text/html">
 <!-- Bootstrap -->
 <link href="production/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Font Awesome -->
@@ -31,6 +32,7 @@
 <link href="production/build/css/custom.css" rel="stylesheet">
 <link href="css/console/bulma.css" rel="stylesheet">
 <link href="css/console/custom.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 @endsection('header')
 
 @section('content')
@@ -53,25 +55,6 @@
       <!-- responsive table -->
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
-          <div class="x_title">
-            <h2>Profiles</h2>
-            <ul class="nav navbar-right panel_toolbox">
-              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Settings 1</a>
-                  </li>
-                  <li><a href="#">Settings 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a class="close-link"><i class="fa fa-close"></i></a>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
           <div class="x_content">
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
               <thead>
@@ -79,6 +62,7 @@
                   <!-- <th>No.</th> -->
                   <th>Name</th>
                   <th>Invite</th>
+                  <th>Answer</th>
                   <th>Card Type</th>
                   <th>Payment</th>
                   <th>Mobile</th>
@@ -88,6 +72,30 @@
                 </tr>
               </thead>
             </table>
+
+            <!-- modal -->
+            <div class="modal" id="answerModal">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <div class="text-box">
+                  <!-- tabs -->
+                  <div class="tabs is-large">
+                    <ul>
+                      <li class="is-active"><a class="questionTab">1</a></li>
+                      <li><a class="questionTab">2</a></li>
+                      <li><a class="questionTab">3</a></li>
+                      <li><a class="questionTab">4</a></li>
+                      <li><a class="questionTab">5</a></li>
+                      <li><a class="questionTab">6</a></li>
+                    </ul>
+                  </div>
+                  <!-- question -->
+                  <div id="question"></div>
+                  <!-- answer -->
+                  <div id="answer" class="notification"></div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -129,4 +137,5 @@
 <!-- Custom Theme Scripts -->
 <script src="production/build/js/custom.js"></script>
 <script src="js/console/custom.js"></script>
+<script src="js/console/table.js"></script>
 @endsection('script')

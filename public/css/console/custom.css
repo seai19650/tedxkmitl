@@ -27,6 +27,13 @@ a.site_title {
     height: 35px;
 }
 
+.modalButton {
+    font-size: 1em;
+    padding: 0 20px;
+    margin: 0;
+    height: 35px;
+}
+
 tr td {
     padding-top: 11px !important;
     padding-right: 15px !important;
@@ -38,17 +45,143 @@ tr td:nth-child(1) {
     padding-left: 37px !important;
 }
 
-tr td:nth-child(n+2):nth-child(-n+4) {
+tr td:nth-child(n+2):nth-child(-n+6) {
     text-align: center;
 }
 
-tr td:nth-child(2) {
+tr td:nth-child(n+2):nth-child(-n+3) {
     padding: 5px 3px !important;
+}
+
+tr th {
+    text-align: center !important;
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
     top: 11px;
     left: 10px;
+}
+
+#answer {
+    font-family: 'Kanit', sans-serif;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    font-size: 1.3em;
+    padding: 20px 30px 40px 30px;
+    overflow: hidden;
+    min-height: 160px;
+    color: black;
+}
+
+div#question {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#datatable-responsive_info {
+  position: relative;
+  top: -20px !important;
+}
+
+/*bulma*/
+.modal.is-white.is-loading:after {
+  border-color: transparent transparent #0a0a0a #0a0a0a !important;
+}
+
+.modal.is-white.is-outlined.is-loading:after {
+  border-color: transparent transparent white white !important;
+}
+
+.modal.is-black.is-loading:after {
+  border-color: transparent transparent white white !important;
+}
+
+.modal.is-black.is-outlined.is-loading:after {
+  border-color: transparent transparent #0a0a0a #0a0a0a !important;
+}
+
+.modal.is-light.is-loading:after {
+  border-color: transparent transparent #363636 #363636 !important;
+}
+
+.modal.is-light.is-outlined.is-loading:after {
+  border-color: transparent transparent whitesmoke whitesmoke !important;
+}
+
+.modal.is-dark.is-loading:after {
+  border-color: transparent transparent whitesmoke whitesmoke !important;
+}
+
+.modal.is-dark.is-outlined.is-loading:after {
+  border-color: transparent transparent #363636 #363636 !important;
+}
+
+.modal.is-primary.is-outlined.is-loading:after {
+  border-color: transparent transparent #00d1b2 #00d1b2 !important;
+}
+
+.modal.is-info.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-info.is-outlined.is-loading:after {
+  border-color: transparent transparent #3273dc #3273dc !important;
+}
+
+.modal.is-success.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-success.is-outlined.is-loading:after {
+  border-color: transparent transparent #23d160 #23d160 !important;
+}
+
+.modal.is-warning.is-loading:after {
+  border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
+}
+
+.modal.is-warning.is-outlined.is-loading:after {
+  border-color: transparent transparent #ffdd57 #ffdd57 !important;
+}
+
+.modal.is-danger.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-danger.is-outlined.is-loading:after {
+  border-color: transparent transparent #ff3860 #ff3860 !important;
+}
+
+.modal.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.modal.is-loading:after {
+  -webkit-animation: spinAround 500ms infinite linear;
+          animation: spinAround 500ms infinite linear;
+  border: 2px solid #dbdbdb;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 3rem;
+  position: relative;
+  width: 3rem;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+  position: absolute !important;
+}
+
+.text-box.is-loading {
+    display: none;
 }
 
 /*
@@ -64,18 +197,3 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
         left: 7px;
     }
 }*/
-/*
-@media screen and (min-width: 404px) and (max-width: 430px) {
-    tr td {
-        padding: 7px 0 0px 5px !important;
-    }
-    tr td:nth-child(1) {
-        padding-left: 32px !important;
-    }
-    table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
-        top: 6px;
-        left: 7px;
-    }
-}
-
-*/
