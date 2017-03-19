@@ -102,7 +102,7 @@ function init_DataTables() {
         info: false,
         oLanguage: { "sSearch": "" },
         dom: '<"top">rt<"bottom"fi><"clear">',
-        order: [[ 7, "desc" ]],
+        order: [[ 8, "desc" ]],
         initComplete: function(settings, json) {
             // setLoading();
             init_approveButton($datatable);
