@@ -67,7 +67,7 @@
           <div class="x_content">
             <form action="/mailbatching" method="post">
               {{ csrf_field() }}
-              <button type="submit" class="btn btn-warning col-xs-12">Batching Email</button>
+              <button class="btn btn-warning col-xs-12" disabled>Batching Email</button>
               <p>This option will be available on 25 March, 2017. It will send an email to all
                 registers based on 'invite' value.</p>
             </form>
