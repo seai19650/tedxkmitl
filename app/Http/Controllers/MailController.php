@@ -18,7 +18,7 @@ class MailController extends Controller
         foreach ($applicants as $applicant)
         {
             $is_approved = $applicant->is_approved;
-            \Mail::to($applicant->email)->queue(new Respond($applicant, $status, $is_approved));
+            \Mail::to($applicant->email)->to(new Respond($applicant, $status, $is_approved));
         }
         return redirect('/login');
     }
