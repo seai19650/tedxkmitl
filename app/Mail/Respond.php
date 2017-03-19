@@ -37,7 +37,6 @@ class Respond extends Mailable
      */
     public function build()
     {
-        dd($this->is_approved);
         if ($this->status == 'normal') {
             return $this->view('email')
                 ->subject('Registration Succeeded!');
