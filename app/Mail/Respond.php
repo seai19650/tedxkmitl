@@ -13,6 +13,8 @@ class Respond extends Mailable
     use Queueable, SerializesModels;
 
     public $applicant;
+    public $status;
+    public $is_approved;
 
 
     /**
@@ -20,11 +22,12 @@ class Respond extends Mailable
      *
      * @return void
      */
-    public function __construct($applicant, $status)
+    public function __construct($applicant, $status, $is_approved)
     {
         //
         $this->applicant = $applicant;
         $this->status = $status;
+        $this->is_approved = $is_approved;
     }
 
     /**
@@ -38,8 +41,13 @@ class Respond extends Mailable
             return $this->view('email')
                 ->subject('Registration Succeeded!');
         } elseif ($this->status == 'batch') {
-            return $this->view('email')
-                ->subject('Congratulations! A seat is reserved for you.');
+            if ($this->is_approved == 1) {
+                return $this->view('mail_stage')
+                    ->subject('Congratulations! A seat is reserved for you.');
+            } else {
+                return $this->view('email_stream')
+                    ->subject('Congratulations! You have got a seat in Live room.');
+            }
         } else {
             return redirect('/');
         }

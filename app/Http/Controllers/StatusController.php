@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Status;
 use App\Registration;
 use Response;
+use Illuminate\Support\Str;
 
 class StatusController extends Controller
 {
@@ -14,7 +15,7 @@ class StatusController extends Controller
     {
         $data = $request->lastname;
         $profile = Registration::where('token', $token)->first();
-        if ($data == $profile->lastname) {
+        if (Str::lower($data) == Str::lower($profile->lastname)) {
             $post = new Status;
             $post->registration_id = $profile->id;
             $post->keycard = $post->keycard();
