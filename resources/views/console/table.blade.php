@@ -80,7 +80,7 @@
                 <!-- content -->
                 <div class="columns text-box">
                   <!-- tabs -->
-                  <div class="overlay column is-4"></div>
+                  <div class="overlay column is-4">Hover to read</div>
                   <div class="column is-4" id="profile">
                     <div id="private-profile">
                       <h5>Name</h5>
