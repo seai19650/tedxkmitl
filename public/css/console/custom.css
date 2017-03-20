@@ -96,10 +96,12 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     height: 100%;
     top: 0;
     left: 10px;
-    padding: 70px 60px;
+    padding: 140px 20px;
     background-color: white;
-    opacity: 0.2;
+    opacity: 0.5;
+    cursor: pointer;
     transition: 0.3s ease;
+    text-align: center;
     z-index: 100;
 }
 
