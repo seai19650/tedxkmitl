@@ -60,5 +60,3 @@ Route::get('/status', function (){
 
 Route::post('/getagestat', 'ConsoleController@getAgeStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
-
-Route::post('/mailbatching', 'MailController@batch_mail');

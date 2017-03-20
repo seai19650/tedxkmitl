@@ -20,6 +20,6 @@ class MailController extends Controller
             $is_approved = $applicant->is_approved;
             \Mail::to($applicant->email)->queue(new Respond($applicant, $status, $is_approved));
         }
-        return redirect('/login');
+        return redirect('/console');
     }
 }
