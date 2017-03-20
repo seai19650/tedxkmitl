@@ -42,10 +42,10 @@ class Respond extends Mailable
                 ->subject('Registration Succeeded!');
         } elseif ($this->status == 'batch') {
             if ($this->is_approved == 1) {
-                return $this->view('email_studio')
+                return $this->view('mail_stage')
                     ->subject('Congratulations! A seat is reserved for you.');
             } else {
-                return $this->view('email_live')
+                return $this->view('email_stream')
                     ->subject('Congratulations! You have got a seat in Live room.');
             }
         } else {
