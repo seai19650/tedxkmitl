@@ -17,8 +17,9 @@ class MailController extends Controller
         $applicants = Registration::all();
         foreach ($applicants as $applicant)
         {
-            \Mail::to($applicant->email)->send(new Respond($applicant, $status));
+            $is_approved = $applicant->is_approved;
+            \Mail::to($applicant->email)->queue(new Respond($applicant, $status, $is_approved));
         }
-        return redirect('/login');
+        return redirect('/console');
     }
 }
