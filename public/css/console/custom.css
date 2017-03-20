@@ -84,6 +84,13 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 #profile {
   padding-right: 30px;
   border-right: 1px solid #D3D3D3;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+#profile:hover {
+    opacity: 1;
+    transition: 0.3s ease;
 }
 
 #private-profile {
