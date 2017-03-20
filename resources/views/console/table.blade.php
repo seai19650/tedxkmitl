@@ -80,10 +80,12 @@
                 <!-- content -->
                 <div class="columns text-box">
                   <!-- tabs -->
-                  <div class="column is-5" id="profile">
+                  <div class="column is-4" id="profile">
                     <div id="private-profile">
                       <h5>Name</h5>
                       <p id="profile-name">...</p>
+                      <!-- <h5>Occupation</h5>
+                      <p id="profile-occupation">...</p> -->
                       <div class="columns">
                         <div class="column is-5">
                           <h5>Ticket</h5>
@@ -106,7 +108,7 @@
                       <p id="profile-email">...</p>
                     </div>
                   </div>
-                  <div class="column is-7" id="questionSection">
+                  <div class="column is-8" id="questionSection">
                     <div class="tabs is-large">
                       <ul>
                         <li class="is-active"><a class="questionTab">1</a></li>
