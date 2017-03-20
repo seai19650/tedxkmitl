@@ -38,10 +38,6 @@ Route::get('/pay/{token}', 'PayController@index');
 
 Route::post('/pay', 'PayController@get_token');
 
-Route::get('/email-confirm', function () {
-    return view('email');
-});
-
 Auth::routes();
 Route::get('/home', function (){
     return redirect('/console'); // Redirect to console after login

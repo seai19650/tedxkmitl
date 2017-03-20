@@ -25,7 +25,7 @@
   <div class="">
     <div class="page-title">
       <div class="title_left">
-        <h3>Mail</h3>
+        <h3>Mail & Status</h3>
       </div>
 
       <div class="title_right">
@@ -65,9 +65,6 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <button class="btn btn-warning col-xs-12" disabled>Batching Email</button>
-            <p>This option will be available on 25 March, 2017. It will send an email to all
-              registers based on 'invite' value.</p>
           </div>
         </div>
       </div>
