@@ -3802,6 +3802,79 @@ a.box:active {
   display: flex;
 }
 
+.modal.is-white.is-loading:after {
+  border-color: transparent transparent #0a0a0a #0a0a0a !important;
+}
+
+.modal.is-white.is-outlined.is-loading:after {
+  border-color: transparent transparent white white !important;
+}
+
+.modal.is-black.is-loading:after {
+  border-color: transparent transparent white white !important;
+}
+
+.modal.is-black.is-outlined.is-loading:after {
+  border-color: transparent transparent #0a0a0a #0a0a0a !important;
+}
+
+.modal.is-light.is-loading:after {
+  border-color: transparent transparent #363636 #363636 !important;
+}
+
+.modal.is-light.is-outlined.is-loading:after {
+  border-color: transparent transparent whitesmoke whitesmoke !important;
+}
+
+.modal.is-dark.is-loading:after {
+  border-color: transparent transparent whitesmoke whitesmoke !important;
+}
+
+.modal.is-dark.is-outlined.is-loading:after {
+  border-color: transparent transparent #363636 #363636 !important;
+}
+
+.modal.is-primary.is-outlined.is-loading:after {
+  border-color: transparent transparent #00d1b2 #00d1b2 !important;
+}
+
+.modal.is-info.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-info.is-outlined.is-loading:after {
+  border-color: transparent transparent #3273dc #3273dc !important;
+}
+
+.modal.is-success.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-success.is-outlined.is-loading:after {
+  border-color: transparent transparent #23d160 #23d160 !important;
+}
+
+.modal.is-warning.is-loading:after {
+  border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
+}
+
+.modal.is-warning.is-outlined.is-loading:after {
+  border-color: transparent transparent #ffdd57 #ffdd57 !important;
+}
+
+.modal.is-danger.is-loading:after {
+  border-color: transparent transparent #fff #fff !important;
+}
+
+.modal.is-danger.is-outlined.is-loading:after {
+  border-color: transparent transparent #ff3860 #ff3860 !important;
+}
+
+.modal.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
 .panel-block > .control {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

@@ -78,37 +78,60 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 }
 
 .column {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 #profile {
-  padding-right: 30px;
-  border-right: 1px solid #D3D3D3;
+    padding-right: 30px;
+    border-right: 1px solid #D3D3D3;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    transition: 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 10px;
+    padding: 70px 60px;
+    background-color: white;
+    opacity: 0.2;
+    transition: 0.3s ease;
+    z-index: 100;
+}
+
+.overlay:hover {
     opacity: 0;
     transition: 0.3s ease;
 }
 
-#profile:hover {
-    opacity: 1;
+.overlay:hover + #profile{
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    -ms-filter: none;
     transition: 0.3s ease;
 }
 
 #private-profile {
-  text-transform: capitalize;
-  border-bottom: 1px solid #D3D3D3;
-  padding-bottom: 10px;
+    text-transform: capitalize;
+    border-bottom: 1px solid #D3D3D3;
+    padding-bottom: 10px;
 }
 
 #contact-profile {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 #questionSection {
-  padding: 0 0 0 30px;
+    padding: 0 0 0 30px;
 }
 
 p#profile-name, p#profile-mobile {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 div#question {
@@ -118,84 +141,16 @@ div#question {
 }
 
 #datatable-responsive_info {
-  position: relative;
-  top: -20px !important;
+    position: relative;
+    top: -20px !important;
 }
+
+.text-box.is-loading {
+    display: none;
+}
+
 
 /*bulma*/
-.modal.is-white.is-loading:after {
-  border-color: transparent transparent #0a0a0a #0a0a0a !important;
-}
-
-.modal.is-white.is-outlined.is-loading:after {
-  border-color: transparent transparent white white !important;
-}
-
-.modal.is-black.is-loading:after {
-  border-color: transparent transparent white white !important;
-}
-
-.modal.is-black.is-outlined.is-loading:after {
-  border-color: transparent transparent #0a0a0a #0a0a0a !important;
-}
-
-.modal.is-light.is-loading:after {
-  border-color: transparent transparent #363636 #363636 !important;
-}
-
-.modal.is-light.is-outlined.is-loading:after {
-  border-color: transparent transparent whitesmoke whitesmoke !important;
-}
-
-.modal.is-dark.is-loading:after {
-  border-color: transparent transparent whitesmoke whitesmoke !important;
-}
-
-.modal.is-dark.is-outlined.is-loading:after {
-  border-color: transparent transparent #363636 #363636 !important;
-}
-
-.modal.is-primary.is-outlined.is-loading:after {
-  border-color: transparent transparent #00d1b2 #00d1b2 !important;
-}
-
-.modal.is-info.is-loading:after {
-  border-color: transparent transparent #fff #fff !important;
-}
-
-.modal.is-info.is-outlined.is-loading:after {
-  border-color: transparent transparent #3273dc #3273dc !important;
-}
-
-.modal.is-success.is-loading:after {
-  border-color: transparent transparent #fff #fff !important;
-}
-
-.modal.is-success.is-outlined.is-loading:after {
-  border-color: transparent transparent #23d160 #23d160 !important;
-}
-
-.modal.is-warning.is-loading:after {
-  border-color: transparent transparent rgba(0, 0, 0, 0.7) rgba(0, 0, 0, 0.7) !important;
-}
-
-.modal.is-warning.is-outlined.is-loading:after {
-  border-color: transparent transparent #ffdd57 #ffdd57 !important;
-}
-
-.modal.is-danger.is-loading:after {
-  border-color: transparent transparent #fff #fff !important;
-}
-
-.modal.is-danger.is-outlined.is-loading:after {
-  border-color: transparent transparent #ff3860 #ff3860 !important;
-}
-
-.modal.is-loading {
-  color: transparent !important;
-  pointer-events: none;
-}
-
 .modal.is-loading:after {
   -webkit-animation: spinAround 500ms infinite linear;
           animation: spinAround 500ms infinite linear;
@@ -214,10 +169,6 @@ div#question {
   position: absolute;
   top: 50%;
   position: absolute !important;
-}
-
-.text-box.is-loading {
-    display: none;
 }
 
 /*
