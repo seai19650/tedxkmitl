@@ -11,7 +11,9 @@ class TableController extends Controller
         return view('console/table');
     }
     public function getTable() {
+        $config = config('ajax');
         $registrations = Registration::all();
+        $registrations = Registration::select(...$config['selection'])->get();
         foreach ($registrations as $key => $value) {
             $registrations[$key]['time'] = $registrations[$key]->created_at->diffForHumans();
         }
