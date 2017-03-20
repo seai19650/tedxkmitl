@@ -43,6 +43,7 @@ tr td {
 
 tr td:nth-child(1) {
     padding-left: 37px !important;
+    text-transform: capitalize;
 }
 
 tr td:nth-child(n+2):nth-child(-n+6) {
@@ -64,7 +65,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 
 #answer {
     font-family: 'Kanit', sans-serif;
-    height: 170px;
+    height: 180px;
     overflow-y: auto;
 }
 
@@ -81,7 +82,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 }
 
 #profile {
-  padding-right: 10px;
+  padding-right: 30px;
   border-right: 1px solid #D3D3D3;
 }
 
@@ -97,6 +98,10 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 
 #questionSection {
   padding: 0 0 0 30px;
+}
+
+p#profile-name, p#profile-mobile {
+  padding-bottom: 5px;
 }
 
 div#question {

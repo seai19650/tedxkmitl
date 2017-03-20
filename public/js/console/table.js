@@ -62,7 +62,8 @@ function init_DataTables() {
             {
                 data: 'firstname',
                 render: function (data, type, row) {
-                    return data + ' ' + row.lastname;
+                    name = data + ' ' + row.lastname;
+                    return name.toLowerCase();
                 }
             },
             {
@@ -81,7 +82,12 @@ function init_DataTables() {
                     return '<button class="button is-outlined modalButton">Expand</button>';
                 }
             },
-            { data: 'ticket_type' },
+            {
+                data: 'ticket_type',
+                render: function (data, type, row) {
+                    return toTitleCase(data);
+                }
+            },
             {
                 data: 'is_paid',
                 render: function (data, type, row) {
@@ -275,13 +281,19 @@ function loadProfile(registration, thisButton, thisRow) {
 }
 
 function loadPrivateProfile(registration) {
-    $('#profile-name').html(registration.firstname + ' ' + registration.lastname);
+    $('#profile-name').html(registration.firstname.toLowerCase() + ' ' + registration.lastname.toLowerCase());
     $('#profile-ticket').html(registration.ticket_type);
     $('#profile-gender').html(registration.gender);
     $('#profile-age').html(registration.age);
     // $('#profile-occupation').html(registration.occupation);
     $('#profile-mobile').html(registration.mobile);
     $('#profile-email').html(registration.email);
+}
+
+function toTitleCase(str) {
+    return str.replace(/(?:^|\s)\w/g, function(match) {
+        return match.toUpperCase();
+    });
 }
 
 function init_closeModal(){
