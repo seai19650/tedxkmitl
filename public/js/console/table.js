@@ -1,52 +1,6 @@
 function init_DataTables() {
-
-    console.log('run_datatables');
-
-    if( typeof ($.fn.DataTable) === 'undefined'){ return; }
-    console.log('init_DataTables');
-
-    var handleDataTableButtons = function() {
-      if ($("#datatable-buttons").length) {
-        $("#datatable-buttons").DataTable({
-          dom: "Bfrtip",
-          buttons: [
-            {
-              extend: "copy",
-              className: "btn-sm"
-            },
-            {
-              extend: "csv",
-              className: "btn-sm"
-            },
-            {
-              extend: "excel",
-              className: "btn-sm"
-            },
-            {
-              extend: "pdfHtml5",
-              className: "btn-sm"
-            },
-            {
-              extend: "print",
-              className: "btn-sm"
-            },
-          ],
-          responsive: true
-        });
-      }
-    };
-
-    TableManageButtons = function() {
-      "use strict";
-      return {
-        init: function() {
-          handleDataTableButtons();
-        }
-      };
-    }();
-
     // datatables ajax: warp
-    var $datatable = $('#datatable-responsive').DataTable({
+    var table = $('#datatable-responsive').DataTable({
         ajax: {
             url: "gettable",
             type: "POST",
@@ -111,12 +65,10 @@ function init_DataTables() {
         order: [[ 8, "desc" ]],
         initComplete: function(settings, json) {
             // setLoading();
-            init_approveButton($datatable);
-            init_modalButton($datatable);
+            init_approveButton(table);
+            init_modalButton(table);
         }
     });
-
-    TableManageButtons.init();
 
     elastic_table();
     disable_scroll();
@@ -156,16 +108,16 @@ function removeLoading() {
     });
 }
 
-function init_approveButton($datatable) {
+function init_approveButton(table) {
     // set document validation status
     $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
         var thisRow = $(this).parents('tr');
         var thisButton = $(this);
         var registration;
         if (thisRow.attr('class') == 'child') {
-            registration = $datatable.row(thisRow.prev()).data();
+            registration = table.row(thisRow.prev()).data();
         } else {
-            registration = $datatable.row(thisRow).data();
+            registration = table.row(thisRow).data();
         }
         ajaxInvite(registration, thisButton);
     });
@@ -209,16 +161,16 @@ function ajaxInvite(registration, thisButton) {
     });
 }
 
-function init_modalButton($datatable) {
+function init_modalButton(table) {
     // create modal button
     $('#datatable-responsive tbody').on('click', '.modalButton', function () {
         var thisRow = $(this).parents('tr');
         var thisButton = $(this);
         var registration;
         if (thisRow.attr('class') == 'child') {
-            registration = $datatable.row(thisRow.prev()).data();
+            registration = table.row(thisRow.prev()).data();
         } else {
-            registration = $datatable.row(thisRow).data();
+            registration = table.row(thisRow).data();
         }
         $('#answerModal').addClass('is-active is-loading');
         $('.text-box').addClass('is-loading');
