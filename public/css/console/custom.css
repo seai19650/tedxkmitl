@@ -76,26 +76,31 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     color: black;
 }
 
+.column {
+  padding-top: 0;
+}
+
 #profile {
-  padding-right: 20px;
+  padding-right: 10px;
   border-right: 1px solid #D3D3D3;
 }
 
 #private-profile {
   text-transform: capitalize;
   border-bottom: 1px solid #D3D3D3;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 #contact-profile {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 #questionSection {
-  padding: 10px 0 0 30px;
+  padding: 0 0 0 30px;
 }
 
 div#question {
+    font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 15px;
 }

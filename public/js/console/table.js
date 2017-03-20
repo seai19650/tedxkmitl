@@ -168,7 +168,7 @@ function init_approveButton($datatable) {
 function ajaxInvite(registration, thisButton) {
     thisButton.addClass('is-loading');
     var state;
-    if ( $(this).hasClass('is-success')) {
+    if ( thisButton.hasClass('is-success')) {
         state = 0;
     } else {
         state = 1;
@@ -279,6 +279,7 @@ function loadPrivateProfile(registration) {
     $('#profile-ticket').html(registration.ticket_type);
     $('#profile-gender').html(registration.gender);
     $('#profile-age').html(registration.age);
+    // $('#profile-occupation').html(registration.occupation);
     $('#profile-mobile').html(registration.mobile);
     $('#profile-email').html(registration.email);
 }
