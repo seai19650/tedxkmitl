@@ -64,16 +64,35 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
 
 #answer {
     font-family: 'Kanit', sans-serif;
-    height: 180px;
+    height: 170px;
     overflow-y: auto;
 }
 
 .modal-content {
     font-size: 1.3em;
-    padding: 20px 30px 40px 30px;
+    padding: 30px 40px 30px 40px;
     overflow: hidden;
     min-height: 160px;
     color: black;
+}
+
+#profile {
+  padding-right: 20px;
+  border-right: 1px solid #D3D3D3;
+}
+
+#private-profile {
+  text-transform: capitalize;
+  border-bottom: 1px solid #D3D3D3;
+  padding-bottom: 15px;
+}
+
+#contact-profile {
+  padding-top: 15px;
+}
+
+#questionSection {
+  padding: 10px 0 0 30px;
 }
 
 div#question {

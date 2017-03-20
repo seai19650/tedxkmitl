@@ -154,48 +154,52 @@ function init_approveButton($datatable) {
     // set document validation status
     $('#datatable-responsive tbody').on('click', '.setStateButton', function () {
         var thisRow = $(this).parents('tr');
+        var thisButton = $(this);
         var registration;
         if (thisRow.attr('class') == 'child') {
             registration = $datatable.row(thisRow.prev()).data();
         } else {
             registration = $datatable.row(thisRow).data();
         }
-        var thisButton = $(this);
-        thisButton.addClass('is-loading');
-        var state;
-        if ( $(this).hasClass('is-success')) {
-            state = 0;
-        } else {
-            state = 1;
-        }
-        $.ajax({
-            url: "setapprove",
-            type: "POST",
-            data: {
-                _token: $('meta[name="csrf_token"]').attr('content'),
-                id: registration.id,
-                state: state
-            },
-            success:function(data){
-                if (data == 0) {
-                    thisButton.removeClass('is-success');
-                    thisButton.removeClass('is-warning');
-                    thisButton.html('No');
-                } else if (data == 1) {
-                    thisButton.removeClass('is-warning');
-                    thisButton.addClass('is-success');
-                    thisButton.html('Yes');
-                } else {
-                    thisButton.addClass('is-warning');
-                    thisButton.removeClass('is-success');
-                    thisButton.html('Invalidated');
-                }
-                thisButton.removeClass('is-loading');
-            },
-            error:function(){
-                thisButton.removeClass('is-loading');
+        ajaxInvite(registration, thisButton);
+    });
+}
+
+function ajaxInvite(registration, thisButton) {
+    thisButton.addClass('is-loading');
+    var state;
+    if ( $(this).hasClass('is-success')) {
+        state = 0;
+    } else {
+        state = 1;
+    }
+    $.ajax({
+        url: "setapprove",
+        type: "POST",
+        data: {
+            _token: $('meta[name="csrf_token"]').attr('content'),
+            id: registration.id,
+            state: state
+        },
+        success:function(data){
+            if (data == 0) {
+                thisButton.removeClass('is-success');
+                thisButton.removeClass('is-warning');
+                thisButton.html('No');
+            } else if (data == 1) {
+                thisButton.removeClass('is-warning');
+                thisButton.addClass('is-success');
+                thisButton.html('Yes');
+            } else {
+                thisButton.addClass('is-warning');
+                thisButton.removeClass('is-success');
+                thisButton.html('Invalidated');
             }
-        });
+            thisButton.removeClass('is-loading');
+        },
+        error:function(){
+            thisButton.removeClass('is-loading');
+        }
     });
 }
 
@@ -243,19 +247,20 @@ function init_modalButton($datatable) {
     });
 }
 
-function loadProfile(registration, thisButton) {
+function loadProfile(registration, thisButton, thisRow) {
     // display first tab by default
     $('.tabs li').removeClass('is-active');
     $('.tabs li:first-child').addClass('is-active');
     $('#question').html(registration[1].question);
     $('#answer').html(registration[1].answer);
+    loadPrivateProfile(registration);
     // build invite button
-    // if (thisButton.hasClass('is-success')) {
-    //     $('#innerInviteButton').addClass('is-success');
-    //     $('#innerInviteButton').html('yes');
-    // } else {
-    //     $('#innerInviteButton').html('no');
-    // }
+    if (thisButton.hasClass('is-success')) {
+        $('#innerInviteButton').addClass('is-success');
+        $('#innerInviteButton').html('yes');
+    } else {
+        $('#innerInviteButton').html('no');
+    }
     // set up tab switcher
     $('.questionTab').on('click', function() {
         $('.tabs li').removeClass('is-active');
@@ -269,6 +274,15 @@ function loadProfile(registration, thisButton) {
     $('.text-box').removeClass('is-loading');
 }
 
+function loadPrivateProfile(registration) {
+    $('#profile-name').html(registration.firstname + ' ' + registration.lastname);
+    $('#profile-ticket').html(registration.ticket_type);
+    $('#profile-gender').html(registration.gender);
+    $('#profile-age').html(registration.age);
+    $('#profile-mobile').html(registration.mobile);
+    $('#profile-email').html(registration.email);
+}
+
 function init_closeModal(){
     // click on the background or 'x' button to close modal
     $('.modal-background, .modal-close').on('click', function(){
@@ -277,6 +291,26 @@ function init_closeModal(){
     $(document).keydown(function(e){
         if (e.keyCode == 27) {
             $('.modal').removeClass('is-active');
+        }
+    });
+}
+
+function init_key_switch() {
+    $(document).keydown(function(event){
+        var key = event.which;
+        switch(key) {
+            case 37:
+                // Key left.
+                break;
+            case 38:
+                // Key up.
+                break;
+            case 39:
+                // Key right.
+                break;
+            case 40:
+                // Key down.
+                break;
         }
     });
 }

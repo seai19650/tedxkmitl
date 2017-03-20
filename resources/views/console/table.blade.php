@@ -77,23 +77,53 @@
             <div class="modal" id="answerModal">
               <div class="modal-background"></div>
               <div class="modal-content">
-                <div class="text-box">
+                <!-- content -->
+                <div class="columns text-box">
                   <!-- tabs -->
-                  <div class="tabs is-large">
-                    <ul>
-                      <li class="is-active"><a class="questionTab">1</a></li>
-                      <li><a class="questionTab">2</a></li>
-                      <li><a class="questionTab">3</a></li>
-                      <li><a class="questionTab">4</a></li>
-                      <li><a class="questionTab">5</a></li>
-                      <li><a class="questionTab">6</a></li>
-                    </ul>
+                  <div class="column is-5" id="profile">
+                    <div id="private-profile">
+                      <h5>Name</h5>
+                      <p id="profile-name">...</p>
+                      <div class="columns">
+                        <div class="column is-5">
+                          <h5>Ticket</h5>
+                          <p id="profile-ticket">...</p>
+                        </div>
+                        <div class="column is-4">
+                          <h5>Gender</h5>
+                          <p id="profile-gender">...</p>
+                        </div>
+                        <div class="column is-3">
+                          <h5>Age</h5>
+                          <p id="profile-age">...</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="contact-profile">
+                      <h5>Mobile</h5>
+                      <p id="profile-mobile">...</p>
+                      <h5>Email</h5>
+                      <p id="profile-email">...</p>
+                    </div>
                   </div>
-                  <!-- question -->
-                  <div id="question"></div>
-                  <!-- answer -->
-                  <div id="answer" class="notification"></div>
+                  <div class="column is-7" id="questionSection">
+                    <div class="tabs is-large">
+                      <ul>
+                        <li class="is-active"><a class="questionTab">1</a></li>
+                        <li><a class="questionTab">2</a></li>
+                        <li><a class="questionTab">3</a></li>
+                        <li><a class="questionTab">4</a></li>
+                        <li><a class="questionTab">5</a></li>
+                        <li><a class="questionTab">6</a></li>
+                      </ul>
+                    </div>
+                    <!-- question -->
+                    <div id="question"></div>
+                    <!-- answer -->
+                    <div id="answer" class="notification"></div>
+                  </div>
                 </div>
+                <!-- end content -->
               </div>
             </div>
 
