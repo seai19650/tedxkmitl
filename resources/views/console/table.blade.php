@@ -91,11 +91,11 @@
                           <h5>Ticket</h5>
                           <p id="profile-ticket">...</p>
                         </div>
-                        <div class="column is-4">
+                        <div class="column is-5">
                           <h5>Gender</h5>
                           <p id="profile-gender">...</p>
                         </div>
-                        <div class="column is-3">
+                        <div class="column is-2">
                           <h5>Age</h5>
                           <p id="profile-age">...</p>
                         </div>
