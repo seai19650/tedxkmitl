@@ -119,6 +119,7 @@
                         <li><a class="questionTab">5</a></li>
                         <li><a class="questionTab">6</a></li>
                       </ul>
+                      <button id="button-fullscreen" class="button">Fullscreen</button>
                     </div>
                     <!-- question -->
                     <div id="question"></div>
