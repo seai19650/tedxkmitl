@@ -17,6 +17,7 @@ class CreateStatusesTable extends Migration
             $table->increments('id');
             $table->integer('registration_id');
             $table->string('status')->nullable();
+            $table->boolean('is_show')->default(true);
             $table->string('keycard');
             $table->timestamps();
         });

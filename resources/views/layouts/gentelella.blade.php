@@ -73,7 +73,7 @@
                       <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul> -->
                   </li>
-                  <li><a href="{{ route('mail') }}"><i class="fa fa-desktop"></i> Mail & Status </a>
+                  <li><a href="{{ route('status') }}"><i class="fa fa-desktop"></i> Status </a>
                     <!-- <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
