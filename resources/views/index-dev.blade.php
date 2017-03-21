@@ -256,12 +256,17 @@
 </footer>
 <div class="reveal" id="regisModal" data-reveal>
     <div class="regis-lang-modal">
-        <div class="row">
+        {{--<div class="row">
             <div class="small-12 medium-6 columns">
                 <a href="{{url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
             </div>
             <div class="small-12 medium-6 columns">
                 <a href="{{url('apply/en')}}" class="button ghost primary large expanded">English</a>
+            </div>
+        </div>--}}
+        <div class="row">
+            <div class="small-12 columns">
+                <h1>First batch's registration is now closed. Thank you for your interest.</h1>
             </div>
         </div>
     </div>
@@ -269,10 +274,10 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
-<script src="{{asset('js/vendor/what-input.min.js')}}"></script>
-<script src="{{asset('js/vendor/foundation.min.js')}}"></script>
-<script src="{{asset('js/on-screen.umd.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/4.1.1/what-input.min.js"></script>
+<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
+<script src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
 <script type="text/javascript">
     $(document).foundation();
     $(document).ready(function () {
@@ -294,8 +299,7 @@
     secTeaser.on('enter', 'section#teaser', (element) = > {
         element.className += 'blacken';
     secTeaser.destroy();
-    })
-    ;
+    });
     var secEvent = new OnScreen({
         container: window,
         tolerance: 100
@@ -303,8 +307,7 @@
     secEvent.on('enter', 'section#event', (element) = > {
         element.className += 'blacken';
     secEvent.destroy();
-    })
-    ;
+    });
 </script>
 <script>
     (function (i, s, o, g, r, a, m) {
@@ -348,7 +351,6 @@
      "address": "Lad Krabang, Thailand"
   }
 }
-
 </script>
 </body>
 </html>
