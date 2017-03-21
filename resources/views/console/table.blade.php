@@ -128,7 +128,7 @@
                         <!-- answer -->
                         <div class="answer notification"></div>
                       </div>
-                      <div id="2" class="question-set col-md-6 is-hidden">
+                      <div id="2" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
                         <!-- answer -->
@@ -136,13 +136,13 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div id="3" class="question-set col-md-6 is-hidden">
+                      <div id="3" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
                         <!-- answer -->
                         <div class="answer notification"></div>
                       </div>
-                      <div id="4" class="question-set col-md-6 is-hidden">
+                      <div id="4" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
                         <!-- answer -->
@@ -150,13 +150,13 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div id="5" class="question-set col-md-6 is-hidden">
+                      <div id="5" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
                         <!-- answer -->
                         <div class="answer notification"></div>
                       </div>
-                      <div id="6" class="question-set col-md-6 is-hidden">
+                      <div id="6" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
                         <!-- answer -->
