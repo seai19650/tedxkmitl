@@ -123,6 +123,10 @@ div.modal-content.fullscreen {
     transition: 0.3s ease;
 }
 
+.modal-content.fullscreen .question-row {
+    height: 30vh;
+}
+
 #button-fullscreen {
     font-size: 0.8em;
     height: 35px;
@@ -130,6 +134,7 @@ div.modal-content.fullscreen {
     top: 15px;
     right: 35px;
     padding: 8px 20px;
+    z-index: 100;
 }
 
 #private-profile {
@@ -157,7 +162,7 @@ div.answer {
 }
 
 div.answer.fullscreen {
-    height: 140px;
+    min-height: 140px;
     margin-bottom: 20px;
 }
 

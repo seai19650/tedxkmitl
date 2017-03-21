@@ -270,6 +270,7 @@ function init_fullscreen_button() {
         $('#questionSection').toggleClass('is-8 is-9');
         $('.question-set').toggleClass('col-md-6 col-md-12');
         $('.answer').toggleClass('fullscreen');
+        $('.tabs ul').toggle();
         if ( $('.modal-content').hasClass('fullscreen') ) {
             $('.question-set').show();
         } else {
