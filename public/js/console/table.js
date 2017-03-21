@@ -260,6 +260,12 @@ function init_closeModal(){
     });
 }
 
+function init_fullscreen_button() {
+    $('#button-fullscreen').on('click', function() {
+        $('.modal-content').toggleClass('fullscreen');
+    });
+}
+
 function init_key_switch() {
     $(document).keydown(function(event){
         var key = event.which;
@@ -288,4 +294,5 @@ function isLoading(selector) {
 
 $(document).ready(function() {
     init_DataTables();
+    init_fullscreen_button();
 });

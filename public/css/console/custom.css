@@ -69,12 +69,17 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     overflow-y: auto;
 }
 
-.modal-content {
+div.modal-content {
     font-size: 1.3em;
     padding: 30px 40px 30px 40px;
     overflow: hidden;
     min-height: 160px;
     color: black;
+}
+
+div.modal-content.fullscreen {
+    height: 95vw;
+    width: 95vw;
 }
 
 .column {
@@ -101,6 +106,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     opacity: 0.5;
     cursor: pointer;
     transition: 0.3s ease;
+    font-size: 1.1em;
     text-align: center;
     z-index: 100;
 }
@@ -116,6 +122,15 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     -o-filter: none;
     -ms-filter: none;
     transition: 0.3s ease;
+}
+
+#button-fullscreen {
+    font-size: 0.8em;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    padding: 8px 20px;
 }
 
 #private-profile {
@@ -150,7 +165,6 @@ div#question {
 .text-box.is-loading {
     display: none;
 }
-
 
 /*bulma*/
 .modal.is-loading:after {
