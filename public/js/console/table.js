@@ -125,6 +125,7 @@ function init_approveButton(table) {
 
 function ajaxInvite(registration, thisButton) {
     thisButton.addClass('is-loading');
+    $('#setStateButton2').addClass('is-loading');
     var state;
     if ( thisButton.hasClass('is-success')) {
         state = 0;
@@ -141,22 +142,22 @@ function ajaxInvite(registration, thisButton) {
         },
         success:function(data){
             if (data == 0) {
+                $('#setStateButton2').removeClass('is-success');
+                $('#setStateButton2').html('No');
                 thisButton.removeClass('is-success');
-                thisButton.removeClass('is-warning');
                 thisButton.html('No');
             } else if (data == 1) {
-                thisButton.removeClass('is-warning');
+                $('#setStateButton2').addClass('is-success');
+                $('#setStateButton2').html('Yes');
                 thisButton.addClass('is-success');
                 thisButton.html('Yes');
-            } else {
-                thisButton.addClass('is-warning');
-                thisButton.removeClass('is-success');
-                thisButton.html('Invalidated');
             }
             thisButton.removeClass('is-loading');
+            $('#setStateButton2').removeClass('is-loading');
         },
         error:function(){
             thisButton.removeClass('is-loading');
+            $('#setStateButton2').removeClass('is-loading');
         }
     });
 }
@@ -171,6 +172,7 @@ function init_modalButton(table) {
 }
 
 function ajaxProfile(table, thisRow, thisButton) {
+    init_setStateButton2(table, thisRow);
     var registration;
     if (thisRow.attr('class') == 'child') {
         registration = table.row(thisRow.prev()).data();
@@ -248,6 +250,22 @@ function loadPrivateProfile(registration) {
     // $('#profile-occupation').html(registration.occupation);
     $('#profile-mobile').html(registration.mobile);
     $('#profile-email').html(registration.email);
+}
+
+function init_setStateButton2(table, thisRow) {
+    var thisButton = thisRow.find('.setStateButton');
+    var registration = table.row(thisRow).data()
+    if (thisButton.hasClass('is-success')) {
+        $('#setStateButton2').addClass('is-success');
+        $('#setStateButton2').html('Yes');
+    } else {
+        $('#setStateButton2').removeClass('is-success');
+        $('#setStateButton2').html('No');
+    }
+    $('#setStateButton2').off();
+    $('#setStateButton2').on('click', function() {
+        ajaxInvite(registration, thisButton);
+    })
 }
 
 function toTitleCase(str) {

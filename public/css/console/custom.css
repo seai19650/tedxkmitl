@@ -137,6 +137,16 @@ div.modal-content.fullscreen {
     z-index: 100;
 }
 
+#setStateButton2 {
+    font-size: 0.8em;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    right: 145px;
+    padding: 8px 20px;
+    z-index: 100;
+}
+
 #private-profile {
     text-transform: capitalize;
     border-bottom: 1px solid #D3D3D3;
