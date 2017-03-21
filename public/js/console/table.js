@@ -291,11 +291,19 @@ function init_key_switch(table, thisRow) {
         var key = event.which;
         switch(key) {
             case 37:
+                if (thisRow.is(':first-child')) {
+                    init_key_switch(table, thisRow);
+                    break;
+                }
                 prevRow = thisRow.prev();
                 prevButton = prevRow.children('.modalButton');
                 ajaxProfile(table, prevRow, prevButton);
                 break;
             case 39:
+                if (thisRow.is(':last-child')) {
+                    init_key_switch(table, thisRow);
+                    break;
+                }
                 nextRow = thisRow.next();
                 nextButton = nextRow.children('.modalButton');
                 ajaxProfile(table, nextRow, nextButton)
