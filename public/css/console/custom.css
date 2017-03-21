@@ -72,8 +72,9 @@ div.modal-content {
 }
 
 div.modal-content.fullscreen {
+    font-size: 1.2em;
     height: 95vw;
-    width: 95vw;
+    width: 97vw;
 }
 
 .column {
@@ -150,7 +151,7 @@ p#profile-name, p#profile-mobile {
 }
 
 div.answer {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Leelawadee', -apple-system;
     height: 180px;
     overflow-y: auto;
 }
