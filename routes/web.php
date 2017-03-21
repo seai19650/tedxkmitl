@@ -48,17 +48,19 @@ Route::get('/home', function (){
 });
 Route::get('/console', 'ConsoleController@index')->middleware('auth')->name('console');;
 Route::get('/table', 'TableController@index')->middleware('auth')->name('table');;
-Route::get('/mail', 'MailController@index')->middleware('auth')->name('mail');;
+Route::get('/status', 'StatusController@index')->middleware('auth')->name('status');;
 Route::post('/gettable', 'TableController@getTable');
 Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
 
 Route::get('/id/{token}', 'IdController@index');
-Route::get('/getstatus', 'StatusController@show');
+Route::post('/getstatus', 'StatusController@show');
+Route::post('/getstatusadmin', 'StatusController@showAdmin');
 Route::post('/id/{token}', 'StatusController@verify');
 Route::post('/post/{token}', 'StatusController@store');
 Route::post('/delete/{token}', 'StatusController@delete');
-Route::get('/status', function (){
+Route::post('/setaction', 'StatusController@setAction');
+Route::get('/live', function (){
     return view('status');
 });
 
