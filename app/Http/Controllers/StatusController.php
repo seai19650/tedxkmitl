@@ -10,6 +10,9 @@ use Illuminate\Support\Str;
 
 class StatusController extends Controller
 {
+    public function index() {
+        return view('console.status');
+    }
 
     public function verify(Request $request, $token)
     {
@@ -61,9 +64,21 @@ class StatusController extends Controller
 
     public function show()
     {
-        $output = Status::where('status', '!=', null)->get();
-        $output = json_decode($output, true);
-
+        $output = Status::where([['status', '!=', null], ['is_show', 1]])->get();
         return Response::json($output);
+    }
+
+    public function showAdmin()
+    {
+        $output = Status::where('status', '!=', null)->get();
+        return Response::json($output);
+    }
+
+    public function setAction(Request $request)
+    {
+        $status = Status::where('keycard', $request->keycard)->first();
+        $status->is_show = $request->state;
+        $status->save();
+        return $status->is_show;
     }
 }

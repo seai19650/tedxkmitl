@@ -70,7 +70,7 @@
             }
         });
         $.ajax({
-            method: 'get',
+            method: 'post',
             url: '/getstatus',
             data: '',
             success: function(data){
