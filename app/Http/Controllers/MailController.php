@@ -8,9 +8,6 @@ use App\Mail\Respond;
 
 class MailController extends Controller
 {
-    public function index() {
-        return view('console.mail');
-    }
     public function batch_mail()
     {
         $status = 'batch';
