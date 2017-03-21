@@ -121,10 +121,48 @@
                       </ul>
                       <button id="button-fullscreen" class="button">Fullscreen</button>
                     </div>
-                    <!-- question -->
-                    <div id="question"></div>
-                    <!-- answer -->
-                    <div id="answer" class="notification"></div>
+                    <div class="row">
+                      <div id="1" class="question-set col-md-12">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                      <div id="2" class="question-set col-md-6 is-hidden">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div id="3" class="question-set col-md-6 is-hidden">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                      <div id="4" class="question-set col-md-6 is-hidden">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div id="5" class="question-set col-md-6 is-hidden">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                      <div id="6" class="question-set col-md-6 is-hidden">
+                        <!-- question -->
+                        <div class="question"></div>
+                        <!-- answer -->
+                        <div class="answer notification"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <!-- end content -->

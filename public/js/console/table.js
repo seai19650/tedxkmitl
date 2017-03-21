@@ -209,8 +209,8 @@ function loadProfile(registration, thisButton, thisRow) {
     // display first tab by default
     $('.tabs li').removeClass('is-active');
     $('.tabs li:first-child').addClass('is-active');
-    $('#question').html(registration[1].question);
-    $('#answer').html(registration[1].answer);
+    $('.question').html(registration[1].question);
+    $('.answer').html(registration[1].answer);
     loadPrivateProfile(registration);
     // build invite button
     if (thisButton.hasClass('is-success')) {
@@ -224,8 +224,8 @@ function loadProfile(registration, thisButton, thisRow) {
         $('.tabs li').removeClass('is-active');
         $(this).parents('li').addClass('is-active');
         question_id = $(this).html();
-        $('#question').html(registration[question_id].question);
-        $('#answer').html(registration[question_id].answer);
+        $('.question').html(registration[question_id].question);
+        $('.answer').html(registration[question_id].answer);
     });
     // unhide text-box and remove loading icon
     $('#answerModal').removeClass('is-loading');
@@ -262,7 +262,17 @@ function init_closeModal(){
 
 function init_fullscreen_button() {
     $('#button-fullscreen').on('click', function() {
+        $(this).toggleClass('is-success');
         $('.modal-content').toggleClass('fullscreen');
+        $('div.overlay, #profile').toggleClass('is-4 is-3');
+        $('#questionSection').toggleClass('is-8 is-9');
+        $('#1.question-set').toggleClass('col-md-6 col-md-12');
+        $('#2.question-set').toggleClass('is-hidden');
+        $('#3.question-set').toggleClass('is-hidden');
+        $('#4.question-set').toggleClass('is-hidden');
+        $('#5.question-set').toggleClass('is-hidden');
+        $('#6.question-set').toggleClass('is-hidden');
+        $('.answer').toggleClass('fullscreen');
     });
 }
 

@@ -63,12 +63,6 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,table.dataTa
     left: 10px;
 }
 
-#answer {
-    font-family: 'Kanit', sans-serif;
-    height: 180px;
-    overflow-y: auto;
-}
-
 div.modal-content {
     font-size: 1.3em;
     padding: 30px 40px 30px 40px;
@@ -84,6 +78,10 @@ div.modal-content.fullscreen {
 
 .column {
     padding-top: 0;
+}
+
+.is-hidden {
+    display: none;
 }
 
 #profile {
@@ -151,7 +149,18 @@ p#profile-name, p#profile-mobile {
     padding-bottom: 5px;
 }
 
-div#question {
+div.answer {
+    font-family: 'Kanit', sans-serif;
+    height: 180px;
+    overflow-y: auto;
+}
+
+div.answer.fullscreen {
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+div.question {
     font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 15px;
