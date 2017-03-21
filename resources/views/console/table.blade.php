@@ -121,7 +121,7 @@
                       </ul>
                       <button id="button-fullscreen" class="button">Fullscreen</button>
                     </div>
-                    <div class="row">
+                    <div class="row question-row">
                       <div id="1" class="question-set col-md-12">
                         <!-- question -->
                         <div class="question"></div>
@@ -135,7 +135,7 @@
                         <div class="answer notification"></div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row question-row">
                       <div id="3" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
@@ -149,7 +149,7 @@
                         <div class="answer notification"></div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row question-row">
                       <div id="5" class="question-set col-md-12 is-hidden">
                         <!-- question -->
                         <div class="question"></div>
