@@ -326,6 +326,8 @@ function init_key_switch(table, thisRow) {
                 nextButton = nextRow.children('.modalButton');
                 ajaxProfile(table, nextRow, nextButton)
                 break;
+            default:
+                init_key_switch(table, thisRow);
         }
     });
 }
