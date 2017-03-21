@@ -166,46 +166,50 @@ function init_modalButton(table) {
     $('#datatable-responsive tbody').on('click', '.modalButton', function () {
         var thisRow = $(this).parents('tr');
         var thisButton = $(this);
-        var registration;
-        if (thisRow.attr('class') == 'child') {
-            registration = table.row(thisRow.prev()).data();
-        } else {
-            registration = table.row(thisRow).data();
-        }
-        $('#answerModal').addClass('is-active is-loading');
-        $('.text-box').addClass('is-loading');
-        $('.modalButton').removeClass('is-success');
-        thisButton.addClass('is-success');
-        init_closeModal();
-        if (! ('isload' in registration)) {
-            // cache missed
-            isLoading($('.modals'))
-            $.ajax({
-                url: "getanswer",
-                type: "POST",
-                data: {
-                    _token: $('meta[name="csrf_token"]').attr('content'),
-                    id: registration.id,
-                },
-                success:function(data){
-                    // cached
-                    registration.isload = true;
-                    for (key in data) {
-                        registration[key] = data[key]
-                    }
-                    loadProfile(registration, thisButton);
-                },
-                error:function(){
-                    alert('AJAX error')
-                }
-            });
-        } else {
-            loadProfile(registration, thisButton);
-        }
+        ajaxProfile(table, thisRow, thisButton);
     });
 }
 
-function loadProfile(registration, thisButton, thisRow) {
+function ajaxProfile(table, thisRow, thisButton) {
+    var registration;
+    if (thisRow.attr('class') == 'child') {
+        registration = table.row(thisRow.prev()).data();
+    } else {
+        registration = table.row(thisRow).data();
+    }
+    $('#answerModal').addClass('is-active is-loading');
+    $('.text-box').addClass('is-loading');
+    $('.modalButton').removeClass('is-success');
+    thisButton.addClass('is-success');
+    init_closeModal();
+    if (! ('isload' in registration)) {
+        // cache missed
+        isLoading($('.modals'))
+        $.ajax({
+            url: "getanswer",
+            type: "POST",
+            data: {
+                _token: $('meta[name="csrf_token"]').attr('content'),
+                id: registration.id,
+            },
+            success:function(data){
+                // cached
+                registration.isload = true;
+                for (key in data) {
+                    registration[key] = data[key]
+                }
+                loadProfile(table, registration, thisButton, thisRow);
+            },
+            error:function(){
+                alert('AJAX error')
+            }
+        });
+    } else {
+        loadProfile(table, registration, thisButton, thisRow);
+    }
+}
+
+function loadProfile(table, registration, thisButton, thisRow) {
     // display first tab by default
     $('.tabs li').removeClass('is-active');
     $('.tabs li:first-child').addClass('is-active');
@@ -232,6 +236,8 @@ function loadProfile(registration, thisButton, thisRow) {
     // unhide text-box and remove loading icon
     $('#answerModal').removeClass('is-loading');
     $('.text-box').removeClass('is-loading');
+    // switch modal key
+    init_key_switch(table, thisRow);
 }
 
 function loadPrivateProfile(registration) {
@@ -280,21 +286,19 @@ function init_fullscreen_button() {
     });
 }
 
-function init_key_switch() {
-    $(document).keydown(function(event){
+function init_key_switch(table, thisRow) {
+    $(document).one('keydown', function(event){
         var key = event.which;
         switch(key) {
             case 37:
-                // Key left.
-                break;
-            case 38:
-                // Key up.
+                prevRow = thisRow.prev();
+                prevButton = prevRow.children('.modalButton');
+                ajaxProfile(table, prevRow, prevButton);
                 break;
             case 39:
-                // Key right.
-                break;
-            case 40:
-                // Key down.
+                nextRow = thisRow.next();
+                nextButton = nextRow.children('.modalButton');
+                ajaxProfile(table, nextRow, nextButton)
                 break;
         }
     });
