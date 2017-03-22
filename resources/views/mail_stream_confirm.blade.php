@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Congratulations! You're qualified for TEDxKMITL event</title>
+    <title>Seat confirmed!</title>
     <style>
         html {
             font-family: "Helvetica Neue", Arial, sans-serif;
@@ -33,34 +33,19 @@
             font-style: italic;
             color: #a1a1a1;
         }
-        .btn-wrap {text-align: center;}
-        a.button {
-            text-decoration: none;
-            background: #e62b1a;
-            padding: 1em;
-            margin: 0.5em auto;
-            display: inline-block;
-            color: #fff;
-            font-weight: bold;
-        }
-        a.button:hover, a.button:focus {
-            background: #c62516;
-        }
     </style>
 </head>
 <body>
 <div class="wrap">
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
-    <h1>Congratulations!<br>You've been selected.</h1>
+    <h1>Your seat has been reserved</h1>
     <hr>
     <p class="start-end">Dear Nathan,</p>
-    <p>Congratulations on being selected as an audience in the <strong>Studio</strong> room. We are so thrilled to have you on board.</p>
-    <p>The next step is to pay for your ticket. Please follow the link below to go to the secure payment page.</p>
-    <div class="btn-wrap">
-        <a href="#" class="button">Confirm your seat</a>
-    </div>
-    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.</p>
-    <P>We'd love to see you there!</P>
+    <p>Thank you for your confirmation to attend TEDxKMTIL 2017 in the <strong>Live Stream</strong> room. This email is
+        to inform you that your seat has successfully been reserved.</p>
+    <p>As a reminder, TEDxKMITL 2017 is on <strong><time datetime="2017-04-22">April 22, 2017</time></strong>
+        at King Mongkut's Institute of Technology Ladkrabang. Registration will be open at 11.30 am.</p>
+    <p>We are pleased to have you with us and would love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
 </div>
 </body>
