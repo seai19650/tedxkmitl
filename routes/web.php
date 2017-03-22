@@ -24,8 +24,16 @@ Route::get('stage', function () {
     return view('mail_stage');
 });
 
+Route::get('stage-th', function () {
+    return view('mail_stage-th');
+});
+
 Route::get('stream-confirm', function () {
     return view('mail_stream_confirm');
+});
+
+Route::get('stream-confirm-th', function () {
+    return view('mail_stream_confirm-th');
 });
 
 //Route::get('/success', function () {
