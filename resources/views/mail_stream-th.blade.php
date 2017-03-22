@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Congratulations, you're eligible for the Live Stream room</title>
+    <title>ยินดีด้วย คุณได้รับเชิญให้เข้าห้อง Live Stream</title>
     <style>
         html {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: Leelawadee, "Helvetica Neue", Arial, sans-serif;
         }
         body {margin: 0;}
         .wrap {
@@ -28,7 +28,7 @@
         h1 {font-size: 2em;}
         p {font-size: 16px;}
         p.start-end {
-            font-size: 18px;
+            font-size: 16px;
             font-family: serif;
             font-style: italic;
             color: #a1a1a1;
@@ -51,16 +51,15 @@
 <body>
 <div class="wrap">
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
-    <h1>You're eligible for the Live Stream room</h1>
+    <h1>คุณได้รับเชิญให้เข้าห้อง Live Stream</h1>
     <hr>
-    <p class="start-end">Dear Nathan,</p>
-    <p>You are invited to join TEDxKMITL in the <strong>Live Stream</strong> room at no cost. Please follow the link
-        below to reserve your seat.</p>
+    <p class="start-end">สวัสดีคุณนาธาร</p>
+    <p>คุณได้รับเชิญให้เข้าร่วมงาน TEDxKMITL 2017 ในห้อง <strong>Live Stream</strong> โดยไม่เสียค่าใช้จ่าย กรุณาเข้าลิงก์ด้านล่างเพื่อยืนยันสิทธิ์</p>
     <div class="btn-wrap">
-        <a href="#" class="button">Reserve your seat</a>
+        <a href="#" class="button">ยืนยันสิทธิ์</a>
     </div>
-    <p>We'd love to see you there!</p>
-    <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <p>หวังว่าจะได้พบคุณ!</p>
+    <p class="start-end">ขอขอบคุณ<br>ทีมงาน TEDxKMITL</p>
     </div>
 </div>
 </body>

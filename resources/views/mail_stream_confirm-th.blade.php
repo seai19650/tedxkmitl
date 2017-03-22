@@ -6,7 +6,7 @@
     <title>ยืนยันที่นั่งสำเร็จ</title>
     <style>
         html {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: Leelawadee, "Helvetica Neue", Arial, sans-serif;
         }
         body {margin: 0;}
         .wrap {
@@ -28,7 +28,7 @@
         h1 {font-size: 2em;}
         p {font-size: 16px;}
         p.start-end {
-            font-size: 18px;
+            font-size: 16px;
             font-family: serif;
             font-style: italic;
             color: #a1a1a1;
@@ -40,7 +40,7 @@
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>ยืนยันที่นั่งเรียบร้อย</h1>
     <hr>
-    <p class="start-end">สวัสดีนาธาร</p>
+    <p class="start-end">สวัสดีคุณนาธาร</p>
     <p>ขอบคุณสำหรับการยืนยันเข้าร่วมงาน TEDxKMTIL 2017 ในห้อง <strong>Live Stream</strong> อีเมลฉบับนี้เป็นการแจ้งให้ทราบว่าท่านได้ทำการยืนยันสิทธิ์การเข้าร่วมงานเป็นที่เรียบร้อยแล้ว</p>
     <p>เผื่อท่านอาจจะลืม งาน TEDxKMITL 2017 จะจัดขึ้นในวันที่ <strong><time datetime="2017-04-22">22 เมษายนนี้</time></strong>
         ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง สามารถลงทะเบียนได้ตั้งแต่เวลา 11.30 น. เป็นต้นไป</p>
