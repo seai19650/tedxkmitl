@@ -48,8 +48,51 @@
   </div>
   <!-- end top tiles -->
 
+  <!-- age line chart -->
   <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Invited<small>Age graph</small></h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <canvas id="ageLineChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end age line chart -->
+
+  <div class="row">
+    <!-- age bar chart -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Invited<small>Gender graph</small></h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <canvas id="genderPieChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <!-- end age line chart -->
+
+    <!-- gender pie chart -->
+    <div class="col-md-6 col-sm-12 col-xs-12">
       <div class="x_panel">
         <div class="x_title">
           <h2>Age graph<small>Male:Female</small></h2>
@@ -62,11 +105,12 @@
           <div class="clearfix"></div>
         </div>
         <div class="x_content">
-          <canvas id="lineChart"></canvas>
+          <canvas id="ageBarChart"></canvas>
         </div>
       </div>
     </div>
   </div>
+  <!-- end gender pie chart -->
 
 
 </div>
