@@ -55,11 +55,13 @@
     <hr>
     <p class="start-end">Dear Nathan, </p>
             <p>You are eligible for the Live Stream room</p>
-            <p>We would like to inform you that you've got a seat in live room</p>
+            <p>You are invited to join TEDxKMITL in the Live Stream room at no cost.
+             Please follow the link below to reserve your seat.</p>
+             <div class="btn-wrap">
+               <a href="#" class="button">Confirm your seat</a>
+             </div>
             <p>We love to see you there!</p>
-                    <div class="btn-wrap">
-                                <a href="#" class="button">Confirm your seat</a>
-                            </div>
+
             <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
 
 
