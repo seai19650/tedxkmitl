@@ -6,7 +6,7 @@
     <title>ขอแสดงความยินดี คุณได้รับเชิญให้เข้าร่วมงาน TEDxKMITL</title>
     <style>
         html {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: Leelawadee, "Helvetica Neue", Arial, sans-serif;
         }
         body {margin: 0;}
         .wrap {
@@ -28,7 +28,7 @@
         h1 {font-size: 2em;}
         p {font-size: 16px;}
         p.start-end {
-            font-size: 18px;
+            font-size: 16px;
             font-family: serif;
             font-style: italic;
             color: #a1a1a1;
@@ -53,7 +53,7 @@
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>เราขอเชิญคุณ</h1>
     <hr>
-    <p class="start-end">สวัสดีนาธาร</p>
+    <p class="start-end">สวัสดีคุณนาธาร</p>
     <p>ขอแสดงความยินดี คุณได้รับเลือกให้มีสิทธิ์เข้าร่วมงานในห้อง <strong>Studio</strong> และเราตื่นเต้นมากที่จะได้คุณมาร่วมในงาน</p>
     <p>ขั้นตอนต่อไปคือการชำระค่าเข้างาน กรุณาเข้าลิงก์ด้านล่างนี้เพื่อไปยังหน้าชำระเงินอย่างปลอดภัยของเรา</p>
     <div class="btn-wrap">

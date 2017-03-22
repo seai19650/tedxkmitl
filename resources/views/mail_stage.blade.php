@@ -61,7 +61,7 @@
         <a href="#" class="button">Confirm your seat</a>
     </div>
     <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.</p>
-    <P>We'd love to see you there!</P>
+    <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
 </div>
 </body>
