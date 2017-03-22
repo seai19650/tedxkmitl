@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Information Received</title>
+    <title>Congratulations! You're qualified for TEDxKMITL event</title>
     <style>
         html {
             font-family: "Helvetica Neue", Arial, sans-serif;
