@@ -32,6 +32,10 @@ Route::get('stream', function () {
     return view('mail_stream');
 });
 
+Route::get('stream-th', function () {
+    return view('mail_stream-th');
+});
+
 Route::get('stream-confirm', function () {
     return view('mail_stream_confirm');
 });
