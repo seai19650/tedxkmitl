@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Congratulations! You're qualified for TEDxKMITL event</title>
+    <title>ขอแสดงความยินดี คุณได้รับเชิญให้เข้าร่วมงาน TEDxKMITL</title>
     <style>
         html {
             font-family: "Helvetica Neue", Arial, sans-serif;
@@ -51,18 +51,17 @@
 <body>
 <div class="wrap">
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
-    <h1>You're invited.</h1>
+    <h1>เราขอเชิญคุณ</h1>
     <hr>
-    <p class="start-end">Dear Nathan,</p>
-    <p>Congratulations! You are eligible to be an audience in the <strong>Studio</strong> room. We are so thrilled to
-        invite you on board.</p>
-    <p>The next step is to pay for your ticket. Please follow the link below to go to the secure payment page.</p>
+    <p class="start-end">สวัสดีนาธาร</p>
+    <p>ขอแสดงความยินดี คุณได้รับเลือกให้มีสิทธิ์เข้าร่วมงานในห้อง <strong>Studio</strong> และเราตื่นเต้นมากที่จะได้คุณมาร่วมในงาน</p>
+    <p>ขั้นตอนต่อไปคือการชำระค่าเข้างาน กรุณาเข้าลิงก์ด้านล่างนี้เพื่อไปยังหน้าชำระเงินอย่างปลอดภัยของเรา</p>
     <div class="btn-wrap">
-        <a href="#" class="button">Confirm your seat</a>
+        <a href="#" class="button">ยืนยันสิทธิ์</a>
     </div>
-    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.</p>
-    <P>We'd love to see you there!</P>
-    <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <p>หากไม่ชำระค่าเข้างานภายใน 3 วันนับจากนี้ สิทธิ์ของท่านจะถือเป็นโมฆะ</p>
+    <p>หวังว่าจะได้พบคุณ!</p>
+    <p class="start-end">ขอขอบคุณ<br>ทีมงาน TEDxKMITL</p>
 </div>
 </body>
 </html>
