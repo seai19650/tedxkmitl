@@ -23,6 +23,12 @@ Route::get('dev', function () {
 Route::get('stage', function () {
     return view('mail_stage');
 });
+Route::get('stream', function () {
+    return view('mail_stream');
+});
+Route::get('stream-confirm', function () {
+    return view('mail_stream_confirm');
+});
 
 //Route::get('/success', function () {
 //    return view('apply-success');
@@ -71,6 +77,3 @@ Route::get('/live', function (){
 Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
-Route::get('stream-confirm', function () {
-    return view('mail_stream_confirm');
-});
