@@ -24,6 +24,10 @@ Route::get('stage', function () {
     return view('mail_stage');
 });
 
+Route::get('stream', function () {
+    return view('mail_stream');
+});
+
 //Route::get('/success', function () {
 //    return view('apply-success');
 //});
