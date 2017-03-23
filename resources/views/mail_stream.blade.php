@@ -53,11 +53,11 @@
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>You're eligible for the Live Stream room</h1>
     <hr>
-    <p class="start-end">Dear Nathan,</p>
+    <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>You are invited to join TEDxKMITL in the <strong>Live Stream</strong> room at no cost. Please follow the link
         below to reserve your seat.</p>
     <div class="btn-wrap">
-        <a href="#" class="button">Reserve your seat</a>
+        <a href="{{ 'https://tedxkmitl.com/id/'.$applicant->token.'/commit' }}" class="button">Reserve your seat</a>
     </div>
     <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>

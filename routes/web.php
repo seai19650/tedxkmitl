@@ -91,3 +91,4 @@ Route::get('/live', function (){
 Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
+Route::get('/id/{token}/commit', 'RegistrationController@commit');
