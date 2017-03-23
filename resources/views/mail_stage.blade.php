@@ -53,12 +53,12 @@
     <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>You're invited.</h1>
     <hr>
-    <p class="start-end">Dear Nathan,</p>
+    <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>Congratulations! You are eligible to be an audience in the <strong>Studio</strong> room. We are so thrilled to
         invite you on board.</p>
-    <p>The next step is to pay for your ticket. Please follow the link below to go to the secure payment page.</p>
-    <div class="btn-wrap">
-        <a href="#" class="button">Confirm your seat</a>
+    <p>The next step is to pay for your ticket.</p>
+    <div>Account No. 693-0-26770-8 Krungthai Bank สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง
+        Account name: นายกันยภัทร ทองมา และนายดุสทิตต์ ลาภสนาเปรม และน.ส.วิสุทธิ์รัตน์ รุ่งนพคุณศรี
     </div>
     <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.</p>
     <p>We'd love to see you there!</p>

@@ -101,4 +101,14 @@ class RegistrationController extends Controller
     {
         //
     }
+
+    public function commit($token) {
+        $applicant = Registration::where('token', $token)->first();
+        $applicant->is_commit = 1;
+        $applicant->save();
+//        $status = 'batch';
+
+//        \Mail::to($applicant->email)->send(new Respond($applicant, $status, $applicant->is_approve));
+        return view('reserved');
+    }
 }
