@@ -37,16 +37,22 @@
 </head>
 <body>
 <div class="wrap">
-    <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
+    <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>Your seat has been reserved</h1>
     <hr>
-    <p class="start-end">Dear Nathan,</p>
+    <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>Thank you for your confirmation to attend TEDxKMTIL 2017 in the <strong>Live Stream</strong> room. This email is
         to inform you that your seat has successfully been reserved.</p>
     <p>As a reminder, TEDxKMITL 2017 is on <strong><time datetime="2017-04-22">April 22, 2017</time></strong>
         at King Mongkut's Institute of Technology Ladkrabang. Registration will be open at 11.30 am.</p>
     <p>We are pleased to have you with us and would love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <hr>
+    <p><strong>Email:</strong> <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a><br>
+        <strong>Facebook Page:</strong> <a href="www.facebook.com/tedxkmitl">TEDxKMITL</a><br>
+        <strong>Tel. BON (คุณบอน):</strong> 06-5159-5696<br>
+        <strong>Tel. TO (คุณโต้):</strong> 09-2579-6660</p>
+</div>
 </div>
 </body>
 </html>

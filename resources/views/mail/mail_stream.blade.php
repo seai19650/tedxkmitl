@@ -56,16 +56,17 @@
     <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>You are invited to join TEDxKMITL in the <strong>Live Stream</strong> room at no cost. Please follow the link
         below to reserve your seat.</p>
-    <p>You are not eligible for attending in <strong>After Party</strong> unless you pay for an after party ticket (100 THB) at the registration point on the event day. </p>
     <div class="btn-wrap">
         <a href="{{ 'https://tedxkmitl.com/id/'.$applicant->token.'/commit' }}" class="button">Reserve your seat</a>
     </div>
+    <p>Also, we are holding an <strong>After Party</strong> at the end of the event. You can purchase a 100 THB's ticket at the registration desk.</p>
     <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
-    <p>Contact : <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a></p>
-    <p>Facebook Page<a href="www.facebook.com/tedxkmitl">TEDxKMITL</a></p>
-    <p>TEL. BON (คุณบอน): 06-5159-5696</p>
-    <p>TEL. TO (คุณโต้): 09-2579-6660</p>
+    <hr>
+    <p><strong>Email:</strong> <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a><br>
+        <strong>Facebook Page:</strong> <a href="www.facebook.com/tedxkmitl">TEDxKMITL</a><br>
+        <strong>Tel. BON (คุณบอน):</strong> 06-5159-5696<br>
+        <strong>Tel. TO (คุณโต้):</strong> 09-2579-6660</p>
     </div>
 </div>
 </body>

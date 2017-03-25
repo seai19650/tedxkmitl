@@ -21,27 +21,27 @@ Route::get('dev', function () {
 });
 
 Route::get('stage', function () {
-    return view('mail_stage');
+    return view('mail.mail_stage');
 });
 
 Route::get('stage-th', function () {
-    return view('mail_stage-th');
+    return view('mail.mail_stage-th');
 });
 
 Route::get('stream', function () {
-    return view('mail_stream');
+    return view('mail.mail_stream');
 });
 
 Route::get('stream-th', function () {
-    return view('mail_stream-th');
+    return view('mail.mail_stream-th');
 });
 
 Route::get('stream-confirm', function () {
-    return view('mail_stream_confirm');
+    return view('mail.mail_stream_confirm');
 });
 
 Route::get('stream-confirm-th', function () {
-    return view('mail_stream_confirm-th');
+    return view('mail.mail_stream_confirm-th');
 });
 
 //Route::get('/success', function () {
