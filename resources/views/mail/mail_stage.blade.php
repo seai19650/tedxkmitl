@@ -62,9 +62,14 @@
         <p><b>Krungthai Bank</b> สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง</p>
         <p><b>Account name:</b> นายกันยภัทร ทองมา และนายดุสทิตต์ ลาภสนาเปรม และน.ส.วิสุทธิ์รัตน์ รุ่งนพคุณศรี</p>
     </div>
-    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.</p>
+    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.(BEFORE 28 March. 4.00 PM.)</p>
+    <p>Please provide a payment slip by send an e-mail to tedxkmitl@gmail.com <strong>PLEASE WRITE YOUR FULL NAME IN ENGLISH ON THE SLIP</strong></p>
     <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <p>Contact : <a href="tedxkmitl@gmail.com">tedxkmitl@gmail.com</a></p>
+    <p>Facebook Page<a href="www.facebook.com/tedxkmitl">TEDxKMITL</a></p>
+    <p>TEL. BON(คุณบอน): 06-5159-5696</p>
+    <p>TEL. TO (คุณโต้) : 09-2579-6660</p>
 </div>
 </body>
 </html>
