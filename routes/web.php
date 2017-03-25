@@ -44,9 +44,9 @@ Route::get('stream-confirm-th', function () {
     return view('mail_stream_confirm-th');
 });
 
-//Route::get('/success', function () {
-//    return view('apply-success');
-//});
+Route::get('/success', function () {
+    return view('apply-success');
+});
 
 //Route::get('/apply/th', function () {
 //    return view('register-th');
@@ -56,9 +56,9 @@ Route::get('/apply', function () {
     abort(404);
 });
 
-//Route::get('/apply/en', function () {
-//    return view('register-en');
-//});
+Route::get('/apply/en', function () {
+    return view('register-en');
+});
 
 Route::post('/apply', 'RegistrationController@store');
 
