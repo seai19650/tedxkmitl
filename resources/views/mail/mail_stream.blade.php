@@ -62,6 +62,10 @@
     </div>
     <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <p>Contact : <a href="tedxkmitl@gmail.com">tedxkmitl@gmail.com</a></p>
+    <p>Facebook Page<a href="www.facebook.com/tedxkmitl">TEDxKMITL</a></p>
+    <p>TEL. BON (คุณบอน): 06-5159-5696</p>
+    <p>TEL. TO (คุณโต้): 09-2579-6660</p>
     </div>
 </div>
 </body>
