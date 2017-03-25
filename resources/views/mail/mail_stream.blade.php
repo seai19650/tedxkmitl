@@ -50,7 +50,7 @@
 </head>
 <body>
 <div class="wrap">
-    <img src="{{ asset('/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
+    <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
     <h1>You're eligible for the Live Stream room</h1>
     <hr>
     <p class="start-end">Dear {{ $applicant->firstname }},</p>
