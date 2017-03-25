@@ -38,14 +38,14 @@ class Respond extends Mailable
     public function build()
     {
         if ($this->status == 'normal') {
-            return $this->view('email')
+            return $this->view('mail.email')
                 ->subject('Registration Succeeded!');
         } elseif ($this->status == 'batch') {
             if ($this->is_approved == 1) {
-                return $this->view('mail_stage')
+                return $this->view('mail.mail_stage')
                     ->subject('Congratulations! A seat is reserved for you.');
             } else {
-                return $this->view('email_stream')
+                return $this->view('mail.mail_stream')
                     ->subject('Congratulations! You have got a seat in Live room.');
             }
         } else {
