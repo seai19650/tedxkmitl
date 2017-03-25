@@ -33,25 +33,12 @@
             font-style: italic;
             color: #a1a1a1;
         }
-        .btn-wrap {text-align: center;}
-        a.button {
-            text-decoration: none;
-            background: #e62b1a;
-            padding: 1em;
-            margin: 0.5em auto;
-            display: inline-block;
-            color: #fff;
-            font-weight: bold;
-        }
-        a.button:hover, a.button:focus {
-            background: #c62516;
-        }
     </style>
 </head>
 <body>
 <div class="wrap">
     <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
-    <h1>You're invited.</h1>
+    <h1>You're invited</h1>
     <hr>
     <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>Congratulations! You are eligible to be an audience in the <strong>Studio</strong> room. We are so thrilled to
@@ -60,16 +47,17 @@
     <div>
         <p><b>Account No.</b> 693-0-26770-8</p>
         <p><b>Krungthai Bank</b> สาขาเทคโนโลยีพระจอมเกล้าฯลาดกระบัง</p>
-        <p><b>Account name:</b> นายกันยภัทร ทองมา และนายดุสทิตต์ ลาภสนาเปรม และน.ส.วิสุทธิ์รัตน์ รุ่งนพคุณศรี</p>
+        <p><b>Account name:</b> นายกันยภัทร ทองมา และ นายดุสทิตต์ ลาภสนาเปรม และ น.ส.วิสุทธิ์รัตน์ รุ่งนพคุณศรี</p>
     </div>
-    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now.(BEFORE 28 March. 4.00 PM.)</p>
-    <p>Please provide a payment slip by send an e-mail to <a href="mailto:tedxkmtil@gmail.com">tedxkmitl@gmail.com</a>  <strong>PLEASE WRITE YOUR FULL NAME IN ENGLISH ON THE SLIP</strong></p>
+    <p>Please note that your seat will be revoked if the payment is not fulfilled within 3 days from now (before March 28 at 4.00 PM).</p>
+    <p>Please provide your payment slip by sending an e-mail to <a href="mailto:tedxkmtil@gmail.com">tedxkmitl@gmail.com</a> and <strong>PLEASE WRITE YOUR FULL NAME IN ENGLISH ON THE SLIP</strong></p>
     <p>We'd love to see you there!</p>
     <p class="start-end">Yours sincerely,<br>TEDxKMITL Staff</p>
-    <p>Contact : <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a></p>
-    <p>Facebook Page<a href="www.facebook.com/tedxkmitl">TEDxKMITL</a></p>
-    <p>TEL. BON(คุณบอน): 06-5159-5696</p>
-    <p>TEL. TO (คุณโต้) : 09-2579-6660</p>
+    <hr>
+    <p><strong>Email:</strong> <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a><br>
+        <strong>Facebook Page:</strong> <a href="www.facebook.com/tedxkmitl">TEDxKMITL</a><br>
+        <strong>Tel. BON (คุณบอน):</strong> 06-5159-5696<br>
+        <strong>Tel. TO (คุณโต้):</strong> 09-2579-6660</p>
 </div>
 </body>
 </html>
