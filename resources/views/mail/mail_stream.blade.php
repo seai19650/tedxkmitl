@@ -56,6 +56,7 @@
     <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>You are invited to join TEDxKMITL in the <strong>Live Stream</strong> room at no cost. Please follow the link
         below to reserve your seat.</p>
+    <p>You are not eligible for attending in <strong>After Party</strong> unless you pay for an after party ticket (100 THB) at the registration point on the event day. </p>
     <div class="btn-wrap">
         <a href="{{ 'https://tedxkmitl.com/id/'.$applicant->token.'/commit' }}" class="button">Reserve your seat</a>
     </div>
