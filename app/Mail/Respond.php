@@ -43,10 +43,10 @@ class Respond extends Mailable
         } elseif ($this->status == 'batch') {
             if ($this->is_approved == 1) {
                 return $this->view('mail.mail_stage')
-                    ->subject('You\'re invited.');
+                    ->subject('Congratulations! You\'re qualified for TEDxKMITL event');
             } else {
                 return $this->view('mail.mail_stream')
-                    ->subject('You\'re eligible for the Live Stream room.');
+                    ->subject('Congratulations, you\'re eligible for the Live Stream room');
             }
         } else {
             return redirect('/');
