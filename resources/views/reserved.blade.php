@@ -56,8 +56,8 @@
 <hr>
 <h1>Your seat has successfully been reserved.</h1>
 <picture>
-    <source srcset="{{asset('img/logo-for-404.png')}} 1x, {{asset('img/2x/logo-for-404.png')}} 2x">
-    <img src="{{asset('img/logo-for-404.png')}}" alt="TEDxKMITL" id="logo">
+    <source srcset="{{secure_asset('img/logo-for-404.png')}} 1x, {{secure_asset('img/2x/logo-for-404.png')}} 2x">
+    <img src="{{secure_asset('img/logo-for-404.png')}}" alt="TEDxKMITL" id="logo">
 </picture>
 </body>
 </html>
