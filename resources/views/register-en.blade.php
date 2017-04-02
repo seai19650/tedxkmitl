@@ -118,6 +118,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" name="ticket_type" value="live" required>
         <div class="columns">
             <button name="submit" class="button ghost primary" type="submit">Submit</button>
         </div>
