@@ -39,8 +39,10 @@
     <h6 style="top:83px;color:#939393;">Full name</h6>
     <h4 style="top:63px;text-transform:none;">{{ $applicant->firstname }}</h4>
     <h4 style="top:43px;text-transform:none;">{{ $applicant->lastname }}</h4>
-    <h6 style="top:33px;color:#939393;">Type</h6>
-    <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
+    @if ($applicant->is_approved == 1)
+        <h6 style="top:33px;color:#939393;">Type</h6>
+        <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
+    @endif
 </div>
 </body>
 </html>
