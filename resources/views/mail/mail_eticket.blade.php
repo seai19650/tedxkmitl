@@ -20,7 +20,7 @@
             box-sizing: border-box;
             padding: 10px;
         }
-        h1,h2,h3,h4,h5,h6 {
+        h2,h4,h5,h6 {
             text-align: right;
             text-transform: uppercase;
             position: relative;
@@ -35,10 +35,10 @@
     <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
     <h4 style="top:120px;">Livin out Loud</h4>
     <h6 style="top:120px;color:#939393;">Nickname</h6>
-    <h2 style="top:96px;">Zartre</h2>
+    <h2 style="top:97px;">Zartre</h2>
     <h6 style="top:83px;color:#939393;">Full name</h6>
-    <h5 style="top:63px;">Nathan</h5>
-    <h5 style="top:43px;">Yiangsupapaanontr</h5>
+    <h4 style="top:63px;text-transform:none;">Nathan</h4>
+    <h4 style="top:43px;text-transform:none;">Yiangsupapaanontr</h4>
     <h6 style="top:33px;color:#939393;">Type</h6>
     <h4 style="top:13px;">General</h4>
 </div>
