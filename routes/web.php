@@ -44,8 +44,13 @@ Route::get('stream-confirm-th', function () {
     return view('mail.mail_stream_confirm-th');
 });
 
+
 Route::get('/success', function () {
     return view('apply-success');
+});
+
+Route::get('eticket', function () {
+    return view('mail_eticket');
 });
 
 Route::get('/apply/th', function () {
