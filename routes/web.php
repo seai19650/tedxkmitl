@@ -90,3 +90,5 @@ Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
 Route::get('/id/{token}/commit', 'RegistrationController@commit');
+
+Route::get('eticket_demmy', 'MailController@eticket_mail');
