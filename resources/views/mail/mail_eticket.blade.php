@@ -37,12 +37,10 @@
 </head>
 <body>
 <div class="wrap">
-    {{--<img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">--}}
-    <h1>You're welcomed!</h1>
+    <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" id="logo">
+    <h1>This is your E-Ticket!</h1>
     <hr>
-    <img src="{{ (storage_path() . '/eticket/1.svg') }}" alt="TEDxKMITL" id="logo">
-    {{--<p class="start-end">Dear {{ $applicant->firstname }},</p>--}}
-    <p class="start-end">Dear Tester,</p>
+    <p class="start-end">Dear {{ $applicant->firstname }},</p>
     <p>Congratulations! You are eligible to be an audience in the <strong>Studio</strong> room. We are so thrilled to
         invite you on board.</p>
     <p>The next step is to pay for your ticket.</p>
