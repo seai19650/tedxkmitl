@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Registration extends Model
 {
-    protected $guarded = ['question'];
+    protected $guarded = ['question', 'submit'];
 
     public function questions() {
         return $this->hasMany(Question::class);
