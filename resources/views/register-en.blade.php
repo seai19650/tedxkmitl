@@ -37,10 +37,10 @@
                 </p>
                 <p><strong>Location</strong></p>
                 <p>Auditorium, Faculty of Information Technology, KMITL</p>
-                <p class="text-justify">Only 100 seats are available. The application is available until April 9, 2017,
+                <p class="text-justify">The application is available until April 9, 2017,
                     23.59 GMT+7.</p>
-                <p class="text-justify">Successful applicants will receive a confirmation email from
-                    tedxkmitl@gmail.com</p>
+                <p class="text-justify">For more information please contact tedxkmitl@gmail.com</p>
+                <p class="text-justify">We are holding an After Party at the end of the event. You can purchase a 100 THB's ticket at the registration desk.</p>
             </div>
         </div>
     </div>
@@ -113,8 +113,7 @@
         <div class="small-12 columns">
             <div class="card">
                 <div class="card-section">
-                    <p>Clicking the Submit button means you agree that you can attend TEDxKMITL event on April 22, 2017
-                        if you are a successful candidate.</p>
+                    <p>Clicking the Submit button means you agree that you can attend TEDxKMITL event on April 22, 2017.</p>
                 </div>
             </div>
         </div>
