@@ -38,7 +38,7 @@ class Respond extends Mailable
     public function build()
     {
         if ($this->status == 'normal') {
-            return $this->view('mail.email')
+            return $this->view('mail.mail_stream')
                 ->subject('Registration Succeeded!');
         } elseif ($this->status == 'batch') {
             if ($this->is_approved == 1) {
