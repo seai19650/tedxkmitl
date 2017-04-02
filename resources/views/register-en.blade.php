@@ -36,28 +36,11 @@
                     <time datetime="2017-04-22">April 22, 2017</time>
                 </p>
                 <p><strong>Location</strong></p>
-                <p>Auditorium, Faculty of Engineering, KMITL</p>
-                <p><strong>Ticket Prices</strong></p>
-                <ul>
-                    <li>Student (Undergraduate or any level below) THB 250</li>
-                    <li>General Public THB 500</li>
-                    <li>Angel Ticket THB 1000</li>
-                </ul>
-                <p class="text-justify">
-                    <span style="margin-right:-5px">(</span> Angel ticket
-                    is a ticket of give that mean when you purchase this ticket you will give an opportunity to a change
-                    maker who will be a part of TEDxKMITL. The receivers are those who work in organizations for society
-                    or those who can potentially spark changes in the society. They will be nominated by impactful
-                    organization as well as society development associates such as teachers in remote areas, volunteer
-                    camps, and foundation.)</p>
-                <p class="text-justify">Only 100 seats are available. The application is available until March 20, 2017,
+                <p>Auditorium, Faculty of Information Technology, KMITL</p>
+                <p class="text-justify">Only 100 seats are available. The application is available until April 9, 2017,
                     23.59 GMT+7.</p>
-                <p class="text-justify">The successful applicants will receive a confirmation email enclosed with
-                    payment details from
+                <p class="text-justify">Successful applicants will receive a confirmation email from
                     tedxkmitl@gmail.com</p>
-                <p>*The payment must be made within three days after the date the applicants have received a
-                    confirmation email; otherwise, they will be disqualified from the audience selection
-                    process.</p>
             </div>
         </div>
     </div>
@@ -108,19 +91,9 @@
                 </select>
             </label>
         </div>
-        <div class="small-12 medium-4 columns">
+        <div class="small-12 medium-8 columns">
             <label for="occupation">Occupation
                 <input type="text" name="occupation" required>
-            </label>
-        </div>
-        <div class="small-12 medium-4 columns">
-            <label for="ticket_type">Ticket type
-                <select name="ticket_type" required>
-                    <option value="" disabled>Select a type</option>
-                    <option value="student">Student</option>
-                    <option value="general">General Public</option>
-                    <option value="angel">Angel</option>
-                </select>
             </label>
         </div>
     </div>
@@ -140,13 +113,8 @@
         <div class="small-12 columns">
             <div class="card">
                 <div class="card-section">
-                    <p>Clicking the Submit button means you hereby agree to the following conditions:</p>
-                    <ul>
-                        <li>I can attend TEDxKMITL event on April 22, 2017.
-                        </li>
-                        <li>I am willing to make a payment to join TEDxKMITL according to the ticket rates.
-                        </li>
-                    </ul>
+                    <p>Clicking the Submit button means you agree that you can attend TEDxKMITL event on April 22, 2017
+                        if you are a successful candidate.</p>
                 </div>
             </div>
         </div>
