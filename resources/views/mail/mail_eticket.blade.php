@@ -20,7 +20,7 @@
             box-sizing: border-box;
             padding: 10px;
         }
-        h1,h3,h4,h5 {
+        h1,h2,h3,h4,h5,h6 {
             text-align: right;
             text-transform: uppercase;
             position: relative;
@@ -32,15 +32,15 @@
     <div style="position:relative;top:69px;text-align:center;">
         {!! QrCode::size(100)->margin(0)->generate('http://tedxkmitl.com/') !!}
     </div>
-    <h4 style="top:120px;">April 22, 2017</h4>
-    <h3 style="top:100px;">Livin out Loud</h3>
-    <h5 style="top:100px;color:#939393;">Nickname</h5>
-    <h1 style="top:80px;">Zartre</h1>
-    <h5 style="top:77px;color:#939393;">Full name</h5>
-    <h4 style="top:57px;">Nathan</h4>
-    <h4 style="top:37px;">Yiangsupapaanontr</h4>
-    <h5 style="top:37px;color:#939393;">Type</h5>
-    <h3 style="top:17px;">General</h3>
+    <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
+    <h4 style="top:120px;">Livin out Loud</h4>
+    <h6 style="top:120px;color:#939393;">Nickname</h6>
+    <h2 style="top:96px;">Zartre</h2>
+    <h6 style="top:83px;color:#939393;">Full name</h6>
+    <h5 style="top:63px;">Nathan</h5>
+    <h5 style="top:43px;">Yiangsupapaanontr</h5>
+    <h6 style="top:33px;color:#939393;">Type</h6>
+    <h4 style="top:13px;">General</h4>
 </div>
 </body>
 </html>
