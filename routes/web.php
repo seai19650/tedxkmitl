@@ -44,21 +44,18 @@ Route::get('stream-confirm-th', function () {
     return view('mail.mail_stream_confirm-th');
 });
 
-//Route::get('/success', function () {
-//    return view('apply-success');
-//});
-
-//Route::get('/apply/th', function () {
-//    return view('register-th');
-//});
-
-Route::get('/apply', function () {
-    abort(404);
+Route::get('/success', function () {
+    return view('apply-success');
 });
 
-//Route::get('/apply/en', function () {
-//    return view('register-en');
-//});
+Route::get('/apply/th', function () {
+    return view('register-th');
+});
+
+
+Route::get('/apply/en', function () {
+    return view('register-en');
+});
 
 Route::post('/apply', 'RegistrationController@store');
 

@@ -137,30 +137,6 @@
                 <textarea rows="4" name="question[2]" required></textarea>
             </label>
         </div>
-        <div class="small-12 large-6 columns">
-            <label>
-                Please, tell us about a kid-mind inside you.
-                <textarea rows="4" name="question[3]" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>
-                What do you hope to get from this TEDxKMITL 2017 event?
-                <textarea rows="4" name="question[4]" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>
-                List 3 topics which you’d love to share them out.
-                <textarea rows="4" name="question[5]" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>
-                Anything else we did not ask you, we’d love to know you more.
-                <textarea rows="4" name="question[6]" required></textarea>
-            </label>
-        </div>
         <div class="small-12 columns">
             <div class="card">
                 <div class="card-section">
