@@ -54,8 +54,6 @@ Route::get('eticket/{token}', function ($token) {
     return view('mail.mail_eticket')->with('applicant',$applicant);
 });
 
-Route::get('eticket_dd', 'MailController@eticket_mail');
-
 Route::get('/apply/th', function () {
     return view('register-th');
 });
