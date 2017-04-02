@@ -49,11 +49,6 @@ Route::get('/success', function () {
     return view('apply-success');
 });
 
-Route::get('eticket/{token}', function ($token) {
-    $applicant = \App\Registration::where('token', $token)->first();
-    return view('mail.mail_eticket')->with('applicant',$applicant);
-});
-
 Route::get('/apply/th', function () {
     return view('register-th');
 });

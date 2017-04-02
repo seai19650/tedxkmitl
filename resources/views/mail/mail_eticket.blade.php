@@ -13,7 +13,7 @@
             margin: 0 auto;
             width: 300px;
             height: 534px;
-            background: url("{{asset('img/e-ticket.png')}}");
+            background: url('https://tedxkmitl.com/img/e-ticket.png');
             background-size: contain;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -30,7 +30,7 @@
 <body>
 <div class="wrap">
     <div style="position:relative;top:69px;text-align:center;">
-        {!! QrCode::size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token) !!}
+        <img src="{!!$message->embedData(QrCode::format('png')->size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token), 'QrCode.png', 'image/png')!!}">
     </div>
     <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
     <h4 style="top:120px;">Livin out Loud</h4>

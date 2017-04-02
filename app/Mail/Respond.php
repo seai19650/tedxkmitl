@@ -48,9 +48,9 @@ class Respond extends Mailable
                 return $this->view('mail.mail_stream')
                     ->subject('Congratulations, you\'re eligible for the Live Stream room');
             }
-        } else {
-            return redirect('/');
+        } elseif ($this->status == 'eticket') {
+            return $this->view('mail.mail_eticket')
+                ->subject('Here is your TEDxKMITL e-ticket');
         }
-
     }
 }
