@@ -25,7 +25,7 @@
     <img src="{{secure_asset('img/2x/nav-on-w.png')}}" alt="TEDxKMITL" class="logo">
     <div class="small-12 columns text-center">
         <div class="qrcode">
-            {!! QrCode::size(300)->generate('http://tedxkmitl.com/id/'.$applicant->token) !!}
+            {!! QrCode::size(300)->generate('https://tedxkmitl.com/id/'.$applicant->token) !!}
         </div>
     </div>
     <div class="small-12 columns text-center">
