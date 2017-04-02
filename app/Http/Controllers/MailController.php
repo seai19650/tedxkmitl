@@ -19,4 +19,17 @@ class MailController extends Controller
         }
         return redirect('/console');
     }
+
+    public function eticket_mail()
+    {
+        $status = 'eticket';
+        $applicants = Registration::where('is_paid', '1')->orwhere('is_commit', '1')->get();
+        dd($applicants);
+//        foreach ($applicants as $applicant)
+//        {
+//            $is_approved = $applicant->is_approved;
+//            \Mail::to($applicant->email)->queue(new Respond($applicant, $status, $is_approved));
+//        }
+        return redirect('/console');
+    }
 }
