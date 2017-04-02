@@ -51,9 +51,6 @@ class Respond extends Mailable
         } elseif ($this->status == 'eticket') {
             return $this->view('mail.mail_eticket')
                 ->subject('Here is your TEDxKMITL e-ticket');
-        } else {
-            return view('/');
         }
-
     }
 }
