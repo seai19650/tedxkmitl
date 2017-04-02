@@ -138,26 +138,6 @@
                 <textarea name="question[2]" rows="4" required></textarea>
             </label>
         </div>
-        <div class="small-12 large-6 columns">
-            <label>บอกเล่าความเป็นเด็กในตัวของคุณให้เราฟังหน่อย
-                <textarea name="question[3]" rows="4" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>คุณคิดว่าคุณจะได้รับอะไรจากการมาฟัง TEDxKMITL 2017 ในครั้งนี้
-                <textarea name="question[4]" rows="4" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>สามสิ่งหรือสามหัวข้อที่คุณสนใจอยากจะแชร์ให้กับบุคคลอื่นๆ
-                <textarea name="question[5]" rows="4" required></textarea>
-            </label>
-        </div>
-        <div class="small-12 large-6 columns">
-            <label>มีอะไรอยากบอกเราเพิ่มเติมไหมที่เราไม่ได้ถาม เราอยากรู้จักคุณเพิ่มเติม
-                <textarea name="question[6]" rows="4" required></textarea>
-            </label>
-        </div>
         <div class="small-12 columns">
             <div class="card">
                 <div class="card-section">
