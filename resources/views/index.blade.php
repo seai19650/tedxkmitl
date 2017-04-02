@@ -245,19 +245,12 @@
 </footer>
 <div class="reveal" id="regisModal" data-reveal>
     <div class="regis-lang-modal">
-        {{--<div class="row">
-            <div class="small-12 medium-6 columns">
-                <a href="{{secure_url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
-            </div>
-            <div class="small-12 medium-6 columns">
-                <a href="{{secure_url('apply/en')}}" class="button ghost primary large expanded">English</a>
-            </div>
-        </div>--}}
         <div class="row">
-            <div class="small-12 columns text-center">
-                <h3 style="color:#e62b1a">First batch's registration is now closed. Thank you for your interest.</h3>
-                <hr>
-                <h4>Stay tuned for further updates!</h4>
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/th')}}" class="button ghost primary large expanded">ไทย</a>
+            </div>
+            <div class="small-12 medium-6 columns">
+                <a href="{{url('apply/en')}}" class="button ghost primary large expanded">English</a>
             </div>
         </div>
     </div>
