@@ -124,6 +124,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" name="ticket_type" value="live" required>
         <div class="small-12 columns">
             <button name="submit" class="button ghost primary" type="submit">ส่งข้อมูล</button>
         </div>
