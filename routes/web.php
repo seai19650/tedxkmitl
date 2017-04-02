@@ -50,7 +50,7 @@ Route::get('/success', function () {
 });
 
 Route::get('eticket', function () {
-    return view('mail_eticket');
+    return view('mail.mail_eticket');
 });
 
 Route::get('/apply/th', function () {
