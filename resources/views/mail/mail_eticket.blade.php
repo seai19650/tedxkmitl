@@ -30,17 +30,17 @@
 <body>
 <div class="wrap">
     <div style="position:relative;top:69px;text-align:center;">
-        {!! QrCode::size(100)->margin(0)->generate('http://tedxkmitl.com/') !!}
+        {!! QrCode::size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token) !!}
     </div>
     <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
     <h4 style="top:120px;">Livin out Loud</h4>
     <h6 style="top:120px;color:#939393;">Nickname</h6>
-    <h2 style="top:97px;">Zartre</h2>
+    <h2 style="top:97px;">{{ $applicant->nickname }}</h2>
     <h6 style="top:83px;color:#939393;">Full name</h6>
-    <h4 style="top:63px;text-transform:none;">Nathan</h4>
-    <h4 style="top:43px;text-transform:none;">Yiangsupapaanontr</h4>
+    <h4 style="top:63px;text-transform:none;">{{ $applicant->firstname }}</h4>
+    <h4 style="top:43px;text-transform:none;">{{ $applicant->lastname }}</h4>
     <h6 style="top:33px;color:#939393;">Type</h6>
-    <h4 style="top:13px;">General</h4>
+    <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
 </div>
 </body>
 </html>
