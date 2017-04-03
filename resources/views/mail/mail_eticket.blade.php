@@ -1,50 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html style="font-family: 'Helvetica Neue', Arial, sans-serif;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Here is your TEDxKMITL e-ticket</title>
-    <style>
-        html {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-        }
-        body {margin: 0;}
-        .wrap {
-            margin: 0 auto;
-            width: 300px;
-            height: 534px;
-            background: url('https://tedxkmitl.com/img/e-ticket.png');
-            background-size: contain;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 10px;
-        }
-        h2,h4,h5,h6 {
-            text-align: right;
-            text-transform: uppercase;
-            position: relative;
-        }
-    </style>
+    <title>Congratulations! You're qualified for TEDxKMITL event</title>
 </head>
-<body>
-<div class="wrap">
-    <div style="position:relative;top:69px;text-align:center;">
-        <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}">
-            <img src="{!!$message->embedData(QrCode::format('png')->size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token), 'QrCode.png', 'image/png')!!}">
-        </a>
+<body style="margin: 0;">
+<div style="margin:0 auto;width:100%;max-width:600px;padding:1.5em 1em 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
+    <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" style="width: 240px;">
+    <h1 style="font-size: 2em;">Here is your TEDxKMITL ticket!</h1>
+    <hr style="width:100%;max-width:240px;margin:1em 0 1.4em;border:3px solid #e62b1a;">
+    <p style="font-size: 18px;font-family: serif;font-style: italic;color: #a1a1a1;">Dear {{ $applicant->firstname }},</p>
+    <p style="font-size: 16px;">Sorry for our previous email which didn't display correctly to some attendees. Please click the link below to go
+        to your new ticket.</p>
+    <div style="text-align: center;">
+        <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}"
+           style="text-decoration: none;background: #e62b1a;padding: 1em;margin: 0.5em auto;display: inline-block;color: #fff;font-weight: bold;">Your
+            e-ticket</a>
     </div>
-    <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
-    <h4 style="top:120px;">Livin out Loud</h4>
-    <h6 style="top:120px;color:#939393;">Nickname</h6>
-    <h2 style="top:97px;">{{ $applicant->nickname }}</h2>
-    <h6 style="top:83px;color:#939393;">Full name</h6>
-    <h4 style="top:63px;text-transform:capitalize;">{{ $applicant->firstname }}</h4>
-    <h4 style="top:43px;text-transform:capitalize;">{{ $applicant->lastname }}</h4>
-    @if ($applicant->is_approved == 1)
-        <h6 style="top:33px;color:#939393;">Type</h6>
-        <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
-    @endif
+    <p style="font-size: 18px;font-family: serif;font-style: italic;color: #a1a1a1;">Yours sincerely,<br>TEDxKMITL Staff</p>
+    <hr style="width:100%;max-width:240px;margin:1em 0 1.4em;border:3px solid #e62b1a;">
+    <p style="font-size: 16px;"><strong>Email:</strong> <a href="mailto:tedxkmitl@gmail.com">tedxkmitl@gmail.com</a><br>
+        <strong>Facebook Page:</strong> <a href="www.facebook.com/tedxkmitl">TEDxKMITL</a><br>
+        <strong>Tel. BON (คุณบอน):</strong> 06-5159-5696<br>
+        <strong>Tel. TO (คุณโต้):</strong> 09-2579-6660</p>
 </div>
 </body>
 </html>
