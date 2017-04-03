@@ -76,8 +76,9 @@ Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
 
 //Route::get('/id/{token}', 'IdController@index');
-Route::get('/id/{token}', function(){
-    return view('pre-id');
+Route::get('/id/{token}', function($token){
+    $applicant = \App\Registration::where('token', $token)->first();
+    return view('pre-id')->with('applicant',$applicant);
 });
 Route::post('/getstatus', 'StatusController@show');
 Route::post('/getstatusadmin', 'StatusController@showAdmin');
