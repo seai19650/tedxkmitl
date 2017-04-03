@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="small-12 columns text-center">
-        <h1><strong>Hi {!! $applicant->firstname !!}!</strong></h1>
+        <h1><strong>Hi {!! $applicant->nickname !!}!</strong></h1>
         <p style="margin-bottom:1.6em;">Thinking about...</p>
     </div>
     @foreach($post as $status)

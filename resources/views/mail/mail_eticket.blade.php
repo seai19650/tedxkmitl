@@ -30,15 +30,17 @@
 <body>
 <div class="wrap">
     <div style="position:relative;top:69px;text-align:center;">
-        <img src="{!!$message->embedData(QrCode::format('png')->size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token), 'QrCode.png', 'image/png')!!}">
+        <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}">
+            <img src="{!!$message->embedData(QrCode::format('png')->size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token), 'QrCode.png', 'image/png')!!}">
+        </a>
     </div>
     <h5 style="top:140px;color:#939393;">April 22, 2017</h5>
     <h4 style="top:120px;">Livin out Loud</h4>
     <h6 style="top:120px;color:#939393;">Nickname</h6>
     <h2 style="top:97px;">{{ $applicant->nickname }}</h2>
     <h6 style="top:83px;color:#939393;">Full name</h6>
-    <h4 style="top:63px;text-transform:none;">{{ $applicant->firstname }}</h4>
-    <h4 style="top:43px;text-transform:none;">{{ $applicant->lastname }}</h4>
+    <h4 style="top:63px;text-transform:capitalize;">{{ $applicant->firstname }}</h4>
+    <h4 style="top:43px;text-transform:capitalize;">{{ $applicant->lastname }}</h4>
     @if ($applicant->is_approved == 1)
         <h6 style="top:33px;color:#939393;">Type</h6>
         <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
