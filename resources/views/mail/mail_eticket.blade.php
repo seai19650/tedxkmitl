@@ -6,7 +6,7 @@
     <title>Here is your TEDxKMITL e-ticket</title>
 </head>
 <body style="margin: 0;">
-<div style="margin:0 auto;width:100%;max-width:600px;padding:1.5em 1em 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
+<div style="margin:0 auto;width:100%;max-width:600px;padding:1.5em 1em 1em 1em;">
     <img src="{{ $message->embed(public_path() . '/img/2x/nav-on-w.png') }}" alt="TEDxKMITL" style="width: 240px;">
     <h1 style="font-size: 2em;">Here is your TEDxKMITL ticket!</h1>
     <hr style="width:100%;max-width:240px;margin:1em 0 1.4em;border:3px solid #e62b1a;">
@@ -14,8 +14,8 @@
     <p style="font-size: 16px;">Sorry for our previous email which didn't display correctly to some attendees. Please click the link below to go
         to your new ticket.</p>
     <div style="text-align: center;">
-        <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}"
-           style="text-decoration: none;background: #e62b1a;padding: 1em;margin: 0.5em auto;display: inline-block;color: #fff;font-weight: bold;">Your
+        <a href="#"
+           style="text-decoration: none;background: #e62b1a;padding: 1em;margin: 0.5em auto 0.5em auto;display: inline-block;color: #fff;font-weight: bold;">Your
             e-ticket</a>
     </div>
     <p style="font-size: 18px;font-family: serif;font-style: italic;color: #a1a1a1;">Yours sincerely,<br>TEDxKMITL Staff</p>
