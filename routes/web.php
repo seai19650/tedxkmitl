@@ -90,6 +90,10 @@ Route::get('/live', function (){
     return view('status');
 });
 
+Route::get('eticket', function (){
+    return view('mail.mail_eticket');
+});
+
 Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
