@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Congratulations! You're qualified for TEDxKMITL event</title>
+    <title>Here is your TEDxKMITL e-ticket</title>
 </head>
 <body style="margin: 0;">
 <div style="margin:0 auto;width:100%;max-width:600px;padding:1.5em 1em 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
