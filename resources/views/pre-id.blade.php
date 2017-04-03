@@ -11,7 +11,7 @@
             background: #e62b1a;
             color: #fff;
             font-family: "Helvetica Neue", Arial, sans-serif;
-            padding: 1em 1em;
+            padding: 1.5em 1em 1em;
         }
         .wrap {
             max-width: 800px;
@@ -19,15 +19,37 @@
             text-align: center;
         }
         p {font-size: 1.1em;}
-    </style>git
+        .ticket {
+            margin: 0 auto 25px;
+            width: 300px;
+            height: 534px;
+            background: url('https://tedxkmitl.com/img/e-ticket.png');
+            background-size: contain;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            color: #000000;
+            border-radius: 16px;
+            box-shadow: 0px 14px 32px rgba(0,0,0,0.18);
+        }
+        .ticket h2,h4,h5,h6 {
+            text-align: right;
+            text-transform: uppercase;
+            position: relative;
+        }
+        @media screen and (max-width: 374px) {
+            body {
+                padding: 0;
+            }
+            .ticket {
+                box-shadow: none;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="wrap">
-    <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" style="width:100%;max-width:300px;max-height:300px">
-    <h1>See you at TEDxKMITL!</h1>
-    <p>Please present your ticket at the registration desk on the event day.</p>
-</div>
-<div class="wrap">
+<div class="ticket">
     <div style="position:relative;top:69px;text-align:center;">
         <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}">
             {!! QrCode::size(100)->margin(0)->generate('https://tedxkmitl.com/id/'.$applicant->token) !!}
@@ -45,6 +67,11 @@
         <h6 style="top:33px;color:#939393;">Type</h6>
         <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
     @endif
+</div>
+<div class="wrap">
+    <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" style="width:90%;max-width:200px;max-height:200px">
+    <h1>See you at TEDxKMITL!</h1>
+    <p>Please present your ticket at the registration desk on the event day.</p>
 </div>
 </body>
 </html>
