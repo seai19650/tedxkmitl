@@ -63,10 +63,14 @@
     <h6 style="top:83px;color:#939393;">Full name</h6>
     <h4 style="top:63px;text-transform:capitalize;">{{ $applicant->firstname }}</h4>
     <h4 style="top:43px;text-transform:capitalize;">{{ $applicant->lastname }}</h4>
+    <h6 style="top:33px;color:#939393;">Type</h6>
+    <h4 style="top:13px;">
     @if ($applicant->is_approved == 1)
-        <h6 style="top:33px;color:#939393;">Type</h6>
-        <h4 style="top:13px;">{{ $applicant->ticket_type }}</h4>
+        {{ $applicant->ticket_type }}
+    @else
+        Live Stream
     @endif
+    </h4>
 </div>
 <div class="wrap">
     <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" style="width:90%;max-width:200px;max-height:200px">
