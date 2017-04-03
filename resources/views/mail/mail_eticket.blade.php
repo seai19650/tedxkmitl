@@ -14,7 +14,7 @@
     <p style="font-size: 16px;">Sorry for our previous email which didn't display correctly to some attendees. Please click the link below to go
         to your new ticket.</p>
     <div style="text-align: center;">
-        <a href="#"
+        <a href="{{'https://tedxkmitl.com/id/'.$applicant->token}}"
            style="text-decoration: none;background: #e62b1a;padding: 1em;margin: 0.5em auto 0.5em auto;display: inline-block;color: #fff;font-weight: bold;">Your
             e-ticket</a>
     </div>
