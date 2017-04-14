@@ -19,10 +19,10 @@
     <style type="text/css">
         @include('include.foundation')
     </style>
-    {{--<style type="text/css">
+    <style type="text/css">
         @include('include.production')
-    </style>--}}
-    <link rel="stylesheet" href="{{ asset('css/production.min.css') }}">
+    </style>
+    {{--<link rel="stylesheet" href="{{ asset('css/production.min.css') }}">--}}
     <script>
         document.createElement("picture");
     </script>
