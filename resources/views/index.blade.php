@@ -20,9 +20,9 @@
         @include('include.foundation')
     </style>
     <style type="text/css">
-        {{--@include('include.production')--}}
+        @include('include.production')
     </style>
-    <link rel="stylesheet" href="{{ asset('css/production.min.css') }}">
+    {{--<link rel="stylesheet" href="{{ asset('css/production.min.css') }}">--}}
     <script>
         document.createElement("picture");
     </script>
@@ -232,10 +232,10 @@
 </section>
 <section id="event">
     <div class="row">
-        <div class="small-12 columns">
-            <h1>SCHEDULE</h1>
+        <div class="small-12 columns hide-for-large">
+            <h1 class="text-center">SCHEDULE</h1>
         </div>
-        <div class="small-12 medium-7 columns end">
+        <div class="small-12 large-7 columns" id="table-wrap">
             <table class="hover unstriped stack">
                 <thead>
                 <th width="20%">Time</th>
@@ -308,6 +308,9 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="large-5 columns show-for-large" id="schedule-large">
+            <h1>SCHEDULE</h1>
         </div>
     </div>
 </section>

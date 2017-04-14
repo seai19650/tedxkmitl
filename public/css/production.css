@@ -242,12 +242,26 @@ section#event h1 {
 }*/
 section#event table {
     border: 2px solid #e62b1a;
+    margin-bottom: 0;
 }
 section#event table th, section#event table td:first-child {
     text-align: center;
 }
 section#event table th, section#event table td {
     padding-top: 0.625rem;
+}
+#table-wrap {
+    float: left;
+}
+#schedule-large {
+    display: flex;
+    align-items: center;
+    height: 788px;
+}
+#schedule-large h1 {
+    width: 100%;
+    text-align: right;
+    margin: 0;
 }
 #spon {
     margin-top: 71px;
@@ -297,6 +311,8 @@ img.regis-logo {
     }
     section#event table {
         text-align: center;
+        max-width: 550px;
+        margin: 0 auto 0.7em;
     }
     section#event table td:first-child {
         padding-bottom: 0;
