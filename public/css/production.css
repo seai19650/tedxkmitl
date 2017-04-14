@@ -185,6 +185,8 @@ section#teaser h1{
 }
 section#speaker {
     padding: 67px 0 58px;
+    border-top: 4px solid #e62b1a;
+    border-bottom: 4px solid #e62b1a;
 }
 section#speaker h1 {
     color: #e62b1a;
@@ -198,6 +200,12 @@ section#speaker h1 {
 }
 .person img {
     width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 7px 20px rgba(255,0,0,0.06);
+    -moz-box-shadow: 0 7px 20px rgba(255,0,0,0.06);
+    box-shadow: 0 7px 20px rgba(255,0,0,0.06);
 }
 .person h2 {
     font-size: 1.8rem;
