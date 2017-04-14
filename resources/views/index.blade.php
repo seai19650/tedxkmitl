@@ -20,9 +20,9 @@
         @include('include.foundation')
     </style>
     <style type="text/css">
-        @include('include.production')
+        {{--@include('include.production')--}}
     </style>
-    {{--<link rel="stylesheet" href="{{ asset('css/production.min.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/production.min.css') }}">
     <script>
         document.createElement("picture");
     </script>
@@ -232,15 +232,82 @@
 </section>
 <section id="event">
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 columns">
             <h1>SCHEDULE</h1>
         </div>
-    </div>
-    <div class="event">
-        <div class="row" id="pic_vi">
-            <div class="small-12 columns ">
-                <h2 style="color: white;" class="text-center">COMING SOON</h2>
-            </div>
+        <div class="small-12 medium-7 columns end">
+            <table class="hover unstriped stack">
+                <thead>
+                <th width="20%">Time</th>
+                <th>Details</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11.00</td>
+                    <td>Registration opens</td>
+                </tr>
+                <tr>
+                    <td>13.20</td>
+                    <td>Hall and livestream room open</td>
+                </tr>
+                <tr>
+                    <td>13.30</td>
+                    <td>TEDxKMITL starts</td>
+                </tr>
+                <tr>
+                    <td>13.50</td>
+                    <td>1<sup>st</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.12</td>
+                    <td>2<sup>nd</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.34</td>
+                    <td>3<sup>rd</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.56</td>
+                    <td>4<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>15.18</td>
+                    <td>Break time</td>
+                </tr>
+                <tr>
+                    <td>15.48</td>
+                    <td>Hall and livestream room open</td>
+                </tr>
+                <tr>
+                    <td>16.10</td>
+                    <td>Live performance</td>
+                </tr>
+                <tr>
+                    <td>16.32</td>
+                    <td>5<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>16.54</td>
+                    <td>6<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>17.16</td>
+                    <td>7<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>17.38</td>
+                    <td>8<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td>9<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>18.30</td>
+                    <td>After Party</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

@@ -39,7 +39,6 @@ p {
 section#main {
     background: #e62b1a;
     position: relative;
-
 }
 .hero-wrap {
     margin: 50px auto 0;
@@ -180,8 +179,8 @@ section#teaser {
     -o-transition: background 1s;
     transition: background 1s;
 }
-section#teaser h1{
-    color: white;
+section#teaser h1, section#event h1 {
+    color: #FFF;
 }
 section#speaker {
     padding: 67px 0 58px;
@@ -190,9 +189,7 @@ section#speaker {
 }
 section#speaker h1 {
     color: #e62b1a;
-    font-size: 3rem;
     position: absolute;
-    text-align: justify;
     z-index: 1;
 }
 #speakers {
@@ -236,32 +233,21 @@ section#event {
     padding: 67px 0;
 }
 section#event h1 {
-    color: white;
-    font-size: 3rem;
-    display: inline;
-    text-align: justify;
-    z-index: 1;
+    margin-bottom: 0.4em;
 }
-.event {
-    margin: 70px auto 15px;
-}
-#pic_vi {
-    margin-top: 20px;
-}
-#pic_vi p {
-    padding: 20px;
-    color: white;
-}
-section#partner {
+/*section#partner {
     min-height: auto;
     padding-top: 90px;
     padding-bottom: 90px;
+}*/
+section#event table {
+    border: 2px solid #e62b1a;
 }
-section#partner h1 {
-    font-size: 3rem;
-    display: inline;
-    text-align: justify;
-    z-index: 1;
+section#event table th, section#event table td:first-child {
+    text-align: center;
+}
+section#event table th, section#event table td {
+    padding-top: 0.625rem;
 }
 #spon {
     margin-top: 71px;
@@ -308,6 +294,16 @@ img.regis-logo {
 @media screen and (max-width: 1023px) {
     .hero-wrap {
         max-width: 610px;
+    }
+    section#event table {
+        text-align: center;
+    }
+    section#event table td:first-child {
+        padding-bottom: 0;
+        font-weight: bold;
+    }
+    section#event table td:last-child {
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 500px) {
