@@ -19,9 +19,10 @@
     <style type="text/css">
         @include('include.foundation')
     </style>
-    <style type="text/css">
+    {{--<style type="text/css">
         @include('include.production')
-    </style>
+    </style>--}}
+    <link rel="stylesheet" href="{{ asset('css/production.min.css') }}">
     <script>
         document.createElement("picture");
     </script>
@@ -87,7 +88,7 @@
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
-                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
+                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png 2x">
                 <img src="img/tedx-vertical.png" class="tedx-vertical">
             </picture>
             <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personel. Our
