@@ -19,9 +19,10 @@
     <style type="text/css">
         @include('include.foundation')
     </style>
-    <style type="text/css">
+    {{--<style type="text/css">
         @include('include.production')
-    </style>
+    </style>--}}
+    <link rel="stylesheet" href="{{ asset('css/production.min.css') }}">
     <script>
         document.createElement("picture");
     </script>
@@ -87,7 +88,7 @@
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
-                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
+                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png 2x">
                 <img src="img/tedx-vertical.png" class="tedx-vertical">
             </picture>
             <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personel. Our
@@ -146,7 +147,7 @@
         </div>
     </div>
     <div class="row" id="speakers">
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk1.png 1x, img/2x/spk1.png 2x">
                 <img src="img/spk1.png" class="float-center" alt="Speaker">
@@ -155,7 +156,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk2.png 1x, img/2x/spk2.png 2x">
                 <img src="img/spk2.png" class="float-center" alt="Speaker">
@@ -164,7 +165,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk3.jpg 1x, img/2x/spk3.jpg 2x">
                 <img src="img/spk3.jpg" class="float-center" alt="Speaker">
@@ -173,7 +174,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk4.png 1x, img/2x/spk4.png 2x">
                 <img src="img/spk4.png" class="float-center" alt="Speaker">
@@ -182,7 +183,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk5.png 1x, img/2x/spk5.png 2x">
                 <img src="img/spk5.png" class="float-center" alt="Speaker">
@@ -191,7 +192,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk6.png 1x, img/2x/spk6.png 2x">
                 <img src="img/spk6.png" class="float-center" alt="Speaker">
@@ -200,10 +201,32 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            <h3 class="text-center" style="margin-top: 35px">guess who they are<br>/more to come/</h3>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk7.png 1x, img/2x/spk7.png 2x">
+                <img src="img/spk7.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk8.png 1x, img/2x/spk8.png 2x">
+                <img src="img/spk8.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk9.png 1x, img/2x/spk9.png 2x">
+                <img src="img/spk9.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
     </div>
 </section>
