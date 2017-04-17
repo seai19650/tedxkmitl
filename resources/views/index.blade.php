@@ -68,7 +68,7 @@
                 <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
                 <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-lg show-for-large">
             </picture>
-            <a data-open="regisModal" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>
+            {{--<a data-open="regisModal" class="button ghost white large show-for-large" id="cta-regis-lg">REGISTER</a>--}}
             <picture>
                 <source media="(max-width:639px)" type="image/png"
                         srcset="img/x-hero-sm.png 1x, img/2x/x-hero-sm.png 2x">
@@ -83,7 +83,7 @@
             <source srcset="img/hero-date.png 1x, img/2x/hero-date.png 2x">
             <img src="img/hero-date.png" alt="April 22, 2017" class="hero-date-md float-center">
         </picture>
-        <a data-open="regisModal" class="button ghost white large" id="cta-regis-md">REGISTER</a>
+        {{--<a data-open="regisModal" class="button ghost white large" id="cta-regis-md">REGISTER</a>--}}
     </div>
     <div class="row" id="about">
         <div class="tedxwhite">
@@ -336,7 +336,7 @@
         </div>
     </div>
 </footer>
-<div class="reveal" id="regisModal" data-reveal>
+{{--<div class="reveal" id="regisModal" data-reveal>
     <div class="regis-lang-modal">
         <div class="row">
             <div class="small-12 medium-6 columns">
@@ -350,7 +350,7 @@
     <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
     </button>
-</div>
+</div>--}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/4.1.1/what-input.min.js"></script>
 <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>

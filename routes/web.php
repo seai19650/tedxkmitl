@@ -49,16 +49,7 @@ Route::get('/success', function () {
     return view('apply-success');
 });
 
-Route::get('/apply/th', function () {
-    return view('register-th');
-});
-
-
-Route::get('/apply/en', function () {
-    return view('register-en');
-});
-
-Route::post('/apply', 'RegistrationController@store');
+// Route::post('/apply', 'RegistrationController@store');
 
 Route::get('/pay/{token}', 'PayController@index');
 
