@@ -39,7 +39,6 @@ p {
 section#main {
     background: #e62b1a;
     position: relative;
-
 }
 .hero-wrap {
     margin: 50px auto 0;
@@ -180,17 +179,17 @@ section#teaser {
     -o-transition: background 1s;
     transition: background 1s;
 }
-section#teaser h1{
-    color: white;
+section#teaser h1, section#event h1 {
+    color: #FFF;
 }
 section#speaker {
     padding: 67px 0 58px;
+    border-top: 4px solid #e62b1a;
+    border-bottom: 4px solid #e62b1a;
 }
 section#speaker h1 {
     color: #e62b1a;
-    font-size: 3rem;
     position: absolute;
-    text-align: justify;
     z-index: 1;
 }
 #speakers {
@@ -198,6 +197,12 @@ section#speaker h1 {
 }
 .person img {
     width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 7px 20px rgba(255,0,0,0.06);
+    -moz-box-shadow: 0 7px 20px rgba(255,0,0,0.06);
+    box-shadow: 0 7px 20px rgba(255,0,0,0.06);
 }
 .person h2 {
     font-size: 1.8rem;
@@ -228,32 +233,35 @@ section#event {
     padding: 67px 0;
 }
 section#event h1 {
-    color: white;
-    font-size: 3rem;
-    display: inline;
-    text-align: justify;
-    z-index: 1;
+    margin-bottom: 0.4em;
 }
-.event {
-    margin: 70px auto 15px;
-}
-#pic_vi {
-    margin-top: 20px;
-}
-#pic_vi p {
-    padding: 20px;
-    color: white;
-}
-section#partner {
+/*section#partner {
     min-height: auto;
     padding-top: 90px;
     padding-bottom: 90px;
+}*/
+section#event table {
+    border: 2px solid #e62b1a;
+    margin-bottom: 0;
 }
-section#partner h1 {
-    font-size: 3rem;
-    display: inline;
-    text-align: justify;
-    z-index: 1;
+section#event table th, section#event table td:first-child {
+    text-align: center;
+}
+section#event table th, section#event table td {
+    padding-top: 0.625rem;
+}
+#table-wrap {
+    float: left;
+}
+#schedule-large {
+    display: flex;
+    align-items: center;
+    height: 788px;
+}
+#schedule-large h1 {
+    width: 100%;
+    text-align: right;
+    margin: 0;
 }
 #spon {
     margin-top: 71px;
@@ -300,6 +308,18 @@ img.regis-logo {
 @media screen and (max-width: 1023px) {
     .hero-wrap {
         max-width: 610px;
+    }
+    section#event table {
+        text-align: center;
+        max-width: 550px;
+        margin: 0 auto 0.7em;
+    }
+    section#event table td:first-child {
+        padding-bottom: 0;
+        font-weight: bold;
+    }
+    section#event table td:last-child {
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 500px) {

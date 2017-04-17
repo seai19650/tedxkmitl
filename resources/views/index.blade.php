@@ -22,6 +22,7 @@
     <style type="text/css">
         @include('include.production')
     </style>
+    {{--<link rel="stylesheet" href="{{ asset('css/production.min.css') }}">--}}
     <script>
         document.createElement("picture");
     </script>
@@ -87,7 +88,7 @@
     <div class="row" id="about">
         <div class="tedxwhite">
             <picture>
-                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png">
+                <source srcset="img/tedx-vertical.png 1x, img/2x/tedx-vertical.png 2x">
                 <img src="img/tedx-vertical.png" class="tedx-vertical">
             </picture>
             <p><strong>TEDxKMITL</strong> is an independently organized TEDx event by KMITL students and personel. Our
@@ -146,7 +147,7 @@
         </div>
     </div>
     <div class="row" id="speakers">
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk1.png 1x, img/2x/spk1.png 2x">
                 <img src="img/spk1.png" class="float-center" alt="Speaker">
@@ -155,7 +156,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person hide-for-small-only">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk2.png 1x, img/2x/spk2.png 2x">
                 <img src="img/spk2.png" class="float-center" alt="Speaker">
@@ -164,7 +165,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk3.jpg 1x, img/2x/spk3.jpg 2x">
                 <img src="img/spk3.jpg" class="float-center" alt="Speaker">
@@ -173,7 +174,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk4.png 1x, img/2x/spk4.png 2x">
                 <img src="img/spk4.png" class="float-center" alt="Speaker">
@@ -182,7 +183,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk5.png 1x, img/2x/spk5.png 2x">
                 <img src="img/spk5.png" class="float-center" alt="Speaker">
@@ -191,7 +192,7 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-        <div class="small-12 medium-4 large-4 columns person">
+        <div class="small-12 medium-4 columns person">
             <picture>
                 <source srcset="img/spk6.png 1x, img/2x/spk6.png 2x">
                 <img src="img/spk6.png" class="float-center" alt="Speaker">
@@ -200,24 +201,116 @@
             <h2 class="speaker-last">KEPT SECRET</h2>
             <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            <h3 class="text-center" style="margin-top: 35px">guess who they are<br>/more to come/</h3>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk7.png 1x, img/2x/spk7.png 2x">
+                <img src="img/spk7.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk8.png 1x, img/2x/spk8.png 2x">
+                <img src="img/spk8.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
+        </div>
+        <div class="small-12 medium-4 columns person">
+            <picture>
+                <source srcset="img/spk9.png 1x, img/2x/spk9.png 2x">
+                <img src="img/spk9.png" class="float-center" alt="Speaker">
+            </picture>
+            <h2 class="speaker-first">THIS IS</h2>
+            <h2 class="speaker-last">KEPT SECRET</h2>
+            <h3 class="speaker-position">Will be announced at the event</h3>
         </div>
     </div>
 </section>
 <section id="event">
     <div class="row">
-        <div class="small-4 columns">
-            <h1>SCHEDULE</h1>
+        <div class="small-12 columns hide-for-large">
+            <h1 class="text-center">SCHEDULE</h1>
         </div>
-    </div>
-    <div class="event">
-        <div class="row" id="pic_vi">
-            <div class="small-12 columns ">
-                <h2 style="color: white;" class="text-center">COMING SOON</h2>
-            </div>
+        <div class="small-12 large-7 columns" id="table-wrap">
+            <table class="hover unstriped stack">
+                <thead>
+                <th width="20%">Time</th>
+                <th>Details</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11.00</td>
+                    <td>Registration opens</td>
+                </tr>
+                <tr>
+                    <td>13.20</td>
+                    <td>Hall and livestream room open</td>
+                </tr>
+                <tr>
+                    <td>13.30</td>
+                    <td>TEDxKMITL starts</td>
+                </tr>
+                <tr>
+                    <td>13.50</td>
+                    <td>1<sup>st</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.12</td>
+                    <td>2<sup>nd</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.34</td>
+                    <td>3<sup>rd</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>14.56</td>
+                    <td>4<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>15.18</td>
+                    <td>Break time</td>
+                </tr>
+                <tr>
+                    <td>15.48</td>
+                    <td>Hall and livestream room open</td>
+                </tr>
+                <tr>
+                    <td>16.10</td>
+                    <td>Live performance</td>
+                </tr>
+                <tr>
+                    <td>16.32</td>
+                    <td>5<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>16.54</td>
+                    <td>6<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>17.16</td>
+                    <td>7<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>17.38</td>
+                    <td>8<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>18.00</td>
+                    <td>9<sup>th</sup> speaker</td>
+                </tr>
+                <tr>
+                    <td>18.30</td>
+                    <td>After Party</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="large-5 columns show-for-large" id="schedule-large">
+            <h1>SCHEDULE</h1>
         </div>
     </div>
 </section>
