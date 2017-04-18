@@ -89,4 +89,4 @@ Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
 Route::get('/id/{token}/commit', 'RegistrationController@commit');
-Route::get('/id/{token}/come', 'RegistrationController@cum')->middleware('auth');
+Route::get('/id/{token}/come', 'RegistrationController@cum');
