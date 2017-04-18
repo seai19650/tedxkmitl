@@ -89,3 +89,4 @@ Route::post('/getstat', 'ConsoleController@getStat');
 Route::post('/gettimestat', 'ConsoleController@getTimeStat');
 
 Route::get('/id/{token}/commit', 'RegistrationController@commit');
+Route::post('/id/{token}/come', 'RegistrationController@cum');
