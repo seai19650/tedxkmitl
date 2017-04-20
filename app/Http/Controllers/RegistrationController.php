@@ -108,4 +108,9 @@ class RegistrationController extends Controller
         $applicant->save();
         return view('reserved');
     }
+
+    public function cum($token) {
+        Registration::where('token', $token)->first()->update(['is_come' => 1]);
+        return response()->json(['data' => 'Success']);
+    }
 }
