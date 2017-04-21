@@ -45,7 +45,7 @@
 <div class="row">
     <div class="small-12 columns">
         <form id="login" name="login" action="">
-            <input name="email" type="hidden" class="textinput verify" placeholder="Enter your password" required>
+            <input name="email" type="hidden" class="textinput verify" placeholder="Enter your email" required>
             <button type="submit" class="button primary rounded write-post">
                 <img src="{{secure_asset('img/pen.png')}}" alt="Write a Post" title="Write a Post">
             </button>
