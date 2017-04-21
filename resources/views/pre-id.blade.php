@@ -92,7 +92,7 @@
     </h4>
 </div>
 <div class="wrap">
-    <a href="#" class="button">Go to Status page</a>
+    <a href="{{'https://tedxkmitl.com/status/'.$applicant->token}}" class="button">Go to Status page</a>
     <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" class="emoji">
     <h1>See you at TEDxKMITL!</h1>
     <p>Please present your ticket at the registration desk on the event day.</p>
