@@ -38,6 +38,25 @@
             text-transform: uppercase;
             position: relative;
         }
+        img.emoji {
+            display:block;
+            width:90%;
+            max-width:200px;
+            max-height:200px;
+            margin: 0 auto;
+        }
+        a.button {
+            display: inline-block;
+            margin: 1em auto 1.4em;
+            background: #fff;
+            color: #e62b1a;
+            padding: 1em;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        a.button:hover {
+            background: #f0f0f0;
+        }
         @media screen and (max-width: 374px) {
             body {
                 padding: 0;
@@ -73,7 +92,8 @@
     </h4>
 </div>
 <div class="wrap">
-    <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" style="width:90%;max-width:200px;max-height:200px">
+    <a href="#" class="button">Go to Status page</a>
+    <img src="{{secure_asset('img/hug.svg')}}" alt="See you!" class="emoji">
     <h1>See you at TEDxKMITL!</h1>
     <p>Please present your ticket at the registration desk on the event day.</p>
 </div>
