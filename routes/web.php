@@ -66,14 +66,14 @@ Route::post('/gettable', 'TableController@getTable');
 Route::post('/getanswer', 'TableController@getAnswer');
 Route::post('/setapprove', 'TableController@setApprove');
 
-//Route::get('/id/{token}', 'IdController@index');
+Route::get('/status/{token}', 'IdController@index');
 Route::get('/id/{token}', function($token){
     $applicant = \App\Registration::where('token', $token)->first();
     return view('pre-id')->with('applicant',$applicant);
 });
 Route::post('/getstatus', 'StatusController@show');
 Route::post('/getstatusadmin', 'StatusController@showAdmin');
-Route::post('/id/{token}', 'StatusController@verify');
+Route::post('/status/{token}', 'StatusController@verify');
 Route::post('/post/{token}', 'StatusController@store');
 Route::post('/delete/{token}', 'StatusController@delete');
 Route::post('/setaction', 'StatusController@setAction');

@@ -16,9 +16,9 @@ class StatusController extends Controller
 
     public function verify(Request $request, $token)
     {
-        $data = $request->lastname;
+        $data = $request->email;
         $profile = Registration::where('token', $token)->first();
-        if (Str::lower($data) == Str::lower($profile->lastname)) {
+        if (Str::lower($data) == Str::lower($profile->email)) {
             $post = new Status;
             $post->registration_id = $profile->id;
             $post->keycard = $post->keycard();

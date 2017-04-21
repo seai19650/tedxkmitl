@@ -45,7 +45,7 @@
 <div class="row">
     <div class="small-12 columns">
         <form id="login" name="login" action="">
-            <input name="lastname" type="hidden" class="textinput verify" placeholder="Enter your password" required>
+            <input name="email" type="hidden" class="textinput verify" placeholder="Enter your password" required>
             <button type="submit" class="button primary rounded write-post">
                 <img src="{{secure_asset('img/pen.png')}}" alt="Write a Post" title="Write a Post">
             </button>
@@ -119,7 +119,7 @@
 
         $(login_form).on('click', function (e) {
             e.preventDefault;
-            $('form input[name="lastname"]').attr('type', 'text');
+            $('form input[name="email"]').attr('type', 'text');
         })
 
         $(login_form).on('submit', function (e) {
@@ -144,9 +144,9 @@
                         $(login_form).hide();
                         $(post_form).fadeIn();
                     } else {
-                        $('form input[name="lastname"]').val('Verification Failed! Please try again').attr('readonly', true);
+                        $('form input[name="email"]').val('Verification Failed! Please try again').attr('readonly', true);
                         setTimeout(function () {
-                            $('form input[name="lastname"]').attr('readonly', false).val('');
+                            $('form input[name="email"]').attr('readonly', false).val('');
                         }, 1000);
                     }
 
@@ -173,7 +173,7 @@
                     console.log(response);
                     if (response != 0) {
                         $('form input[name="keycard"]').remove();
-                        $('form input[name="lastname"]').attr('type', 'hidden').val('');
+                        $('form input[name="email"]').attr('type', 'hidden').val('');
                         $('form input[name="status"]').val('');
                         location.reload();
                     } else {
