@@ -101,7 +101,7 @@
         }
         $('#status').fadeOut(800, function () {
             console.log('Message '+i+' is on screen.');
-            $(this).empty().append('<h2>"' + d[i-1]['status'] + '"</h2>').fadeIn();
+            $(this).empty().append('<h2>' + d[i-1]['status'] + '</h2>').fadeIn();
         });
 
         i++;
