@@ -26,7 +26,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Kanit;
+            font-family: "Sukhumvit Set", Kanit, sans-serif;
             font-size: 3em;
             line-height: 1.8em;
             text-align: center;
