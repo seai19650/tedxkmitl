@@ -30,6 +30,7 @@
             font-size: 3em;
             line-height: 1.8em;
             text-align: center;
+            text-rendering: optimizeLegibility;
         }
         h2 {
             max-width: 80vw;

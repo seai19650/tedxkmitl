@@ -44,6 +44,10 @@ Route::get('stream-confirm-th', function () {
     return view('mail.mail_stream_confirm-th');
 });
 
+Route::get('survey', function () {
+    return view('mail.mail_survey');
+});
+
 
 Route::get('/success', function () {
     return view('apply-success');
