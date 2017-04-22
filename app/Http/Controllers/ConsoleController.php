@@ -19,7 +19,9 @@ class ConsoleController extends Controller
             'paid' => Registration::where('is_paid', 1)->count(),
             'male' => Registration::where('gender', 'male')->count(),
             'female' => Registration::where('gender', 'female')->count(),
-            'dayleft' => $dayleft
+            'dayleft' => $dayleft,
+            'came_live' => Registration::where('is_come', 1)->where('is_approved', 1)->count(),
+            'came_stream' => Registration::where('is_come', 1)->where('is_approved', 0)->count()
         ];
         return view('console/dashboard', compact('stat'));
     }

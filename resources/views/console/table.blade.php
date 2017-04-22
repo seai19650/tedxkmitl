@@ -65,6 +65,7 @@
                   <th>Answer</th>
                   <th>Card Type</th>
                   <th>Payment</th>
+                  <th>Is come</th>
                   <th>Mobile</th>
                   <th>Email</th>
                   <th>Recent</th>

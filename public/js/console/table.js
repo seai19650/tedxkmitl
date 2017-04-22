@@ -52,6 +52,16 @@ function init_DataTables() {
                     }
                 }
             },
+            {
+                data: 'is_come',
+                render: function (data, type, row) {
+                    if (data) {
+                        return 'Came';
+                    } else {
+                        return 'Not yet';
+                    }
+                }
+            },
             { data: 'mobile' },
             { data: 'email' },
             { data: 'time' },

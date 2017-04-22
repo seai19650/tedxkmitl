@@ -34,12 +34,12 @@
       <div class="count">{{ $stat['paid'] }}</div>
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Male</span>
-      <div class="count">{{ $stat['male'] }}</div>
+      <span class="count_top"><i class="fa fa-user"></i> Total studio came</span>
+      <div class="count">{{ $stat['came_live'] }}</div>
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Female</span>
-      <div class="count">{{ $stat['female'] }}</div>
+      <span class="count_top"><i class="fa fa-user"></i> Total live stream came</span>
+      <div class="count">{{ $stat['came_stream'] }}</div>
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
       <span class="count_top"><i class="fa fa-clock-o"></i> Day left </span>

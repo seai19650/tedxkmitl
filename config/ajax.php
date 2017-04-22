@@ -13,6 +13,7 @@ return [
         'ticket_type',
         'is_approved',
         'is_paid',
+        'is_come',
         'created_at'
     ]
 ];
