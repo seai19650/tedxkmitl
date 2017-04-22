@@ -34,6 +34,9 @@ class StatusController extends Controller
     {
         $keycard = $request->keycard;
         $post = $request->status;
+
+        $post = Status::escape($post);
+
         $index = Status::where('keycard', $keycard)->first();
         $profile = Registration::where('token', $token)->first();
 
